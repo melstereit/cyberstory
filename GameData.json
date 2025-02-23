@@ -1,0 +1,74 @@
+{
+  "name": "eXodus",
+  "faction": "Anarchisten",
+  "trademarks": {
+    "Netrunner": [
+      "Hacking",
+      "Digital Systems",
+      "Neural Interface"
+    ],
+    "Partisan": [
+      "Guerilla Tactics",
+      "Sabotage",
+      "Stealth Operations"
+    ]
+  },
+  "flaws": [
+    "Family Ties",
+    "Vendetta"
+  ],
+  "drive": {
+    "description": "Revolution - Rache für die Kommune und Sturz der korrupten Machtstrukturen",
+    "track": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "edges": [
+    "Ghost in the Machine",
+    "Shadow Walker",
+    "Network",
+    "Quick Hack"
+  ],
+  "stunt_points": 3,
+  "inventory": [
+    "Militärischer Cyberdeck",
+    "Stealth-Suite",
+    "EMP-Granaten",
+    "Datensplitter mit Beweisen"
+  ],
+  "xp": 0,
+  "current_quest": null,
+  "locations": {
+    "known": ["Anarchistische Kommune (zerstört)", "Neo-Berlin Untergrund", "Ostsektor Ebene -3", "U-Bahn-Station 'Neue Mitte'", "Zhangs Repairs"],
+    "current_location": "Wartungstunnel der U-Bahn",
+    "routes": {
+      "tunnel": {"risk": "medium", "kontrolle": "Tunnel-Runner"},
+      "dächer": {"risk": "high", "kontrolle": "Corp-Sicherheit"},
+      "mall": {"risk": "medium", "kontrolle": "Automatisierte Sicherheit"}
+    }
+  },
+  "contacts": {
+    "allies": ["Überlebende der Kommune", "Razor (Hackerin)", "Spider (Informationshändler)", "Zhang (Krypto-Spezialist)", "Eisenfaust-Crew", "Kabel (Eisenfaust-Veteran)"],
+    "factions_status": {
+      "Tunnel-Runner": "freundlich",
+      "Eisenfaust-Crew": "verbündet, aktive Unterstützung"
+    },
+    "current_intel": "Obsidian jagt Informanten"
+  },
+  "enemies": {
+    "known": ["Unbekannter Politiker", "SecureTech Sicherheitschef"],
+    "suspected": [],
+    "status": {}
+  },
+  "quest_log": [],
+  "status_effects": []
+}
