@@ -1,0 +1,48 @@
+{
+  "name": "",
+  "faction": "",
+  "trademarks": {
+  },
+  "flaws": [],
+  "drive": {
+    "description": "",
+    "track": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "edges": [],
+  "stunt_points": 0,
+  "inventory": [],
+  "xp": 0,
+  "current_quest": null,
+  "locations": {
+    "known": [],
+    "current_location": "",
+    "routes": {
+      "tunnel": {"risk": "", "kontrolle": ""},
+      "dächer": {"risk": "", "kontrolle": ""},
+      "mall": {"risk": "", "kontrolle": ""}
+    }
+  },
+  "contacts": {
+    "allies": [],
+    "factions_status": {},
+    "current_intel": ""
+  },
+  "enemies": {
+    "known": [],
+    "suspected": [],
+    "status": {}
+  },
+  "quest_log": [],
+  "status_effects": []
+}
