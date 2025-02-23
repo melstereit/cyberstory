@@ -28,9 +28,6 @@
     "known": [],
     "current_location": "",
     "routes": {
-      "tunnel": {"risk": "", "kontrolle": ""},
-      "dächer": {"risk": "", "kontrolle": ""},
-      "mall": {"risk": "", "kontrolle": ""}
     }
   },
   "contacts": {
