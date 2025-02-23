@@ -1,8 +1,7 @@
 {
   "name": "",
   "faction": "",
-  "trademarks": {
-  },
+  "trademarks": {},
   "flaws": [],
   "drive": {
     "description": "",
@@ -26,9 +25,8 @@
   "current_quest": null,
   "locations": {
     "known": [],
-    "current_location": "",
-    "routes": {
-    }
+    "current_location": null,
+    "routes": {}
   },
   "contacts": {
     "allies": [],
