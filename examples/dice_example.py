@@ -1,6 +1,7 @@
 # examples/dice_example.py
-from mechanics.nco_dice_system import NCODiceSystem
 from mechanics.check_manager import CheckManager
+from mechanics.nco_dice_system import NCODiceSystem
+
 
 def main():
     # Würfelsystem erstellen

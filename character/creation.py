@@ -1,10 +1,12 @@
 # character/creation.py
-from character.interfaces import Trademark, Edge, Flaw, Drive, Item
+import random
+from typing import Dict, List, Any
+
+from character.gear_manager import GearManager
 from character.manager import CharacterManager
 from character.templates import TemplateManager
-from character.gear_manager import GearManager
-from typing import Dict, List, Any, Optional
-import random
+from mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
+
 
 class CharacterCreation:
     """Verwaltet den Charaktererstellungsprozess."""

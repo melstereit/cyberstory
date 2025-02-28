@@ -1,9 +1,11 @@
 # character/gear_manager.py
-from character.interfaces import Item
-from typing import Dict, List, Any, Optional
 import json
 import os
 import random
+from typing import Optional
+
+from mechanics.interfaces import Item
+
 
 class GearManager:
     """Verwaltet Ausrüstungsgegenstände."""

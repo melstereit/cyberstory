@@ -2,7 +2,8 @@
 import os
 import textwrap
 import time
-from typing import List, Optional
+from typing import List
+
 
 class TerminalUI:
     """Einfache Terminal-UI für das Cyberpunk RPG."""

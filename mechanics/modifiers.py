@@ -1,5 +1,5 @@
 # mechanics/modifiers.py
-from typing import Dict, List, Any, Callable
+from typing import Dict, Any, Callable
 
 class DicePoolModifier:
     """Repräsentiert einen Modifikator für den Würfelpool."""

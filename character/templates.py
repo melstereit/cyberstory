@@ -1,9 +1,9 @@
 # character/templates.py
-from character.interfaces import Trademark, Edge, Flaw, Drive
-from typing import Dict, List, Any, Optional
 import json
 import os
 import random
+from typing import Dict, List, Any, Optional
+
 
 class TemplateManager:
     """Verwaltet Templates für Trademarks, Edges, Flaws, usw."""

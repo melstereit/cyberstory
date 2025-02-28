@@ -1,9 +1,9 @@
 # ui/character_creation_ui.py
-from ui.terminal import TerminalUI
+from typing import Dict, Any, Optional
+
 from character.creation import CharacterCreation
-from character.interfaces import Trademark, Edge, Flaw, Drive, Item
-from typing import Dict, List, Any, Optional
-import textwrap
+from ui.terminal import TerminalUI
+
 
 class CharacterCreationUI:
     """UI für den Charaktererstellungsprozess."""

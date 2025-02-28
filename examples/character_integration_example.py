@@ -1,16 +1,19 @@
 # main.py
-from ui.terminal import TerminalUI
-from ui.character_creation_ui import CharacterCreationUI
-from ui.character_display import CharacterDisplay
-from character.manager import CharacterManager
-from character.templates import TemplateManager
+import os
+
+from ai.llm_interface import LLMInterface
+
 from character.creation import CharacterCreation
 from character.gear_manager import GearManager
 from character.llm_integration import CharacterLLMIntegration
-from ai.llm_interface import LLMInterface
-from mechanics.nco_dice_system import NCODiceSystem
+from character.manager import CharacterManager
+from character.templates import TemplateManager
 from mechanics.check_manager import CheckManager
-import os
+from mechanics.nco_dice_system import NCODiceSystem
+from ui.character_creation_ui import CharacterCreationUI
+from ui.character_display import CharacterDisplay
+from ui.terminal import TerminalUI
+
 
 def main():
     # Terminal-UI erstellen

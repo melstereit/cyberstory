@@ -1,7 +1,9 @@
 # mechanics/check_manager.py
-from mechanics.interfaces import DiceSystemInterface, DiceResult
+from typing import Dict, Any
+
+from mechanics.interfaces import DiceSystemInterface
 from mechanics.modifiers import ModifierManager
-from typing import Dict, List, Any, Optional
+
 
 class CheckManager:
     """Verwaltet die Durchführung von Würfelproben."""

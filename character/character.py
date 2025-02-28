@@ -1,7 +1,9 @@
 # character/character.py
-from character.interfaces import Trademark, Edge, Flaw, Drive, Item
-from typing import Dict, List, Any, Optional, Set
 import uuid
+from typing import Dict, Any
+
+from mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
+
 
 class Character:
     """Repräsentiert einen Spielercharakter."""

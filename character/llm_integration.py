@@ -1,8 +1,8 @@
 # character/llm_integration.py
-from character.interfaces import Trademark, Edge, Flaw, Drive, Item
+from typing import Dict, List, Any
+
 from ai.llm_interface import LLMInterface
-from typing import Dict, List, Any, Optional
-import json
+
 
 class CharacterLLMIntegration:
     """Integration von LLM-Funktionalitäten für die Charaktererstellung."""

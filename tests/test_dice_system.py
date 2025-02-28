@@ -1,7 +1,9 @@
 # tests/test_dice_system.py
-import unittest
-from mechanics.nco_dice_system import NCODiceSystem
 import random
+import unittest
+
+from mechanics.nco_dice_system import NCODiceSystem
+
 
 class TestNCODiceSystem(unittest.TestCase):
     

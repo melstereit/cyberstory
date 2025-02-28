@@ -1,7 +1,9 @@
 # mechanics/nco_dice_system.py
-from mechanics.interfaces import DiceSystemInterface, DiceResult
-from typing import Dict, List, Any, Tuple
 import random
+from typing import Dict, Any, Tuple
+
+from mechanics.interfaces import DiceSystemInterface, DiceResult
+
 
 class NCODiceSystem(DiceSystemInterface):
     """Implementierung des Neon City Overdrive Würfelsystems."""

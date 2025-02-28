@@ -1,6 +1,8 @@
 # ui/character_display.py
-from ui.terminal import TerminalUI
 from typing import Dict, List, Any, Optional
+
+from ui.terminal import TerminalUI
+
 
 class CharacterDisplay:
     """Zeigt Charakterinformationen im Terminal an."""

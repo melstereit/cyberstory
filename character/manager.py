@@ -1,9 +1,11 @@
 # character/manager.py
-from character.interfaces import CharacterInterface, Trademark, Edge, Flaw, Drive, Item
-from character.character import Character
-from typing import Dict, List, Any, Optional
 import json
 import os
+from typing import Dict, List, Any, Optional
+
+from character.character import Character
+from mechanics.interfaces import CharacterInterface, Trademark, Edge, Flaw, Drive, Item
+
 
 class CharacterManager(CharacterInterface):
     """Verwaltet Charaktere und deren Persistenz."""

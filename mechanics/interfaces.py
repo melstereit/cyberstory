@@ -1,6 +1,7 @@
 # character/interfaces.py
 from abc import ABC, abstractmethod
-from typing import Dict, List, Any, Optional, Set
+from typing import Dict, List, Any, Optional
+
 
 class Trademark:
     """Repräsentiert ein Trademark (Kernkompetenz) eines Charakters."""
@@ -247,7 +248,7 @@ class CharacterInterface(ABC):
 
 # mechanics/interfaces.py
 from abc import ABC, abstractmethod
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Tuple
 
 class DiceResult:
     """Repräsentiert das Ergebnis eines Würfelwurfs."""

@@ -1,10 +1,9 @@
 import json
 import os
-import random
-from pathlib import Path
+
 import google.generativeai as genai
+
 from dotenv import load_dotenv
-import re  # Importiere das Modul für reguläre Ausdrücke
 
 # .env-Datei laden
 load_dotenv()  # Lade die Umgebungsvariablen aus der api_key.env-Datei

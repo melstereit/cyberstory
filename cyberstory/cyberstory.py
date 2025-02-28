@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
-import sys
-import os
 import configparser
+import os
+import sys
+
 from dotenv import load_dotenv
-from langchain_openai import OpenAI
-from langchain_community.llms import HuggingFaceHub
 from langchain.prompts import PromptTemplate
+from langchain_community.llms import HuggingFaceHub
+from langchain_openai import OpenAI
 from openai import RateLimitError
 
 # Laden der Umgebungsvariablen aus der .env-Datei
