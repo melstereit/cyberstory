@@ -205,7 +205,7 @@ cyberpunk_rpg/
 1. [x] Terminal-UI und Grundgerüst
 2. JSON-Datenbankintegration
 3. [x] Grundlegende Würfelmechanik
-4. LLM-API-Integration
+4. [x] LLM-API-Integration
 
 ### Phase 2: Charaktersystem
 1. [x] Charaktererstellung

@@ -1,3 +1,4 @@
+from ai.interface import LLMInterface
 from character.character import Character
 from character.creation import CharacterCreation
 from character.gear_manager import GearManager, Item
@@ -12,4 +13,4 @@ from ui.character_creation_ui import CharacterCreationUI
 from ui.character_display import CharacterDisplay
 from ui.terminal import TerminalUI
 
-__all__ = ['Trademark', 'Edge', 'Flaw', 'Drive', 'Item', 'CharacterInterface', 'DiceResult', 'DiceSystemInterface', 'Character', 'GearManager', 'Item', 'CharacterManager', 'TemplateManager', 'ModifierManager', 'DicePoolModifier', 'CharacterLLMIntegration', 'CheckManager', 'NCODiceSystem', 'CharacterCreationUI', 'CharacterDisplay', 'TerminalUI', 'CharacterCreation']
+__all__ = ['Trademark', 'Edge', 'Flaw', 'Drive', 'Item', 'CharacterInterface', 'DiceResult', 'DiceSystemInterface', 'Character', 'GearManager', 'Item', 'CharacterManager', 'TemplateManager', 'ModifierManager', 'DicePoolModifier', 'CharacterLLMIntegration', 'CheckManager', 'NCODiceSystem', 'CharacterCreationUI', 'CharacterDisplay', 'TerminalUI', 'CharacterCreation', 'LLMInterface']
