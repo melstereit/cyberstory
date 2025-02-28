@@ -1,196 +1,257 @@
-import json
+# main.py (überarbeitete Version mit Datenbankintegration)
+from ui.terminal import TerminalUI
+from ui.character_creation_ui import CharacterCreationUI
+from ui.character_display import CharacterDisplay
+from character.manager import CharacterManager
+from character.templates import TemplateManager
+from character.creation import CharacterCreation
+from character.gear_manager import GearManager
+from character.llm_integration import CharacterLLMIntegration
+from ai.llm_interface import LLMInterface
+from mechanics.nco_dice_system import NCODiceSystem
+from mechanics.check_manager import CheckManager
+from data.config_handler import ConfigHandler
+from data.session_handler import SessionHandler
+from data.game_state import GameStateManager
 import os
 
-import google.generativeai as genai
-
-from dotenv import load_dotenv
-
-# .env-Datei laden
-load_dotenv()  # Lade die Umgebungsvariablen aus der api_key.env-Datei
-
-# Gemini API Key aus der Umgebungsvariablen laden
-GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
-
-if GOOGLE_API_KEY is None:
-    print("Fehler: Google API Key nicht in der api_key.env-Datei gefunden.")
-    exit()
-
-def load_data(filepath):
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        print(f"Fehler: Die Datei {filepath} wurde nicht gefunden.")
-        return {}
-    except json.JSONDecodeError:
-        print(f"Fehler: Die Datei {filepath} konnte nicht gelesen werden. Möglicherweise ist sie beschädigt.")
-        return {}
-
-def load_text(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return f.read()
-
-def get_gemini_response(prompt, user_input, data, history, current_phase):
-    """
-    Sendet einen strukturierten Input an Gemini und erhält die strukturierte Antwort.
-    """
-    genai.configure(api_key=GOOGLE_API_KEY)
-    model = genai.GenerativeModel('gemini-pro')
-
-    # Input-Template erstellen
-    input_template = {
-        "prompt": prompt,
-        "user_input": user_input,
-        "data": data,
-        "history": history
-    }
-
-    try:
-        response = model.generate_content(json.dumps(input_template))
-
-        # Überprüfen, ob die Antwort leer ist
-        if not response.text.strip():
-            raise ValueError("Die Antwort von Gemini ist leer.")
-
-        # Sicherstellen, dass die Antwort als UTF-8 kodiert ist
-        clean_response = response.text.strip()
-
-        # Entferne Markdown-Code-Block-Markierungen
-        if clean_response.startswith("```json"):
-            clean_response = clean_response[7:]  # Entferne ```json
-        if clean_response.endswith("```"):
-            clean_response = clean_response[:-3]  # Entferne ```
-        clean_response = clean_response.strip()  # Entferne zusätzliche Leerzeichen
-
-        # Versuchen, die bereinigte Antwort als JSON zu parsen
-        try:
-            parsed_response = json.loads(clean_response)
-        except json.JSONDecodeError as e:
-            print("Fehler beim Parsen der Antwort als JSON:", e)
-            print("Bereinigte Antwort:", clean_response)
-            return {"error": "Die Antwort von Gemini konnte nicht als JSON interpretiert werden."}
-
-        if "response" not in parsed_response:
-            raise ValueError("Die Antwort enthält kein 'response'-Feld.")
-
-        return parsed_response
-
-    except json.JSONDecodeError as e:
-        print("Fehler: Die Antwort von Gemini konnte nicht als JSON interpretiert werden.")
-        return {"error": "Die Antwort von Gemini konnte nicht als JSON interpretiert werden."}
-    except ValueError as ve:
-        print(f"Wertfehler: {ve}")
-        return {"error": str(ve)}
-    except Exception as e:
-        print(f"Allgemeiner Fehler: {e}")
-        return {"error": f"Fehler bei der Gemini-Anfrage: {e}"}
-
 def main():
-    """
-    Hauptfunktion des Programms.
-    """
-    prompt_file = 'prompt.md'
-    data_file = 'data.json'
-    history_file = 'history.md'
-
-    # Daten und Prompt laden
-    prompt = load_text(prompt_file)
-
-    # Überprüfen, ob history.md existiert und initialisieren, wenn nicht
-    if not os.path.exists(history_file):
-        with open(history_file, 'w', encoding='utf-8') as f:
-            f.write("**Spielverlauf**\n\n")  # Initialer Inhalt für die History-Datei
-
-    # Überprüfen, ob data.json existiert und initialisieren, wenn nicht
-    if not os.path.exists(data_file):
-        data = {
-            "name": "",
-            "faction": "",
-            "trademarks": {},
-            "flaws": [],
-            "drive": {
-                "description": "",
-                "track": [False] * 10
-            },
-            "edges": [],
-            "stunt_points": 0,
-            "inventory": [],
-            "xp": 0,
-            "current_quest": None,
-            "locations": {
-                "known": [],
-                "current_location": None,
-                "routes": {}
-            },
-            "contacts": {
-                "allies": [],
-                "factions_status": {},
-                "current_intel": ""
-            },
-            "enemies": {
-                "known": [],
-                "suspected": [],
-                "status": {}
-            },
-            "quest_log": [],
-            "status_effects": []
-        }
-        with open(data_file, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2)
-    else:
-        data = load_data(data_file)
-
-    # Initialisieren der Geschichte
-    history = "Die Charaktererstellung muss gestartet werden."  # Nachricht für leere Geschichte
-
-    current_phase = "Spielphase"  # Setzen Sie die Phase auf "Spielphase"
-
-    print("Wenn die Charaktererstellung erforderlich ist, antworte mit Charakter erstellen.")
-
-    # Hauptschleife des Spiels
+    # Konfigurations-Handler initialisieren
+    config = ConfigHandler()
+    
+    # Sitzungs-Handler initialisieren
+    session = SessionHandler()
+    
+    # Terminal-UI erstellen
+    terminal_width = config.get("ui.terminal_width", 80)
+    ui = TerminalUI(width=terminal_width)
+    
+    # LLM-Interface initialisieren
+    api_key = config.get("api_key") or os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        ui.display_text("Kein API-Schlüssel gefunden. Bitte setze die Umgebungsvariable GOOGLE_API_KEY.")
+        return
+    
+    model = config.get("model", "gemini-2.0-flash")
+    llm = LLMInterface(api_key=api_key, model=model)
+    
+    # Datenverzeichnisse aus der Konfiguration
+    char_dir = config.get("data_dirs.characters", "data/characters")
+    template_dir = config.get("data_dirs.templates", "data/templates")
+    
+    # Charakterverwaltung erstellen
+    character_manager = CharacterManager(char_dir)
+    template_manager = TemplateManager(template_dir)
+    gear_manager = GearManager(f"{template_dir}/gear.json")
+    
+    # LLM-Integration erstellen
+    llm_integration = CharacterLLMIntegration(llm)
+    
+    # Charaktererstellung erstellen
+    character_creation = CharacterCreation(character_manager, template_manager, gear_manager)
+    
+    # Würfelsystem erstellen
+    dice_system = NCODiceSystem()
+    check_manager = CheckManager(dice_system)
+    
+    # Game-State-Manager erstellen
+    game_state_manager = GameStateManager(config.get("data_dirs.game_states", "data/game_states"))
+    
+    # UIs erstellen
+    character_creation_ui = CharacterCreationUI(ui, character_creation)
+    character_display = CharacterDisplay(ui)
+    
+    # Lade aktiven Spielzustand, falls vorhanden
+    active_game_id = session.get_session_value("active_game_state_id")
+    if active_game_id:
+        game_state_manager.load_game(active_game_id)
+    
+    # Hauptmenü
     while True:
-        user_input = input("\nDeine Aktion: ")
-        print(f"Benutzereingabe: {user_input}")  # Debug-Ausgabe
-
-        # Kontext für Gemini erstellen
-        gemini_response = get_gemini_response(prompt, user_input, data, history, current_phase)
-
-        # Überprüfen, ob die Antwort einen Fehler enthält
-        if "error" in gemini_response:
-            print(gemini_response["error"])
-            continue
-
-        # Antwort des Spielleiters
-        game_master_response = gemini_response.get("response", "")
-        data_update = gemini_response.get("data_update", {})
-        history_update = gemini_response.get("history_update", "")
-
-        # Antwort ausgeben
-        print(f"\n{game_master_response}")
-
-        # Selektives Aktualisieren der Datenstruktur
-        if isinstance(data_update, dict):
-            for key, value in data_update.items():
-                data[key] = value  # Aktualisiere nur vorhandene Schlüssel
-        else:
-            print("Warnung: data_update ist kein Dictionary.  Wird ignoriert.")
-
-        # History aktualisieren
-        with open(history_file, 'a', encoding='utf-8') as f:
-            f.write(f"\n\n**Spieler:** {user_input}\n")
-            f.write(f"**Spielleiter:** {game_master_response}\n")
-            f.write(f"**Aktualisierte Geschichte:** {history_update}\n")
-
-        # Aktualisieren der data.json
-        with open(data_file, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2)
-
-        # History neu laden
-        history = load_text(history_file)
-
-        # Optional: Spiel beenden, wenn der Spieler etwas Bestimmtes eingibt
-        if user_input.lower() == "ende":
-            print("Spiel beendet.")
+        ui.clear_screen()
+        ui.display_title("NEON CITY OVERDRIVE: TERMINAL EDITION")
+        
+        options = [
+            "Neuen Charakter erstellen",
+            "Charaktere anzeigen",
+            "Spiel starten",
+            "Spielstand laden",
+            "Spielstand speichern",
+            "Einstellungen",
+            "Beenden"
+        ]
+        
+        choice = ui.get_choice("Hauptmenü:", options)
+        
+        if choice == 0:  # Neuen Charakter erstellen
+            character_data = character_creation_ui.start_creation()
+            
+            if character_data:
+                # Aktiven Charakter in der Sitzung speichern
+                session.set_session_value("active_character_id", character_data.get("id"))
+                
+                # Neues Spiel starten
+                if ui.get_yes_no("Möchtest du mit diesem Charakter ein neues Spiel starten?"):
+                    game_state = game_state_manager.new_game(character_data.get("id"))
+                    session.set_session_value("active_game_state_id", game_state.id)
+        
+        elif choice == 1:  # Charaktere anzeigen
+            characters = character_manager.get_all_characters()
+            selected_id = character_display.display_character_list(characters)
+            
+            if selected_id:
+                character_data = character_manager.get_character(selected_id)
+                character_display.display_character_sheet(character_data)
+                
+                # Charakter als aktiv setzen
+                if ui.get_yes_no("Möchtest du diesen Charakter verwenden?"):
+                    session.set_session_value("active_character_id", selected_id)
+        
+        elif choice == 2:  # Spiel starten
+            # Aktiven Charakter prüfen
+            char_id = session.get_session_value("active_character_id")
+            if not char_id:
+                # Charakter auswählen
+                characters = character_manager.get_all_characters()
+                
+                if not characters:
+                    ui.display_text("Keine Charaktere vorhanden. Bitte erstelle zuerst einen Charakter.")
+                    ui.display_text("\nDrücke Enter, um fortzufahren...")
+                    input()
+                    continue
+                
+                selected_id = character_display.display_character_list(characters)
+                
+                if selected_id:
+                    char_id = selected_id
+                    session.set_session_value("active_character_id", char_id)
+                else:
+                    continue
+            
+            # Aktiven Spielzustand prüfen
+            game_id = session.get_session_value("active_game_state_id")
+            if not game_id:
+                # Neues Spiel erstellen
+                game_state = game_state_manager.new_game(char_id)
+                session.set_session_value("active_game_state_id", game_state.id)
+            
+            # Hier würde die Spielimplementierung beginnen
+            # Dies ist für die nächste Phase vorgesehen
+            ui.clear_screen()
+            ui.display_title("SPIEL STARTEN")
+            ui.display_text("Spielimplementierung noch nicht verfügbar in dieser Phase.")
+            ui.display_text("\nDrücke Enter, um fortzufahren...")
+            input()
+        
+        elif choice == 3:  # Spielstand laden
+            saved_games = game_state_manager.get_saved_games()
+            
+            if not saved_games:
+                ui.display_text("Keine Spielstände vorhanden.")
+                ui.display_text("\nDrücke Enter, um fortzufahren...")
+                input()
+                continue
+            
+            options = [f"{game['id']} - Charakter: {game['active_character_id']}" for game in saved_games]
+            game_choice = ui.get_choice("Wähle einen Spielstand:", options)
+            
+            if 0 <= game_choice < len(saved_games):
+                game_id = saved_games[game_choice]["id"]
+                game_state = game_state_manager.load_game(game_id)
+                
+                if game_state:
+                    ui.display_text(f"Spielstand '{game_id}' geladen.")
+                    session.set_session_value("active_game_state_id", game_id)
+                    session.set_session_value("active_character_id", game_state.active_character_id)
+                else:
+                    ui.display_text(f"Fehler beim Laden des Spielstands '{game_id}'.")
+                
+                ui.display_text("\nDrücke Enter, um fortzufahren...")
+                input()
+        
+        elif choice == 4:  # Spielstand speichern
+            game_id = session.get_session_value("active_game_state_id")
+            
+            if not game_id or not game_state_manager.active_game_state:
+                ui.display_text("Kein aktives Spiel vorhanden.")
+                ui.display_text("\nDrücke Enter, um fortzufahren...")
+                input()
+                continue
+            
+            save_name = ui.get_input("Gib einen Namen für den Spielstand ein (leer für aktuellen Namen):")
+            
+            if save_name:
+                success = game_state_manager.save_game_as(save_name)
+                if success:
+                    ui.display_text(f"Spielstand als '{save_name}' gespeichert.")
+                    session.set_session_value("active_game_state_id", save_name)
+                else:
+                    ui.display_text(f"Fehler beim Speichern des Spielstands als '{save_name}'.")
+            else:
+                success = game_state_manager.save_game()
+                if success:
+                    ui.display_text(f"Spielstand '{game_id}' gespeichert.")
+                else:
+                    ui.display_text(f"Fehler beim Speichern des Spielstands '{game_id}'.")
+            
+            ui.display_text("\nDrücke Enter, um fortzufahren...")
+            input()
+        
+        elif choice == 5:  # Einstellungen
+            ui.clear_screen()
+            ui.display_title("EINSTELLUNGEN")
+            
+            options = [
+                f"Terminalbreite: {config.get('ui.terminal_width')}",
+                f"Animationsgeschwindigkeit: {config.get('ui.animation_speed')}",
+                f"API-Schlüssel: {'*****' + api_key[-4:] if api_key else 'Nicht gesetzt'}",
+                f"Modell: {config.get('model')}"
+            ]
+            
+            setting_choice = ui.get_choice("Wähle eine Einstellung zum Ändern:", options)
+            
+            if setting_choice == 0:  # Terminalbreite
+                width = ui.get_input("Neue Terminalbreite (60-120):")
+                try:
+                    width = int(width)
+                    if 60 <= width <= 120:
+                        config.set("ui.terminal_width", width)
+                        ui.width = width
+                except ValueError:
+                    ui.display_text("Ungültige Eingabe.")
+            
+            elif setting_choice == 1:  # Animationsgeschwindigkeit
+                speed = ui.get_input("Neue Animationsgeschwindigkeit (0.001-0.1):")
+                try:
+                    speed = float(speed)
+                    if 0.001 <= speed <= 0.1:
+                        config.set("ui.animation_speed", speed)
+                except ValueError:
+                    ui.display_text("Ungültige Eingabe.")
+            
+            elif setting_choice == 2:  # API-Schlüssel
+                key = ui.get_input("Neuer API-Schlüssel (leer für unverändert):")
+                if key:
+                    config.set("api_key", key)
+                    api_key = key
+                    llm = LLMInterface(api_key=api_key, model=model)
+            
+            elif setting_choice == 3:  # Modell
+                options = ["gemini-2.0-flash", "gemini-2.0-pro", "gemini-1.5-flash"]
+                model_choice = ui.get_choice("Wähle ein Modell:", options)
+                model = options[model_choice]
+                config.set("model", model)
+                llm = LLMInterface(api_key=api_key, model=model)
+            
+            ui.display_text("Einstellungen gespeichert.")
+            ui.display_text("\nDrücke Enter, um fortzufahren...")
+            input()
+        
+        elif choice == 6:  # Beenden
+            # Letzten Zustand speichern
+            if game_state_manager.active_game_state:
+                game_state_manager.save_game()
+            
             break
 
 if __name__ == "__main__":
