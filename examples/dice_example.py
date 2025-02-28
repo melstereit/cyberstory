@@ -1,6 +1,6 @@
 # examples/dice_example.py
-from cyberstory.mechanics.check_manager import CheckManager
-from cyberstory.mechanics.nco_dice_system import NCODiceSystem
+from cyberstory import CheckManager
+from cyberstory import NCODiceSystem
 
 
 def main():
