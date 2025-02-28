@@ -202,16 +202,16 @@ cyberpunk_rpg/
 ## 6. Implementierungsplan
 
 ### Phase 1: Grundlegende Funktionalität
-1. Terminal-UI und Grundgerüst
+1. [x] Terminal-UI und Grundgerüst
 2. JSON-Datenbankintegration
-3. Grundlegende Würfelmechanik
+3. [x] Grundlegende Würfelmechanik
 4. LLM-API-Integration
 
 ### Phase 2: Charaktersystem
-1. Charaktererstellung
-2. Trademarks, Edges, Flaws
-3. Inventarverwaltung
-4. Charakterstatusanzeige
+1. [x] Charaktererstellung
+2. [x] Trademarks, Edges, Flaws
+3. [x] Inventarverwaltung
+4. [x] Charakterstatusanzeige
 
 ### Phase 3: Spielmechanik
 1. Check-System implementieren
