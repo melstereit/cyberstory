@@ -203,7 +203,7 @@ cyberpunk_rpg/
 
 ### Phase 1: Grundlegende Funktionalität
 1. [x] Terminal-UI und Grundgerüst
-2. JSON-Datenbankintegration
+2. [x] JSON-Datenbankintegration
 3. [x] Grundlegende Würfelmechanik
 4. [x] LLM-API-Integration
 
