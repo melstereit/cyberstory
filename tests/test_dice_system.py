@@ -2,7 +2,7 @@
 import random
 import unittest
 
-from cyberstory.mechanics.nco_dice_system import NCODiceSystem
+from cyberstory import NCODiceSystem
 
 
 class TestNCODiceSystem(unittest.TestCase):
