@@ -4,7 +4,7 @@ import os
 import random
 from typing import Optional
 
-from mechanics.interfaces import Item
+from cyberstory.mechanics.interfaces import Item
 
 
 class GearManager:

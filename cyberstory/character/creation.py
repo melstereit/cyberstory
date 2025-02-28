@@ -2,10 +2,10 @@
 import random
 from typing import Dict, List, Any
 
-from character.gear_manager import GearManager
-from character.manager import CharacterManager
-from character.templates import TemplateManager
-from mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
+from cyberstory.character.gear_manager import GearManager
+from cyberstory.character.manager import CharacterManager
+from cyberstory.character.templates import TemplateManager
+from cyberstory.mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
 
 
 class CharacterCreation:

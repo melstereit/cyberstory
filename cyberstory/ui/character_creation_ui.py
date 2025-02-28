@@ -1,8 +1,8 @@
 # ui/character_creation_ui.py
 from typing import Dict, Any, Optional
 
-from character.creation import CharacterCreation
-from ui.terminal import TerminalUI
+from cyberstory.character.creation import CharacterCreation
+from cyberstory.ui.terminal import TerminalUI
 
 
 class CharacterCreationUI:

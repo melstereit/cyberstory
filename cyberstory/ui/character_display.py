@@ -1,7 +1,7 @@
 # ui/character_display.py
 from typing import Dict, List, Any, Optional
 
-from ui.terminal import TerminalUI
+from cyberstory.ui.terminal import TerminalUI
 
 
 class CharacterDisplay:

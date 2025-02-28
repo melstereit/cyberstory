@@ -2,7 +2,7 @@
 import random
 from typing import Dict, Any, Tuple
 
-from mechanics.interfaces import DiceSystemInterface, DiceResult
+from cyberstory.mechanics.interfaces import DiceSystemInterface, DiceResult
 
 
 class NCODiceSystem(DiceSystemInterface):

@@ -2,7 +2,7 @@
 import uuid
 from typing import Dict, Any
 
-from mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
+from cyberstory.mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
 
 
 class Character:

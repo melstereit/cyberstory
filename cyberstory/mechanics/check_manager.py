@@ -1,8 +1,8 @@
 # mechanics/check_manager.py
 from typing import Dict, Any
 
-from mechanics.interfaces import DiceSystemInterface
-from mechanics.modifiers import ModifierManager
+from cyberstory.mechanics.interfaces import DiceSystemInterface
+from cyberstory.mechanics.modifiers import ModifierManager
 
 
 class CheckManager:

@@ -1,7 +1,7 @@
 # character/llm_integration.py
 from typing import Dict, List, Any
 
-from ai.llm_interface import LLMInterface
+from cyberstory.ai.llm_interface import LLMInterface
 
 
 class CharacterLLMIntegration:
