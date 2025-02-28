@@ -1,10 +1,25 @@
 {
-  "name": "",
-  "faction": "",
-  "trademarks": {},
+  "name": "Exodus",
+  "faction": "Anarchisten",
+  "trademarks": {
+    "Arcology Brat": {
+      "triggers": [
+        "Nahkampf",
+        "Schusswaffen",
+        "\u00dcberleben"
+      ]
+    },
+    "Partisan": {
+      "triggers": [
+        "Guerilla-Taktik",
+        "Sabotage",
+        "Technologie"
+      ]
+    }
+  },
   "flaws": [],
   "drive": {
-    "description": "",
+    "description": null,
     "track": [
       false,
       false,
@@ -19,7 +34,7 @@
     ]
   },
   "edges": [],
-  "stunt_points": 0,
+  "stunt_points": 3,
   "inventory": [],
   "xp": 0,
   "current_quest": null,
@@ -31,7 +46,7 @@
   "contacts": {
     "allies": [],
     "factions_status": {},
-    "current_intel": ""
+    "current_intel": null
   },
   "enemies": {
     "known": [],
