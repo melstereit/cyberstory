@@ -1,4 +1,4 @@
-from ai.interface import LLMInterface
+from ai.llm_interface import LLMInterface
 from character.character import Character
 from character.creation import CharacterCreation
 from character.gear_manager import GearManager, Item
