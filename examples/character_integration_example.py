@@ -1,18 +1,18 @@
 # main.py
 import os
 
-from cyberstory.ai.llm_interface import LLMInterface
+from cyberstory import LLMInterface
 
-from cyberstory.character.creation import CharacterCreation
-from cyberstory.character.gear_manager import GearManager
-from cyberstory.character.llm_integration import CharacterLLMIntegration
-from cyberstory.character.manager import CharacterManager
-from cyberstory.character.templates import TemplateManager
-from cyberstory.mechanics.check_manager import CheckManager
-from cyberstory.mechanics.nco_dice_system import NCODiceSystem
-from cyberstory.ui.character_creation_ui import CharacterCreationUI
-from cyberstory.ui.character_display import CharacterDisplay
-from cyberstory.ui.terminal import TerminalUI
+from cyberstory import CharacterCreation
+from cyberstory import GearManager
+from cyberstory import CharacterLLMIntegration
+from cyberstory import CharacterManager
+from cyberstory import TemplateManager
+from cyberstory import CheckManager
+from cyberstory import NCODiceSystem
+from cyberstory import CharacterCreationUI
+from cyberstory import CharacterDisplay
+from cyberstory import TerminalUI
 
 
 def main():

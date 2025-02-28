@@ -3,8 +3,8 @@ import json
 import os
 from typing import Dict, List, Any, Optional
 
-from cyberstory.character.character import Character
-from cyberstory.mechanics.interfaces import CharacterInterface, Trademark, Edge, Flaw, Drive, Item
+from cyberstory import Character
+from cyberstory import CharacterInterface, Trademark, Edge, Flaw, Drive, Item
 
 
 class CharacterManager(CharacterInterface):
