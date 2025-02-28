@@ -1,1 +1,4 @@
-api_key.env
+/.env
+/cyberstory.iml
+/.venv/
+/.idea/
