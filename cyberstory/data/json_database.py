@@ -1,9 +1,10 @@
 # data/json_database.py
-from data.interfaces import DatabaseInterface
-from typing import Dict, List, Any, Optional, Type, TypeVar, Generic
 import json
 import os
 from pathlib import Path
+from typing import Dict, List, Any, Optional, Type, TypeVar
+
+from data_interfaces import DatabaseInterface
 
 T = TypeVar('T')
 

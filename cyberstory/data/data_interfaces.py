@@ -1,6 +1,6 @@
 # data/interfaces.py
-from abc import ABC, abstractmethod
-from typing import Dict, List, Any, Optional, Type, TypeVar, Generic
+from abc import abstractmethod
+from typing import Dict, List, Any, Optional, TypeVar, Generic
 
 T = TypeVar('T')
 

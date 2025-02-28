@@ -1,19 +1,8 @@
 # main.py (überarbeitete Version mit Datenbankintegration)
-from ui.terminal import TerminalUI
-from ui.character_creation_ui import CharacterCreationUI
-from ui.character_display import CharacterDisplay
-from character.manager import CharacterManager
-from character.templates import TemplateManager
-from character.creation import CharacterCreation
-from character.gear_manager import GearManager
-from character.llm_integration import CharacterLLMIntegration
-from ai.llm_interface import LLMInterface
-from mechanics.nco_dice_system import NCODiceSystem
-from mechanics.check_manager import CheckManager
-from data.config_handler import ConfigHandler
-from data.session_handler import SessionHandler
-from data.game_state import GameStateManager
 import os
+
+from cyberstory import *
+
 
 def main():
     # Konfigurations-Handler initialisieren

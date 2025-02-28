@@ -1,11 +1,10 @@
 # mechanics/check_manager.py
+import time
+import uuid
 from typing import Dict, Any, List
 
-from cyberstory import DiceSystemInterface
-from cyberstory.mechanics.modifiers import ModifierManager
-from data.json_database import JSONDatabase
-import uuid
-import time
+from cyberstory import DiceSystemInterface, ModifierManager, JSONDatabase
+
 
 class CheckResult:
     """Repräsentiert das Ergebnis einer Würfelprobe mit zusätzlichen Metadaten."""

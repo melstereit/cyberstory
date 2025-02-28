@@ -1,8 +1,9 @@
 # data/config_handler.py
-from typing import Dict, List, Any, Optional
 import json
 import os
 from pathlib import Path
+from typing import Dict, Any
+
 
 class ConfigHandler:
     """

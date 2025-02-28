@@ -1,10 +1,10 @@
 # character/manager.py
-import json
-import os
 from typing import Dict, List, Any, Optional
 
 from cyberstory import Character
-from cyberstory import CharacterInterface, Trademark, Edge, Flaw, Drive, Item
+from cyberstory import CharacterInterface, Trademark
+from cyberstory import JSONDatabase
+
 
 class CharacterManager(CharacterInterface):
     """Verwaltet Charaktere und deren Persistenz."""
