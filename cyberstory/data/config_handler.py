@@ -12,7 +12,7 @@ class ConfigHandler:
     Diese Klasse lädt und speichert globale Konfigurationseinstellungen.
     """
     
-    def __init__(self, config_file: str = "data/config.json"):
+    def __init__(self, config_file: str = "resources/config.json"):
         """
         Initialisiert den ConfigHandler.
         
@@ -29,9 +29,9 @@ class ConfigHandler:
             "api_key": None,
             "model": "gemini-2.0-flash",
             "data_dirs": {
-                "characters": "data/characters",
-                "game_states": "data/game_states",
-                "templates": "data/templates"
+                "characters": "resources/characters",
+                "game_states": "resources/game_states",
+                "templates": "resources/templates"
             },
             "ui": {
                 "terminal_width": 80,

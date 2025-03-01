@@ -14,7 +14,7 @@ class SessionHandler:
     einschließlich temporärer Daten, die zwischen den Sitzungen verloren gehen können.
     """
     
-    def __init__(self, session_file: str = "data/current_session.json"):
+    def __init__(self, session_file: str = "resources/current_session.json"):
         """
         Initialisiert den SessionHandler.
         

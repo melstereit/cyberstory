@@ -96,7 +96,7 @@ class GameStateManager:
     Diese Klasse bietet Methoden zum Speichern, Laden und Verwalten des Spielzustands.
     """
     
-    def __init__(self, data_dir: str = "data/game_states"):
+    def __init__(self, data_dir: str = "resources/game_states"):
         """
         Initialisiert den GameStateManager.
         
