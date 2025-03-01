@@ -3,9 +3,8 @@ import time
 import uuid
 from typing import Dict, Any, List
 
-from cyberstory.data.json_database import JSONDatabase
-from cyberstory.mechanics.interfaces import DiceSystemInterface
-from cyberstory.mechanics.modifiers import ModifierManager
+from mechanics.interfaces import DiceSystemInterface
+from mechanics.modifiers import ModifierManager
 
 
 class CheckResult:
@@ -186,3 +185,7 @@ class CheckManager:
                 description += f"- {modifier}\n"
         
         return description
+
+def some_function():
+    from data.json_database import JSONDatabase  # Import hier
+    # Verwende JSONDatabase hier

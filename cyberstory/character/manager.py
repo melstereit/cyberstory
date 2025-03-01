@@ -74,45 +74,37 @@ class CharacterManager(CharacterInterface):
         return result
 
     def add_edge(self, character_id: str, edge: Edge) -> bool:
+        """Fügt einem Charakter ein Edge hinzu."""
         if character_id not in self.characters:
             return False
-
-        if 'edges' not in self.characters[character_id]:
-            self.characters[character_id]['edges'] = []
-
-        self.characters[character_id]['edges'].append(edge.to_dict())
-        self._save_character(character_id)
-        return True
+        
+        # Verwende die add_edge-Methode der Character-Klasse
+        result = self.characters[character_id].add_edge(edge)
+        if result:
+            # In der Datenbank aktualisieren
+            self.db.save(self.characters[character_id].to_dict())
+        
+        return result
 
     def add_flaw(self, character_id: str, flaw: Flaw) -> bool:
-        if character_id not in self.characters:
-            return False
-
-        if 'flaws' not in self.characters[character_id]:
-            self.characters[character_id]['flaws'] = []
-
-        self.characters[character_id]['flaws'].append(flaw.to_dict())
-        self._save_character(character_id)
-        return True
+        """Fügt einem Charakter einen Flaw hinzu."""
+        # Implementierung hier
+        pass  # Ersetze dies mit der tatsächlichen Logik
 
     def add_item(self, character_id: str, item: Item) -> bool:
-        if character_id not in self.characters:
-            return False
-
-        if 'inventory' not in self.characters[character_id]:
-            self.characters[character_id]['inventory'] = []
-
-        self.characters[character_id]['inventory'].append(item.to_dict())
-        self._save_character(character_id)
-        return True
+        """Fügt einem Charakter ein Item hinzu."""
+        # Implementierung hier
+        pass  # Ersetze dies mit der tatsächlichen Logik
 
     def set_drive(self, character_id: str, drive: Drive) -> bool:
-        if character_id not in self.characters:
-            return False
+        """Setzt den Drive für einen Charakter."""
+        # Implementierung hier
+        pass  # Ersetze dies mit der tatsächlichen Logik
 
-        self.characters[character_id]['drive'] = drive.to_dict()
-        self._save_character(character_id)
-        return True
+    def update_character(self, character_id: str, updates: Dict[str, Any]) -> bool:
+        """Aktualisiert die Charakterdaten."""
+        # Implementierung hier
+        pass  # Ersetze dies mit der tatsächlichen Logik
 
     def _save_character(self, character_id: str) -> None:
         self.db.save(self.characters[character_id])
@@ -128,50 +120,27 @@ class CharacterManager(CharacterInterface):
             Dict mit den Charakterdaten oder None bei Fehler
         """
         if character_id in self.characters:
+            # Character is in cache
             return self.characters[character_id].to_dict()
         
-        # Versuche, aus der Datenbank zu laden
+        # Try to load from database
+        print(f"Debug: Loading character {character_id} from database")
         char_data = self.db.load(character_id)
+        
         if char_data:
-            character = Character.from_dict(char_data)
+            # Successfully loaded from database
+            if isinstance(char_data, dict):
+                character = Character.from_dict(char_data)
+            else:
+                # Already a Character object
+                character = char_data
+                
             self.characters[character_id] = character
             return character.to_dict()
+        else:
+            print(f"Debug: Failed to load character {character_id} from database")
         
         return None
-    
-    def update_character(self, character_id: str, updates: Dict[str, Any]) -> bool:
-        """
-        Aktualisiert die Charakterdaten.
-        
-        Args:
-            character_id: ID des Charakters
-            updates: Dictionary mit den zu aktualisierenden Werten
-        
-        Returns:
-            bool: True, wenn erfolgreich, sonst False
-        """
-        if character_id not in self.characters:
-            char_data = self.db.load(character_id)
-            if char_data:
-                self.characters[character_id] = Character.from_dict(char_data)
-            else:
-                return False
-        
-        character = self.characters[character_id]
-        
-        try:
-            # Aktualisiere die Charakterdaten
-            # (Implementation wie zuvor)
-            
-            # In der Datenbank aktualisieren
-            self.db.save(character.to_dict())
-            
-            return True
-            
-        except Exception as e:
-            print(f"Fehler beim Aktualisieren des Charakters: {e}")
-        
-        return False
     
     def get_all_characters(self) -> List[Dict[str, Any]]:
         """

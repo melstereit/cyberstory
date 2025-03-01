@@ -41,7 +41,9 @@ class JSONDatabase(DatabaseInterface[T]):
         Returns:
             Path: Der Dateipfad
         """
-        return self.data_dir / f"{id_value}.json"
+        path = self.data_dir / f"{id_value}.json"
+        print(f"Debug: File path: {path}, exists: {path.exists()}")
+        return path
     
     def save(self, data: T, id_field: str = "id") -> bool:
         """
@@ -210,3 +212,7 @@ class JSONDatabase(DatabaseInterface[T]):
         """
         file_path = self._get_file_path(id_value)
         return file_path.exists()
+
+def some_other_function():
+    from mechanics.check_manager import CheckManager  # Import hier
+    # Verwende CheckManager hier

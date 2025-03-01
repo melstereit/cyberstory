@@ -1,0 +1,10 @@
+{
+  "active_game_state_id": null,
+  "active_character_id": null,
+  "ui_settings": {
+    "terminal_width": 80,
+    "animation_speed": 0.01
+  },
+  "last_access": 1740796119.3049119,
+  "test_value": "Dies ist ein Test"
+}

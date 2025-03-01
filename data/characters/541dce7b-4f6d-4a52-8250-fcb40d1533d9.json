@@ -1,0 +1,55 @@
+{
+  "id": "541dce7b-4f6d-4a52-8250-fcb40d1533d9",
+  "name": "Raven",
+  "faction": "Anarchisten",
+  "trademarks": {
+    "Codeslinger": {
+      "name": "Codeslinger",
+      "triggers": [
+        "Hacking",
+        "Security systems",
+        "Computers"
+      ],
+      "description": ""
+    },
+    "Infiltrator": {
+      "name": "Infiltrator",
+      "triggers": [
+        "Stealth",
+        "Locks",
+        "Security systems"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Hacking",
+      "trademark": "Codeslinger",
+      "description": ""
+    },
+    {
+      "name": "Security systems",
+      "trademark": "Codeslinger",
+      "description": ""
+    },
+    {
+      "name": "Stealth",
+      "trademark": "Infiltrator",
+      "description": ""
+    }
+  ],
+  "flaws": [],
+  "drive": null,
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [],
+  "xp": 0,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [],
+  "conditions": []
+}

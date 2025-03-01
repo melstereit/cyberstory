@@ -1,0 +1,19 @@
+{
+  "api_key": null,
+  "model": "gemini-2.0-flash",
+  "data_dirs": {
+    "characters": "resources/characters",
+    "game_states": "resources/game_states",
+    "templates": "resources/templates"
+  },
+  "ui": {
+    "terminal_width": 100,
+    "animation_speed": 0.01,
+    "color_enabled": true
+  },
+  "game": {
+    "max_history_entries": 100,
+    "max_stunt_points": 3,
+    "max_hits": 3
+  }
+}

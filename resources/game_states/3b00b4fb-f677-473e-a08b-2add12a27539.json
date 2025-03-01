@@ -1,0 +1,14 @@
+{
+  "id": "3b00b4fb-f677-473e-a08b-2add12a27539",
+  "active_character_id": "31b9c4a6-ad54-4dd7-8de4-aeed3e3cf8ff",
+  "current_scene": {
+    "name": "The Bar",
+    "description": "Ein düsterer Ort mit vielen zwielichtigen Gestalten."
+  },
+  "quest_data": {},
+  "world_state": {},
+  "history": [
+    "Charakter betritt die Bar",
+    "Charakter spricht mit dem Barkeeper"
+  ]
+}
