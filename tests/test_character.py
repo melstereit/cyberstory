@@ -1,9 +1,21 @@
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import unittest
 
-from character.manager import CharacterManager
+# Füge das übergeordnete Verzeichnis zum Python-Pfad hinzu
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from cyberstory.character.manager import CharacterManager
 from cyberstory.mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
+
+class TestCharacterManager(unittest.TestCase):
+    def setUp(self):
+        self.manager = CharacterManager()
+
+    def test_create_character(self):
+        character = self.manager.create_character("Test Character")
+        self.assertIsNotNone(character)
+        self.assertEqual(character.name, "Test Character")
 
 def test_character_system():
     print("\n=== Charaktersystem-Test ===")
@@ -102,4 +114,4 @@ def test_character_system():
     print("\nTest abgeschlossen.")
 
 if __name__ == "__main__":
-    test_character_system()
+    unittest.main()
