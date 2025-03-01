@@ -3,7 +3,9 @@ import time
 import uuid
 from typing import Dict, Any, List
 
-from cyberstory import DiceSystemInterface, ModifierManager, JSONDatabase
+from cyberstory.data.json_database import JSONDatabase
+from cyberstory.mechanics.interfaces import DiceSystemInterface
+from cyberstory.mechanics.modifiers import ModifierManager
 
 
 class CheckResult:

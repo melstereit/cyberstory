@@ -1,9 +1,9 @@
 # character/manager.py
 from typing import Dict, List, Any, Optional
 
-from cyberstory import Character
-from cyberstory import CharacterInterface, Trademark
-from cyberstory import JSONDatabase
+from cyberstory.character.character import Character
+from cyberstory.data.json_database import JSONDatabase
+from cyberstory.mechanics.interfaces import CharacterInterface, Trademark, Edge, Flaw, Item, Drive
 
 
 class CharacterManager(CharacterInterface):
@@ -72,8 +72,50 @@ class CharacterManager(CharacterInterface):
             self.db.save(self.characters[character_id].to_dict())
         
         return result
-    
-    # ... (weitere Methoden wie add_edge, add_flaw usw. ähnlich anpassen)
+
+    def add_edge(self, character_id: str, edge: Edge) -> bool:
+        if character_id not in self.characters:
+            return False
+
+        if 'edges' not in self.characters[character_id]:
+            self.characters[character_id]['edges'] = []
+
+        self.characters[character_id]['edges'].append(edge.to_dict())
+        self._save_character(character_id)
+        return True
+
+    def add_flaw(self, character_id: str, flaw: Flaw) -> bool:
+        if character_id not in self.characters:
+            return False
+
+        if 'flaws' not in self.characters[character_id]:
+            self.characters[character_id]['flaws'] = []
+
+        self.characters[character_id]['flaws'].append(flaw.to_dict())
+        self._save_character(character_id)
+        return True
+
+    def add_item(self, character_id: str, item: Item) -> bool:
+        if character_id not in self.characters:
+            return False
+
+        if 'inventory' not in self.characters[character_id]:
+            self.characters[character_id]['inventory'] = []
+
+        self.characters[character_id]['inventory'].append(item.to_dict())
+        self._save_character(character_id)
+        return True
+
+    def set_drive(self, character_id: str, drive: Drive) -> bool:
+        if character_id not in self.characters:
+            return False
+
+        self.characters[character_id]['drive'] = drive.to_dict()
+        self._save_character(character_id)
+        return True
+
+    def _save_character(self, character_id: str) -> None:
+        self.db.save(self.characters[character_id])
     
     def get_character(self, character_id: str) -> Optional[Dict[str, Any]]:
         """

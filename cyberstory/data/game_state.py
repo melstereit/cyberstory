@@ -2,7 +2,7 @@
 import uuid
 from typing import Dict, List, Any, Optional
 
-from json_database import JSONDatabase
+from cyberstory.data.json_database import JSONDatabase
 
 
 class GameState:

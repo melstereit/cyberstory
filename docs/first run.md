@@ -316,7 +316,7 @@ if __name__ == "__main__":
 Wenn du alle Module korrekt implementiert hast, kannst du die Hauptanwendung starten:
 
 ```bash
-cd cyberpunk_rpg
+cd cyberpunk
 python main.py
 ```
 

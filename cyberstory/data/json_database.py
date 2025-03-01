@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Type, TypeVar
 
-from data_interfaces import DatabaseInterface
+from cyberstory.data.data_interfaces import DatabaseInterface
 
 T = TypeVar('T')
 

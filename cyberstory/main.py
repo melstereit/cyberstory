@@ -1,7 +1,23 @@
 # main.py (überarbeitete Version mit Datenbankintegration)
 import os
 
-from cyberstory import *
+from cyberstory import SessionHandler, ConfigHandler
+from cyberstory import TerminalUI
+from cyberstory import LLMInterface
+from cyberstory import CharacterManager
+from cyberstory import TemplateManager
+from cyberstory import GearManager
+from cyberstory import CharacterLLMIntegration
+from cyberstory import CharacterCreation
+from cyberstory import NCODiceSystem
+from cyberstory import CheckManager
+from cyberstory import GameStateManager
+from cyberstory import CharacterCreationUI
+from cyberstory import CharacterDisplay
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 def main():
@@ -16,13 +32,14 @@ def main():
     ui = TerminalUI(width=terminal_width)
     
     # LLM-Interface initialisieren
-    api_key = config.get("api_key") or os.environ.get("GOOGLE_API_KEY")
+    api_key = os.getenv("GOOGLE_API_KEY")
+    # api_key = config.get("api_key") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         ui.display_text("Kein API-Schlüssel gefunden. Bitte setze die Umgebungsvariable GOOGLE_API_KEY.")
         return
     
     model = config.get("model", "gemini-2.0-flash")
-    llm = LLMInterface(api_key=api_key, model=model)
+    llm = LLMInterface(api_key=api_key)
     
     # Datenverzeichnisse aus der Konfiguration
     char_dir = config.get("data_dirs.characters", "data/characters")
