@@ -1,0 +1,113 @@
+{
+  "ranged_weapons": [
+    {
+      "name": "Light Pistol",
+      "tags": [
+        "Concealed",
+        "Quick draw"
+      ],
+      "description": "A small, easily concealable handgun."
+    },
+    {
+      "name": "Heavy Pistol",
+      "tags": [
+        "Intimidating",
+        "Armor piercing"
+      ],
+      "description": "A large-caliber handgun with stopping power."
+    }
+  ],
+  "melee_weapons": [
+    {
+      "name": "Switchblade",
+      "tags": [
+        "Concealed",
+        "Quick"
+      ],
+      "description": "A concealable blade that flips out with the press of a button."
+    },
+    {
+      "name": "Monofilament Whip",
+      "tags": [
+        "Deadly",
+        "Reach"
+      ],
+      "description": "An almost invisible whip that can cut through most materials."
+    }
+  ],
+  "armor": [
+    {
+      "name": "Armored Jacket",
+      "tags": [
+        "Bullet proof",
+        "Concealed"
+      ],
+      "description": "A stylish jacket with bulletproof panels."
+    },
+    {
+      "name": "Combat Armor",
+      "tags": [
+        "Bullet proof",
+        "Energy absorption",
+        "Exoskeleton"
+      ],
+      "description": "Heavy-duty armor for serious combat situations."
+    }
+  ],
+  "vehicles": [
+    {
+      "name": "Motorcycle",
+      "tags": [
+        "Fast",
+        "Agile"
+      ],
+      "description": "A standard motorcycle for quick transportation."
+    },
+    {
+      "name": "Hoverbike",
+      "tags": [
+        "Fly",
+        "Fast",
+        "Flashy"
+      ],
+      "description": "A flashy flying bike that hovers above the ground."
+    }
+  ],
+  "tools": [
+    {
+      "name": "Medipack",
+      "tags": [
+        "Portable",
+        "Well-stocked"
+      ],
+      "description": "A kit with medical supplies for emergency treatment."
+    },
+    {
+      "name": "B&E Kit",
+      "tags": [
+        "Concealed",
+        "Quiet"
+      ],
+      "description": "Tools for breaking and entering without making noise."
+    }
+  ],
+  "cyberware": [
+    {
+      "name": "Cyber Eyes",
+      "tags": [
+        "Thermal imaging",
+        "Camera",
+        "HUD"
+      ],
+      "description": "Replacement eyes with enhanced capabilities."
+    },
+    {
+      "name": "Wired Reflexes",
+      "tags": [
+        "Fast",
+        "Quick draw"
+      ],
+      "description": "Neural enhancements that speed up reaction time."
+    }
+  ]
+}

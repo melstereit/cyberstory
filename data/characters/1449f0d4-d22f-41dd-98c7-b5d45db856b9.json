@@ -1,0 +1,20 @@
+{
+  "id": "1449f0d4-d22f-41dd-98c7-b5d45db856b9",
+  "name": "Test Character",
+  "faction": null,
+  "trademarks": {},
+  "edges": [],
+  "flaws": [],
+  "drive": null,
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [],
+  "xp": 0,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [],
+  "conditions": []
+}

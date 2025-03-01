@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cyberstory
+Version: 2025-02-28
+Summary: A short description of your project
+Home-page: https://github.com/yourusername/your-repo
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# cyberstory
+A Pen and Paper like game using AI as the story teller.
+Notebook: https://notebooklm.google.com/notebook/f3e4c5c2-ebb3-4745-954b-1a2fb29abec0
+

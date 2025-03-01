@@ -1,4 +1,3 @@
-# data/json_database.py
 import json
 import os
 from pathlib import Path

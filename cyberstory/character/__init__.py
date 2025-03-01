@@ -1,4 +1,4 @@
-from .manager import CharacterManager
-from .character import Character
+from cyberstory.character.manager import CharacterManager
+from cyberstory.character.character import Character
 
-__all__ = ['CharacterManager', 'Character'] 
+__all__ = ['CharacterManager', 'Character']

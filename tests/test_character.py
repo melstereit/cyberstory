@@ -1,10 +1,11 @@
 import sys
 import os
+from pathlib import Path
+
+# Füge das Projekt-Stammverzeichnis zum Python-Pfad hinzu
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import unittest
-
-# Füge das übergeordnete Verzeichnis zum Python-Pfad hinzu
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from cyberstory.character.manager import CharacterManager
 from cyberstory.mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
 
@@ -13,9 +14,15 @@ class TestCharacterManager(unittest.TestCase):
         self.manager = CharacterManager()
 
     def test_create_character(self):
-        character = self.manager.create_character("Test Character")
-        self.assertIsNotNone(character)
-        self.assertEqual(character.name, "Test Character")
+        character_data = self.manager.create_character("Test Character")
+        self.assertIsNotNone(character_data)
+        self.assertEqual(character_data.get("name"), "Test Character")
+        
+        # Oder alternativ, wenn du mit dem Charakter-Objekt direkt arbeiten möchtest:
+        # character_id = character_data.get("id")
+        # character_obj = self.manager.characters.get(character_id)
+        # self.assertEqual(character_obj.name, "Test Character")
+
 
 def test_character_system():
     print("\n=== Charaktersystem-Test ===")

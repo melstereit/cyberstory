@@ -1,9 +1,7 @@
-# mechanics/nco_dice_system.py
 import random
 from typing import Dict, Any, Tuple
 
-# Import directly from interfaces instead of from cyberstory
-from .interfaces import DiceSystemInterface, DiceResult
+from cyberstory.mechanics.interfaces import DiceSystemInterface, DiceResult
 
 class NCODiceSystem(DiceSystemInterface):
     """Implementierung des Neon City Overdrive Würfelsystems."""

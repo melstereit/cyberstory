@@ -1,11 +1,10 @@
-# mechanics/__init__.py
-from .interfaces import (
+from cyberstory.mechanics.interfaces import (
     Trademark, Edge, Flaw, Drive, Item, 
     CharacterInterface, DiceResult, DiceSystemInterface
 )
-from .check_manager import CheckManager
-from .modifiers import ModifierManager, DicePoolModifier
-from .nco_dice_system import NCODiceSystem
+from cyberstory.mechanics.check_manager import CheckManager
+from cyberstory.mechanics.modifiers import ModifierManager, DicePoolModifier
+from cyberstory.mechanics.nco_dice_system import NCODiceSystem
 
 __all__ = [
     'Trademark', 'Edge', 'Flaw', 'Drive', 'Item', 

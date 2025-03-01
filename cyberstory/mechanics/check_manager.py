@@ -1,11 +1,10 @@
-# mechanics/check_manager.py
 import time
 import uuid
 from typing import Dict, Any, List
 
-from mechanics.interfaces import DiceSystemInterface
-from mechanics.modifiers import ModifierManager
-
+from cyberstory.mechanics.interfaces import DiceSystemInterface
+from cyberstory.mechanics.modifiers import ModifierManager
+from cyberstory.data.json_database import JSONDatabase
 
 class CheckResult:
     """Repräsentiert das Ergebnis einer Würfelprobe mit zusätzlichen Metadaten."""
@@ -73,16 +72,8 @@ class CheckResult:
 
 
 class CheckManager:
-    """Verwaltet die Durchführung von Würfelproben mit Persistenz."""
-    
+    # Import-Teil in __init__ ändern
     def __init__(self, dice_system: DiceSystemInterface, data_dir: str = "data/checks"):
-        """
-        Initialisiert den Check-Manager.
-        
-        Args:
-            dice_system: Das zu verwendende Würfelsystem
-            data_dir: Verzeichnis für die Check-Ergebnisse
-        """
         self.dice_system = dice_system
         self.modifier_manager = ModifierManager()
         self.db = JSONDatabase(data_dir, CheckResult)

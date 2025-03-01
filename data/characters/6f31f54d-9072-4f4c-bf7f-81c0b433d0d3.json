@@ -1,0 +1,30 @@
+{
+  "id": "6f31f54d-9072-4f4c-bf7f-81c0b433d0d3",
+  "name": "Test Character",
+  "faction": "Anarchisten",
+  "trademarks": {
+    "Codeslinger": {
+      "name": "Codeslinger",
+      "triggers": [
+        "Hacking",
+        "Security systems",
+        "Computers"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [],
+  "flaws": [],
+  "drive": null,
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [],
+  "xp": 0,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [],
+  "conditions": []
+}

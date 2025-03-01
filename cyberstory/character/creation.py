@@ -7,7 +7,6 @@ from cyberstory.character.manager import CharacterManager
 from cyberstory.character.templates import TemplateManager
 from cyberstory.mechanics.interfaces import Trademark, Edge, Flaw, Drive, Item
 
-
 class CharacterCreation:
     """Verwaltet den Charaktererstellungsprozess."""
     
