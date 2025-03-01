@@ -1,0 +1,50 @@
+{
+  "id": "4d77c9f2-6deb-4b61-91c7-52528efafd90",
+  "name": "DebugChar",
+  "faction": "Anarchisten",
+  "trademarks": {
+    "Codeslinger": {
+      "name": "Codeslinger",
+      "triggers": [
+        "Hacking",
+        "Security systems",
+        "Computers"
+      ],
+      "description": ""
+    },
+    "Infiltrator": {
+      "name": "Infiltrator",
+      "triggers": [
+        "Stealth",
+        "Locks",
+        "Security systems"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Hacking",
+      "trademark": "Codeslinger",
+      "description": ""
+    },
+    {
+      "name": "Stealth",
+      "trademark": "Infiltrator",
+      "description": ""
+    }
+  ],
+  "flaws": [],
+  "drive": null,
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [],
+  "xp": 0,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [],
+  "conditions": []
+}

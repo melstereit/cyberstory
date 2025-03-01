@@ -87,19 +87,73 @@ class CharacterManager(CharacterInterface):
         return result
 
     def add_flaw(self, character_id: str, flaw: Flaw) -> bool:
-        """Fügt einem Charakter einen Flaw hinzu."""
-        # Implementierung hier
-        pass  # Ersetze dies mit der tatsächlichen Logik
+        """
+        Fügt einem Charakter einen Flaw hinzu.
+        
+        Args:
+            character_id: ID des Charakters
+            flaw: Der hinzuzufügende Flaw
+        
+        Returns:
+            bool: True, wenn erfolgreich, sonst False
+        """
+        if character_id not in self.characters:
+            return False
+        
+        # Flaw zum Charakter hinzufügen
+        result = self.characters[character_id].add_flaw(flaw)
+        
+        if result:
+            # In der Datenbank aktualisieren
+            self.db.save(self.characters[character_id].to_dict())
+        
+        return result
 
     def add_item(self, character_id: str, item: Item) -> bool:
-        """Fügt einem Charakter ein Item hinzu."""
-        # Implementierung hier
-        pass  # Ersetze dies mit der tatsächlichen Logik
+        """
+        Fügt einem Charakter ein Item hinzu.
+        
+        Args:
+            character_id: ID des Charakters
+            item: Das hinzuzufügende Item
+        
+        Returns:
+            bool: True, wenn erfolgreich, sonst False
+        """
+        if character_id not in self.characters:
+            return False
+        
+        # Item zum Charakter hinzufügen
+        result = self.characters[character_id].add_item(item)
+        
+        if result:
+            # In der Datenbank aktualisieren
+            self.db.save(self.characters[character_id].to_dict())
+        
+        return result
 
     def set_drive(self, character_id: str, drive: Drive) -> bool:
-        """Setzt den Drive für einen Charakter."""
-        # Implementierung hier
-        pass  # Ersetze dies mit der tatsächlichen Logik
+        """
+        Setzt den Drive für einen Charakter.
+        
+        Args:
+            character_id: ID des Charakters
+            drive: Der Drive des Charakters
+            
+        Returns:
+            bool: True, wenn erfolgreich, sonst False
+        """
+        if character_id not in self.characters:
+            return False
+        
+        # Drive für den Charakter setzen
+        result = self.characters[character_id].set_drive(drive)
+        
+        if result:
+            # In der Datenbank aktualisieren
+            self.db.save(self.characters[character_id].to_dict())
+        
+        return result
 
     def update_character(self, character_id: str, updates: Dict[str, Any]) -> bool:
         """Aktualisiert die Charakterdaten."""

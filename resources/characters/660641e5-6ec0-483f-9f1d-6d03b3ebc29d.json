@@ -2,8 +2,38 @@
   "id": "660641e5-6ec0-483f-9f1d-6d03b3ebc29d",
   "name": "eXodus",
   "faction": 1,
-  "trademarks": {},
-  "edges": [],
+  "trademarks": {
+    "Infiltrator": {
+      "name": "Infiltrator",
+      "triggers": [
+        "Stealthy",
+        "Quick",
+        "Silent takedown"
+      ],
+      "description": ""
+    },
+    "Cyber Eyes": {
+      "name": "Cyber Eyes",
+      "triggers": [
+        "Notice",
+        "Target assist",
+        "Thermal imaging"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Hide",
+      "trademark": "Infiltrator",
+      "description": ""
+    },
+    {
+      "name": "HUD",
+      "trademark": "Cyber Eyes",
+      "description": ""
+    }
+  ],
   "flaws": [],
   "drive": null,
   "stunt_points": 3,

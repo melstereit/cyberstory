@@ -1,0 +1,84 @@
+{
+  "id": "8d35d520-9d5b-4c61-b7dd-fd86ad3efbf7",
+  "name": "basti",
+  "faction": 1,
+  "trademarks": {
+    "Codeslinger": {
+      "name": "Codeslinger",
+      "triggers": [
+        "Hacking",
+        "Cyber combat",
+        "Security systems"
+      ],
+      "description": ""
+    },
+    "Cyber Eyes": {
+      "name": "Cyber Eyes",
+      "triggers": [
+        "Notice",
+        "Target assist",
+        "Thermal imaging"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Cyber combat",
+      "trademark": "Codeslinger",
+      "description": ""
+    },
+    {
+      "name": "HUD",
+      "trademark": "Cyber Eyes",
+      "description": ""
+    }
+  ],
+  "flaws": [
+    {
+      "name": "Code of honor",
+      "description": "You follow strict personal rules that can be limiting."
+    },
+    {
+      "name": "Flashbacks",
+      "description": "Traumatic memories haunt you and can be triggered unexpectedly."
+    }
+  ],
+  "drive": {
+    "description": "Prove I didn't kill \"Bam Bam\" Crow",
+    "track": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [
+    {
+      "name": "Hoverbike",
+      "tags": [
+        "Fly",
+        "Fast",
+        "Flashy"
+      ],
+      "description": "",
+      "is_special": true
+    }
+  ],
+  "xp": 0,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [],
+  "conditions": []
+}
