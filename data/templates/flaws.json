@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Family ties",
+    "description": "You have family obligations that often get in the way."
+  },
+  {
+    "name": "Wanted",
+    "description": "Someone is looking for you, and not in a good way."
+  },
+  {
+    "name": "Addiction",
+    "description": "You are addicted to a substance or behavior."
+  },
+  {
+    "name": "Debt",
+    "description": "You owe someone money, favors, or services."
+  },
+  {
+    "name": "Notorious",
+    "description": "Your face or name is well-known for the wrong reasons."
+  },
+  {
+    "name": "Vengeful",
+    "description": "You can't let go of a grudge, even when it's in your best interest."
+  },
+  {
+    "name": "Phobia",
+    "description": "You have an irrational fear that can paralyze you."
+  },
+  {
+    "name": "Flashbacks",
+    "description": "Traumatic memories haunt you and can be triggered unexpectedly."
+  },
+  {
+    "name": "Code of honor",
+    "description": "You follow strict personal rules that can be limiting."
+  },
+  {
+    "name": "Reckless",
+    "description": "You take unnecessary risks and act without thinking."
+  }
+]

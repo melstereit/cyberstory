@@ -69,7 +69,7 @@ from mechanics.check_manager import CheckManager
 
 def test_dice_system():
     print("\n=== Würfelsystem-Test ===")
-    dice_system = NCODiceSystem()
+    dice_system = NCODiceSystem() 
     
     # Einfacher Würfelwurf
     print("\n1. Einfacher Würfelwurf (3 Action, 1 Danger):")
@@ -316,7 +316,7 @@ if __name__ == "__main__":
 Wenn du alle Module korrekt implementiert hast, kannst du die Hauptanwendung starten:
 
 ```bash
-cd cyberpunk
+cd cyberpunk_rpg
 python main.py
 ```
 
