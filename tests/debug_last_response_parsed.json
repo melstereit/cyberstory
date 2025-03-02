@@ -1,0 +1,58 @@
+{
+  "name": "Der Neon-Dschungel von Kabuki",
+  "description": "Du wirst aus dem stickigen Inneren eines heruntergekommenen Automatik-Taxi in die gleißende Kakophonie von Kabuki geworfen. Neonreklamen flackern in allen Farben des Regenbogens und darüber hinaus, während sie um die Aufmerksamkeit der Passanten buhlen. Der Gestank von gebratenen Nudeln, synthetischen Drogen und menschlichem Elend hängt schwer in der Luft. Menschenmassen drängen sich durch die engen Gassen, eine Mischung aus Edgerunnern, Korporaten-Angestellten auf der Suche nach Zerstreuung, obdachlosen Junkies und zwielichtigen Gestalten, die nach einem schnellen Cred suchen. Die Luft vibriert von der Energie der Stadt, eine Mischung aus Hoffnung und Verzweiflung.",
+  "characters": [
+    {
+      "name": "Rattenschwanz-Ronny",
+      "description": "Ein schmieriger Informant mit einem Cyber-Implantat, das wie ein Rattenschwanz aus seinem Hinterkopf ragt. Er scheint nervös und blickt ständig über seine Schulter.",
+      "faction": "Unabhängig"
+    },
+    {
+      "name": "Straßenhändler",
+      "description": "Ein hagerer Mann mit bleichem Teint, der in einem abgewetzten Trenchcoat gekleidet ist. Er bietet 'verbesserte' Cyberware und verdächtig billige Drogen an.",
+      "faction": "Gangs"
+    }
+  ],
+  "objects": [
+    {
+      "name": "Neon-Reklame",
+      "description": "Eine flackernde Neon-Reklame für 'Cyber Sushi'. Ein Draht hängt lose herunter und sprüht Funken.",
+      "tags": [
+        "Elektrizität",
+        "Gefahr",
+        "Dekoration"
+      ]
+    },
+    {
+      "name": "Datenkiosk",
+      "description": "Ein heruntergekommener Datenkiosk, der mit Graffiti übersät ist. Er bietet öffentliche Informationen, aber ist wahrscheinlich mit Viren verseucht.",
+      "tags": [
+        "Information",
+        "Hacking",
+        "Netzwerk"
+      ]
+    }
+  ],
+  "threats": [
+    {
+      "name": "CorpSec-Drohne",
+      "description": "Eine fliegende Überwachungsdrohne mit leuchtend roten Lichtern und einem deutlich hörbaren Summen. Sie scheint nach jemandem zu suchen.",
+      "hits": 3,
+      "tags": [
+        "Überwachung",
+        "CorpSec",
+        "Technologie"
+      ]
+    }
+  ],
+  "objectives": [
+    "Kontaktiere Rattenschwanz-Ronny, um Informationen über deinen nächsten Schritt zu erhalten.",
+    "Vermeide die Aufmerksamkeit der CorpSec-Drohne."
+  ],
+  "suggested_actions": [
+    "Versuche, Rattenschwanz-Ronny anzusprechen.",
+    "Verstecke dich vor der CorpSec-Drohne.",
+    "Hacke den Datenkiosk, um alternative Routen zu finden."
+  ],
+  "completed": false
+}

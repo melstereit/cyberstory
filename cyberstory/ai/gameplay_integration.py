@@ -14,6 +14,62 @@ from cyberstory.ai.prompt_templates import (
 class LLMGameplayIntegration:
     """Integration von LLM-Funktionalitäten für das Gameplay."""
     
+    def debug_scene_generation(self) -> Dict[str, Any]:
+        """
+        Testet die Szenengenerierung mit minimalen Testdaten.
+        Diese Methode ist nur für Debug-Zwecke gedacht.
+        
+        Returns:
+            Dict mit den Szenendaten oder Fallback-Szene bei Fehler
+        """
+        print("\n=== DEBUG SZENENGENERIERUNG ===")
+        
+        # Minimale Testdaten
+        test_character = {
+            "id": "test-char",
+            "name": "Test Charakter",
+            "faction": "Anarchisten",
+            "trademarks": {
+                "Codeslinger": {
+                    "name": "Codeslinger",
+                    "triggers": ["Hacking", "Cyber combat", "Security systems"]
+                }
+            },
+            "edges": [
+                {"name": "Hacking", "trademark": "Codeslinger"}
+            ],
+            "flaws": [
+                {"name": "Wanted", "description": "Auf der Fahndungsliste von Corp Sec"}
+            ],
+            "drive": {
+                "description": "Befreie dich von der Kontrolle der Megacorps",
+                "track": [False] * 10
+            }
+        }
+        
+        test_game_state = {
+            "id": "test-game",
+            "active_character_id": "test-char",
+            "current_scene": {},
+            "quest_data": {},
+            "world_state": {},
+            "history": []
+        }
+        
+        # Versuche, eine Szene zu generieren
+        try:
+            print("Starte Szenengenerierung mit Testdaten...")
+            scene = self.generate_scene(test_game_state, test_character)
+            print(f"Szenengenerierung abgeschlossen: {scene.get('name', 'Keine Szene generiert')}")
+            print("=== DEBUG ENDE ===\n")
+            return scene
+        except Exception as e:
+            print(f"!!! FEHLER BEI DER SZENENGENERIERUNG: {e} !!!")
+            import traceback
+            traceback.print_exc()
+            print("=== DEBUG ENDE MIT FEHLER ===\n")
+            return self._create_fallback_scene()
+    
     def __init__(self, llm_interface: LLMInterface):
         """
         Initialisiert die LLM-Integration für das Gameplay.
@@ -157,27 +213,55 @@ class LLMGameplayIntegration:
         return response
     
     def _send_to_llm(self, prompt: str) -> Optional[Dict[str, Any]]:
-        """
-        Sendet einen Prompt an das LLM und gibt die Antwort zurück.
-        
-        Args:
-            prompt: Der zu sendende Prompt
-            
-        Returns:
-            Die geparste LLM-Antwort oder None bei Fehler
-        """
         try:
+            print("\n=== LLM-ANFRAGE BEGINNT ===")
+            print(f"Sende Anfrage an Modell: {self.llm.model}")
+            print(f"Prompt (gekürzt): {prompt[:300]}...\n")
+            
+            # Debug: Prompt in Datei speichern
+            with open("debug_last_prompt.txt", "w", encoding="utf-8") as f:
+                f.write(prompt)
+                print("Vollständiger Prompt in 'debug_last_prompt.txt' gespeichert.")
+            
+            # API-Anfrage senden
             response = self.llm.client.models.generate_content(
                 model=self.llm.model,
                 contents=prompt,
                 config={"response_mime_type": "application/json"}
             )
             
-            # Parsed JSON aus der Antwort extrahieren
-            return response.parsed
+            # Debug: Rohantwort speichern
+            with open("debug_last_response_raw.txt", "w", encoding="utf-8") as f:
+                f.write(str(response))
+                print("Rohantwort in 'debug_last_response_raw.txt' gespeichert.")
+            
+            print(f"LLM-Antwort erhalten, Rohtext: {response.text[:300]}...")
+            
+            # Manuelles JSON-Parsing implementieren
+            import json
+            try:
+                # Manuelles JSON-Parsing der Textantwort
+                result = json.loads(response.text)
+                print(f"Manuelles JSON-Parsing erfolgreich: {str(result)[:300]}...")
+                
+                # Debug: Geparste Antwort speichern
+                with open("debug_last_response_parsed.json", "w", encoding="utf-8") as f:
+                    json.dump(result, f, ensure_ascii=False, indent=2)
+                    print("Geparste Antwort in 'debug_last_response_parsed.json' gespeichert.")
+                
+                print("=== LLM-ANFRAGE ENDE ===\n")
+                return result
+                
+            except json.JSONDecodeError as je:
+                print(f"JSON-Parsing-Fehler: {je}")
+                print(f"Vollständige Antwort: {response.text}")
+                return None
             
         except Exception as e:
-            print(f"Fehler bei der LLM-Anfrage: {e}")
+            print(f"\n!!! FEHLER BEI DER LLM-ANFRAGE: {e} !!!")
+            import traceback
+            traceback.print_exc()  # Vollständigen Stack-Trace anzeigen
+            print("\n=== LLM-ANFRAGE ENDE MIT FEHLER ===\n")
             return None
     
     def _create_fallback_scene(self) -> Dict[str, Any]:

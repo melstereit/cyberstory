@@ -18,17 +18,17 @@ Generiere eine neue Szene für den Charakter, passend zum aktuellen Spielzustand
 ## Output-Format
 Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
 ```json
-{
+{{
   "name": "Name der Szene",
   "description": "Ausführliche Beschreibung der Szene und der Umgebung",
   "characters": [
-    {"name": "Name des NPC", "description": "Beschreibung des NPC", "faction": "Fraktion des NPC"}
+    {{"name": "Name des NPC", "description": "Beschreibung des NPC", "faction": "Fraktion des NPC"}}
   ],
   "objects": [
-    {"name": "Name des Objekts", "description": "Beschreibung des Objekts", "tags": ["Tag1", "Tag2"]}
+    {{"name": "Name des Objekts", "description": "Beschreibung des Objekts", "tags": ["Tag1", "Tag2"]}}
   ],
   "threats": [
-    {"name": "Name der Bedrohung", "description": "Beschreibung der Bedrohung", "hits": 2, "tags": ["Tag1", "Tag2"]}
+    {{"name": "Name der Bedrohung", "description": "Beschreibung der Bedrohung", "hits": 2, "tags": ["Tag1", "Tag2"]}}
   ],
   "objectives": [
     "Primäres Ziel der Szene",
@@ -39,7 +39,7 @@ Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
     "Mögliche Aktion 2"
   ],
   "completed": false
-}
+}}
 ```
 
 Sei kreativ, beschreibe die Szene lebhaft und füge genug Details hinzu, damit der Spieler sich vorstellen kann, was um ihn herum geschieht.
@@ -61,9 +61,9 @@ Analysiere die Spieleraktion und bestimme, was passieren sollte. Entscheide, ob 
 ## Output-Format
 Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
 ```json
-{
+{{
   "requires_check": true/false,
-  "check_context": {
+  "check_context": {{
     "action": "Beschreibung der Aktion",
     "relevant_trademark": "Name des relevanten Trademarks oder null",
     "relevant_edges": ["Edge1", "Edge2"],
@@ -71,23 +71,23 @@ Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
     "advantageous_tags": ["Tag1", "Tag2"],
     "disadvantageous_tags": ["Tag1", "Tag2"],
     "opposition_scale": 0
-  },
+  }},
   "response": "Antwort für den Spieler, wenn kein Würfelwurf erforderlich ist",
-  "state_update": {
-    "game_state": {
+  "state_update": {{
+    "game_state": {{
       "history_event": "Ereignis für die Historie",
-      "scene_updates": {},
-      "world_state_updates": {},
-      "quest_updates": {}
-    },
-    "character": {
+      "scene_updates": {{}},
+      "world_state_updates": {{}},
+      "quest_updates": {{}}
+    }},
+    "character": {{
       "add_condition": "Bedingung hinzufügen",
       "remove_condition": "Bedingung entfernen",
-      "add_item": {},
+      "add_item": {{}},
       "remove_item": "Item-Name"
-    }
-  }
-}
+    }}
+  }}
+}}
 ```
 
 Wenn `requires_check` true ist, wird ein Würfelwurf durchgeführt, und das Feld `check_context` wird verwendet, um den Würfelpool zu berechnen.
@@ -116,21 +116,21 @@ Das Ergebnis ist:
 ## Output-Format
 Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
 ```json
-{
+{{
   "description": "Ausführliche Beschreibung der Konsequenzen",
-  "game_state_updates": {
+  "game_state_updates": {{
     "history_event": "Ereignis für die Historie",
-    "scene_updates": {
+    "scene_updates": {{
       "key": "value"
-    },
-    "world_state_updates": {
+    }},
+    "world_state_updates": {{
       "key": "value"
-    },
-    "quest_updates": {
+    }},
+    "quest_updates": {{
       "key": "value"
-    }
-  },
-  "character_updates": {
+    }}
+  }},
+  "character_updates": {{
     "add_hits": 1,
     "heal_hits": 1,
     "add_trauma": "Beschreibung des Traumas",
@@ -139,17 +139,17 @@ Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
     "spend_stunt_points": 1,
     "refresh_stunt_points": true,
     "add_xp": 1,
-    "add_item": {
+    "add_item": {{
       "name": "Item-Name",
       "tags": ["Tag1", "Tag2"],
       "is_special": true
-    },
+    }},
     "remove_item": "Item-Name",
     "tick_drive": 0,
     "cross_out_drive": 0
-  },
+  }},
   "scene_completed": false
-}
+}}
 ```
 
 Sei kreativ, beschreibe die Konsequenzen lebhaft und berücksichtige das Würfelergebnis sowie den Kontext der Szene.
@@ -174,51 +174,51 @@ Generiere eine neue Quest für den Charakter, passend zu seinen Trademarks, Flaw
 ## Output-Format
 Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
 ```json
-{
+{{
   "name": "Name der Quest",
   "description": "Ausführliche Beschreibung der Quest",
-  "client": {
+  "client": {{
     "name": "Name des Auftraggebers",
     "description": "Beschreibung des Auftraggebers",
     "faction": "Fraktion des Auftraggebers"
-  },
+  }},
   "objectives": [
-    {
+    {{
       "description": "Beschreibung des Ziels",
       "completed": false
-    }
+    }}
   ],
-  "rewards": {
+  "rewards": {{
     "credits": 1000,
     "items": [
-      {
+      {{
         "name": "Item-Name",
         "tags": ["Tag1", "Tag2"],
         "is_special": true
-      }
+      }}
     ],
     "xp": 3,
-    "faction_standing": {
+    "faction_standing": {{
       "faction_name": 1
-    }
-  },
+    }}
+  }},
   "locations": [
-    {
+    {{
       "name": "Name des Orts",
       "description": "Beschreibung des Orts",
       "visited": false
-    }
+    }}
   ],
   "npcs": [
-    {
+    {{
       "name": "Name des NPC",
       "description": "Beschreibung des NPC",
       "faction": "Fraktion des NPC",
       "attitude": "Einstellung zum Spieler"
-    }
+    }}
   ],
   "completed": false
-}
+}}
 ```
 
 Sei kreativ, generiere eine interessante Quest mit mehreren möglichen Lösungswegen und Hindernissen, die zu den Fähigkeiten des Charakters passen.

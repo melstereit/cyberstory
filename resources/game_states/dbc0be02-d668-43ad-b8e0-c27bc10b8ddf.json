@@ -1,8 +1,81 @@
 {
   "id": "dbc0be02-d668-43ad-b8e0-c27bc10b8ddf",
   "active_character_id": "660641e5-6ec0-483f-9f1d-6d03b3ebc29d",
-  "current_scene": {},
-  "quest_data": {},
+  "current_scene": {
+    "name": "Neon-beleuchtete Gasse",
+    "description": "Du stehst in einer engen Gasse, gesäumt von flackernden Neonlichtern, die die Pfützen auf dem regennassen Asphalt bunt färben. Die Luft ist erfüllt vom Geruch nach gebratenem Essen, Abgasen und dem metallischen Duft der Stadt. Menschen drängen sich vorbei, jeder in seine eigene Geschichte vertieft.",
+    "characters": [
+      {
+        "name": "Straßenverkäufer",
+        "description": "Ein älterer Mann mit Cyber-Auge, der Syn-Ramen an einem kleinen Stand verkauft.",
+        "faction": "Freelancer"
+      }
+    ],
+    "objects": [
+      {
+        "name": "Öffentliches Terminal",
+        "description": "Ein veraltetes öffentliches Datenterminal, das gelegentlich flackert.",
+        "tags": [
+          "Information",
+          "Grid-Zugang"
+        ]
+      }
+    ],
+    "threats": [],
+    "objectives": [
+      "Sammle Informationen über deine aktuelle Situation"
+    ],
+    "suggested_actions": [
+      "Sprich mit dem Straßenverkäufer",
+      "Nutze das öffentliche Terminal",
+      "Erkunde die Umgebung weiter"
+    ],
+    "completed": false
+  },
+  "quest_data": {
+    "name": "Daten-Paket",
+    "description": "Ein anonymer Client braucht deine Hilfe, um ein wertvolles Datenpaket aus einem gesicherten Megacorp-Terminal zu extrahieren. Die Bezahlung ist gut, die Risiken sind hoch.",
+    "client": {
+      "name": "Anonymer Fixer",
+      "description": "Ein gesichtsloser Kontakt, der nur über verschlüsselte Kanäle kommuniziert.",
+      "faction": "Unbekannt"
+    },
+    "objectives": [
+      {
+        "description": "Infiltriere das Megacorp-Gebäude",
+        "completed": false
+      },
+      {
+        "description": "Extrahiere das Datenpaket",
+        "completed": false
+      },
+      {
+        "description": "Entkommen ohne entdeckt zu werden",
+        "completed": false
+      }
+    ],
+    "rewards": {
+      "credits": 2000,
+      "items": [],
+      "xp": 3
+    },
+    "locations": [
+      {
+        "name": "Megacorp-Tower",
+        "description": "Ein imposanter Wolkenkratzer mit strenger Sicherheit.",
+        "visited": false
+      }
+    ],
+    "npcs": [
+      {
+        "name": "Sicherheitschef",
+        "description": "Ein ehemaliger Militär mit Cyber-Upgrades und strengem Blick.",
+        "faction": "Megacorp",
+        "attitude": "Feindlich"
+      }
+    ],
+    "completed": false
+  },
   "world_state": {},
   "history": []
 }
