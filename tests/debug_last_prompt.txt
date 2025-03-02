@@ -6,41 +6,58 @@ Du bist der Spielleiter eines textbasierten Cyberpunk-RPGs.
 - Aktueller Spielzustand: {"id": "557681ae-d831-480e-9929-fceeac7fae71", "active_character_id": "16325b79-a826-4877-9480-e87c8d6a3432", "current_scene": {"name": "Neon Alley Ambush", "description": "Du wachst auf. Dein Kopf brummt, und der Geschmack von billigem Synth-Whiskey hängt in der Luft. Du liegst in einer dunklen Gasse, gesäumt von hoch aufragenden Hologrammen, die für Cyberware und illegale Mods werben. Der Regen peitscht auf das Neonpflaster und lässt die Farben in einem schillernden Tanz verschwimmen. Der Gestank von Abfall und verbranntem Kabel überzieht alles. Ein paar Meter entfernt qualmt ein Mülleimer, von innen heraus beleuchtet. Ein einzelner 'Chirp'-Sound von einem heruntergekommenen Autodoc in der Nähe ist alles, was die Stille unterbricht. Drei Figuren, mit dunklen Regenmänteln und leuchtenden Cyberaugen, blockieren den Ausgang der Gasse. Einer von ihnen zischt: 'Da ist er. Holt ihn euch!'", "characters": [{"name": "Gassen-Schläger 1", "description": "Dunkler Regenmantel, Cyberaugen leuchten rot, vernarbte Hände", "faction": "Gasse"}, {"name": "Gassen-Schläger 2", "description": "Hager, mit einem Cyberarm der mit leuchtenden Tätowierungen bedeckt ist.", "faction": "Gasse"}, {"name": "Gassen-Schläger 3", "description": "Breit gebaut, trägt eine Chrommaske, die sein Gesicht verdeckt.", "faction": "Gasse"}], "objects": [{"name": "Qualmender Mülleimer", "description": "Ein ausgebrannter Mülleimer, der schwach leuchtet und beißenden Rauch abgibt.", "tags": ["Gefahr", "Brennbar"]}, {"name": "Autodoc", "description": "Ein heruntergekommener, automatisierter medizinischer Kiosk, der schwach mit Fehlermeldungen blinkt.", "tags": ["Kaputt", "Nützlich?"]}, {"name": "Neonpflaster", "description": "Das Pflaster ist mit Neonröhren durchzogen, die ein kaleidoskopisches Muster erzeugen, aber auch rutschig sind.", "tags": ["Rutschig", "Ablenkend"]}], "threats": [{"name": "Gassen-Schläger Angriff", "description": "Die Schläger wollen dich verletzen oder entführen.", "hits": 2, "tags": ["Nahkampf", "Überzahl"]}], "objectives": ["Entkomme den Schlägern aus der Gasse", "Finde heraus, warum du angegriffen wurdest"], "suggested_actions": ["Kampf mit den Schlägern", "Flucht aus der Gasse", "Versuche, die Schläger zu überlisten", "Die Umgebung zu deinem Vorteil nutzen (Mülleimer, Autodoc, Neonpflaster)"], "completed": false}, "quest_data": {"name": "Forgotten Echoes", "description": "A fragmented message surfaces hinting at the location of your missing birth records, but powerful forces are trying to bury the truth. You must navigate the treacherous digital landscape and the cutthroat streets to uncover your past before it's erased forever.", "client": {"name": "Glitch", "description": "An enigmatic netrunner residing deep within the old datanet. Their motives are unclear, but they claim to have information vital to your past.", "faction": "Independent Netrunners"}, "objectives": [{"description": "Access Glitch's hidden server in the old datanet.", "completed": false}, {"description": "Decipher the fragmented message regarding your birth records.", "completed": false}, {"description": "Locate the abandoned Arcology district mentioned in the message.", "completed": false}, {"description": "Infiltrate the secure archive within the Arcology and retrieve your birth records.", "completed": false}], "rewards": {"credits": 2500, "items": [{"name": "Encrypted Datachip", "tags": ["Encrypted", "Personal"], "is_special": true}], "xp": 5, "faction_standing": {"Independent Netrunners": 1}}, "locations": [{"name": "Old Datanet Access Point", "description": "A decrepit, abandoned terminal offering access to the archaic datanet.", "visited": false}, {"name": "Abandoned Arcology Sector 7", "description": "A decaying sector of a once-proud Arcology, now overrun by squatters and gangs.", "visited": false}, {"name": "Arcology Archive", "description": "A heavily secured archive within the Arcology, holding records long forgotten.", "visited": false}], "npcs": [{"name": "Razor", "description": "Leader of a local gang controlling access to the Arcology Sector 7.", "faction": "Crimson Dragons", "attitude": "Hostile"}, {"name": "Whisper", "description": "A former archivist who knows the ins and outs of the Arcology archive.", "faction": "Independent", "attitude": "Neutral"}], "completed": false}, "world_state": {}, "history": []}
 - Aktuelle Szene: {"name": "Neon Alley Ambush", "description": "Du wachst auf. Dein Kopf brummt, und der Geschmack von billigem Synth-Whiskey hängt in der Luft. Du liegst in einer dunklen Gasse, gesäumt von hoch aufragenden Hologrammen, die für Cyberware und illegale Mods werben. Der Regen peitscht auf das Neonpflaster und lässt die Farben in einem schillernden Tanz verschwimmen. Der Gestank von Abfall und verbranntem Kabel überzieht alles. Ein paar Meter entfernt qualmt ein Mülleimer, von innen heraus beleuchtet. Ein einzelner 'Chirp'-Sound von einem heruntergekommenen Autodoc in der Nähe ist alles, was die Stille unterbricht. Drei Figuren, mit dunklen Regenmänteln und leuchtenden Cyberaugen, blockieren den Ausgang der Gasse. Einer von ihnen zischt: 'Da ist er. Holt ihn euch!'", "characters": [{"name": "Gassen-Schläger 1", "description": "Dunkler Regenmantel, Cyberaugen leuchten rot, vernarbte Hände", "faction": "Gasse"}, {"name": "Gassen-Schläger 2", "description": "Hager, mit einem Cyberarm der mit leuchtenden Tätowierungen bedeckt ist.", "faction": "Gasse"}, {"name": "Gassen-Schläger 3", "description": "Breit gebaut, trägt eine Chrommaske, die sein Gesicht verdeckt.", "faction": "Gasse"}], "objects": [{"name": "Qualmender Mülleimer", "description": "Ein ausgebrannter Mülleimer, der schwach leuchtet und beißenden Rauch abgibt.", "tags": ["Gefahr", "Brennbar"]}, {"name": "Autodoc", "description": "Ein heruntergekommener, automatisierter medizinischer Kiosk, der schwach mit Fehlermeldungen blinkt.", "tags": ["Kaputt", "Nützlich?"]}, {"name": "Neonpflaster", "description": "Das Pflaster ist mit Neonröhren durchzogen, die ein kaleidoskopisches Muster erzeugen, aber auch rutschig sind.", "tags": ["Rutschig", "Ablenkend"]}], "threats": [{"name": "Gassen-Schläger Angriff", "description": "Die Schläger wollen dich verletzen oder entführen.", "hits": 2, "tags": ["Nahkampf", "Überzahl"]}], "objectives": ["Entkomme den Schlägern aus der Gasse", "Finde heraus, warum du angegriffen wurdest"], "suggested_actions": ["Kampf mit den Schlägern", "Flucht aus der Gasse", "Versuche, die Schläger zu überlisten", "Die Umgebung zu deinem Vorteil nutzen (Mülleimer, Autodoc, Neonpflaster)"], "completed": false}
 - Spieleraktion: "überlisten"
+- Würfelergebnis: {"result": {"success_level": "partial", "value": 4, "action_dice": [1, 1, 4], "danger_dice": [], "remaining_dice": [1, 1, 4], "boons": 0, "is_botch": false}, "pool_details": {"action_dice": 3, "danger_dice": 0, "applied_modifiers": ["Trademark: +1 Action Dice", "Edge: +1 Action Dice"]}}
 
 ## Aufgabe
-Analysiere die Spieleraktion und bestimme, was passieren sollte. Entscheide, ob ein Würfelwurf erforderlich ist oder ob die Aktion automatisch gelingt/misslingt.
+Basierend auf dem Würfelergebnis, generiere passende Konsequenzen für die Aktion des Spielers. 
+
+Das Ergebnis ist:
+- Erfolgsgrad: partial (success, partial, failure oder botch)
+- Wert: 4
+- Boons: 0
 
 ## Output-Format
 Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
 ```json
 {
-  "requires_check": true/false,
-  "check_context": {
-    "action": "Beschreibung der Aktion",
-    "relevant_trademark": "Name des relevanten Trademarks oder null",
-    "relevant_edges": ["Edge1", "Edge2"],
-    "gear_tags": ["Tag1", "Tag2"],
-    "advantageous_tags": ["Tag1", "Tag2"],
-    "disadvantageous_tags": ["Tag1", "Tag2"],
-    "opposition_scale": 0
-  },
-  "response": "Antwort für den Spieler, wenn kein Würfelwurf erforderlich ist",
-  "state_update": {
-    "game_state": {
-      "history_event": "Ereignis für die Historie",
-      "scene_updates": {},
-      "world_state_updates": {},
-      "quest_updates": {}
+  "description": "Ausführliche Beschreibung der Konsequenzen",
+  "game_state_updates": {
+    "history_event": "Ereignis für die Historie",
+    "scene_updates": {
+      "key": "value"
     },
-    "character": {
-      "add_condition": "Bedingung hinzufügen",
-      "remove_condition": "Bedingung entfernen",
-      "add_item": {},
-      "remove_item": "Item-Name"
+    "world_state_updates": {
+      "key": "value"
+    },
+    "quest_updates": {
+      "key": "value"
     }
-  }
+  },
+  "character_updates": {
+    "add_hits": 1,
+    "heal_hits": 1,
+    "add_trauma": "Beschreibung des Traumas",
+    "add_condition": "Bedingungsname",
+    "remove_condition": "Bedingungsname",
+    "spend_stunt_points": 1,
+    "refresh_stunt_points": true,
+    "add_xp": 1,
+    "add_item": {
+      "name": "Item-Name",
+      "tags": ["Tag1", "Tag2"],
+      "is_special": true
+    },
+    "remove_item": "Item-Name",
+    "tick_drive": 0,
+    "cross_out_drive": 0
+  },
+  "scene_completed": false
 }
 ```
 
-Wenn `requires_check` true ist, wird ein Würfelwurf durchgeführt, und das Feld `check_context` wird verwendet, um den Würfelpool zu berechnen.
-Wenn `requires_check` false ist, wird die `response` direkt angezeigt, und `state_update` wird verwendet, um den Spielzustand zu aktualisieren.
+Sei kreativ, beschreibe die Konsequenzen lebhaft und berücksichtige das Würfelergebnis sowie den Kontext der Szene.
+
+- Bei einem vollen Erfolg (success) sollte der Spieler sein Ziel erreichen, möglicherweise mit zusätzlichen Vorteilen für Boons.
+- Bei einem Teilerfolg (partial) sollte der Spieler sein Ziel mit Einschränkungen oder Kosten erreichen.
+- Bei einem Misserfolg (failure) sollte der Spieler sein Ziel nicht erreichen und negative Konsequenzen erleiden.
+- Bei einem kritischen Misserfolg (botch) sollten die Konsequenzen besonders schwerwiegend sein.

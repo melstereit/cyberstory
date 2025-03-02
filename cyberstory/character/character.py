@@ -110,6 +110,26 @@ class Character:
         self.inventory.append(item)
         return True
     
+    def remove_item(self, item_name: str) -> bool:
+        """
+        Entfernt ein Item aus dem Inventar.
+        
+        Args:
+            item_name: Name des zu entfernenden Items
+            
+        Returns:
+            bool: True, wenn erfolgreich, sonst False
+        """
+        # Suche das Item im Inventar
+        for i, item in enumerate(self.inventory):
+            if item.name == item_name:
+                # Entferne das Item
+                self.inventory.pop(i)
+                return True
+        
+        # Item nicht gefunden
+        return False
+
     def take_hit(self) -> bool:
         """
         Markiert eine Hit-Box.

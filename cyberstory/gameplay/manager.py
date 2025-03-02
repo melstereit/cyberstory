@@ -451,7 +451,7 @@ class GameplayManager:
             character.add_xp(updates["add_xp"])
         
         # Items hinzufügen/entfernen
-        if "add_item" in updates:
+        if "add_item" in updates and updates["add_item"] is not None:
             from cyberstory.mechanics.interfaces import Item
             
             item_data = updates["add_item"]
@@ -463,7 +463,7 @@ class GameplayManager:
             )
             character.add_item(item)
         
-        if "remove_item" in updates:
+        if "remove_item" in updates and updates["remove_item"] is not None:
             item_name = updates["remove_item"]
             # Hier müsste die Logik zum Entfernen eines Items implementiert werden
             # Da die Character-Klasse keine remove_item-Methode hat, muss diese ergänzt werden

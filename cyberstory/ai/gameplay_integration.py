@@ -10,7 +10,6 @@ from cyberstory.ai.prompt_templates import (
     QUEST_GENERATION_PROMPT
 )
 from cyberstory.ai.schemas import Scene  # oder welches Modell auch immer benötigt wird
-from cyberstory.mechanics.dice_result import DiceResult  # Import DiceResult
 
 
 class LLMGameplayIntegration:
@@ -149,7 +148,7 @@ class LLMGameplayIntegration:
     def generate_consequences(self, 
                              game_state: Dict[str, Any], 
                              character_data: Dict[str, Any], 
-                             check_result: Any,  # Allow both dict and DiceResult
+                             check_result: Dict[str, Any], 
                              action_text: str) -> Dict[str, Any]:
         """
         Generiert Konsequenzen basierend auf einem Würfelergebnis.
@@ -157,7 +156,7 @@ class LLMGameplayIntegration:
         Args:
             game_state: Aktueller Spielzustand
             character_data: Aktuelle Charakterdaten
-            check_result: Ergebnis der Würfelprobe (kann dict oder DiceResult sein)
+            check_result: Ergebnis der Würfelprobe als Dict
             action_text: Text der Spieleraktion
             
         Returns:
@@ -166,16 +165,33 @@ class LLMGameplayIntegration:
         # Extrahiere relevante Daten für den Prompt
         current_scene = game_state.get("current_scene", {})
         
+        # Extrahiere die Werte aus check_result - unabhängig davon, ob es ein Dict oder ein DiceResult-Objekt ist
+        result = check_result["result"]
+        
+        # Hier verwenden wir die Werte direkt aus dem result-Objekt
+        success_level = result.success_level if hasattr(result, 'success_level') else "failure"
+        value = result.value if hasattr(result, 'value') else 0
+        boons = result.boons if hasattr(result, 'boons') else 0
+        
+        # Konvertiere das result-Objekt in ein Dict, wenn es noch keins ist
+        result_dict = result.to_dict() if hasattr(result, 'to_dict') else result
+        
+        # Erstelle einen sicheren Dict für die JSON-Serialisierung
+        check_result_dict = {
+            "result": result_dict,
+            "pool_details": check_result["pool_details"]
+        }
+        
         # Erstelle den Prompt
         prompt = CONSEQUENCES_PROMPT.format(
             character_data=json.dumps(character_data, ensure_ascii=False),
             game_state=json.dumps(game_state, ensure_ascii=False),
             current_scene=json.dumps(current_scene, ensure_ascii=False),
             action_text=action_text,
-            check_result=json.dumps(check_result.to_dict() if isinstance(check_result, DiceResult) else check_result, ensure_ascii=False),  # Use to_dict() here
-            success_level=check_result.success_level if isinstance(check_result, DiceResult) else "failure",
-            value=check_result.value if isinstance(check_result, DiceResult) else 0,
-            boons=check_result.boons if isinstance(check_result, DiceResult) else 0
+            check_result=json.dumps(check_result_dict, ensure_ascii=False),
+            success_level=success_level,
+            value=value,
+            boons=boons
         )
         
         # Sende den Prompt an das LLM
@@ -183,7 +199,7 @@ class LLMGameplayIntegration:
         
         # Fallback-Konsequenzen, falls etwas schiefgeht
         if not response:
-            return self._create_fallback_consequences(check_result.value if isinstance(check_result, DiceResult) else None)
+            return self._create_fallback_consequences(success_level)
         
         return response
     
@@ -349,10 +365,8 @@ class LLMGameplayIntegration:
             "response": "Du führst die Aktion aus, aber nicht viel passiert. Vielleicht solltest du etwas Spezifischeres versuchen?"
         }
     
-    def _create_fallback_consequences(self, result) -> Dict[str, Any]:
+    def _create_fallback_consequences(self, success_level: str) -> Dict[str, Any]:
         """Erstellt Fallback-Konsequenzen für den Fall eines Fehlers."""
-        success_level = result.success_level if hasattr(result, 'success_level') else "failure"
-        
         if success_level == "success":
             return {
                 "description": "Du hast Erfolg! Die Aktion gelingt wie gewünscht.",

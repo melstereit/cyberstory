@@ -1,37 +1,28 @@
 {
-  "requires_check": true,
-  "check_context": {
-    "action": "Versuchen, die Gassen-Schläger zu überlisten, um eine Konfrontation zu vermeiden.",
-    "relevant_trademark": "Arcology Brat",
-    "relevant_edges": [
-      "Hacking"
-    ],
-    "gear_tags": [
-      "Concealed",
-      "Quick",
-      "Fast",
-      "Quick draw"
-    ],
-    "advantageous_tags": [
-      "Rutschig",
-      "Ablenkend"
-    ],
-    "disadvantageous_tags": [],
-    "opposition_scale": 3
-  },
-  "response": null,
-  "state_update": {
-    "game_state": {
-      "history_event": null,
-      "scene_updates": {},
-      "world_state_updates": {},
-      "quest_updates": {}
+  "description": "Du versuchst, die Schläger zu überlisten, indem du sie in den qualmenden Mülleimer lockst. Du taumelst rückwärts, tust so, als ob du desorientiert bist, und deutest mit zittriger Stimme in die Richtung des Mülleimers: 'Was... was ist das für ein Geräusch?' Zwei der Schläger scheinen kurz abgelenkt, während der dritte misstrauisch bleibt und näher kommt. Du nutzt den Moment, um deine Switchblade zu ziehen, aber die Ablenkung war nicht genug. Einer der Schläger, der mit dem Cyberarm, stolpert über das Neonpflaster und fällt direkt in den brennenden Müll - er schreit auf. Du hast kurz Zeit gewonnen, aber die Situation ist immer noch gefährlich. Du erleidest einen leichten Treffer, da der Schläger mit der Chrommaske dich im Vorbeigehen streift. ",
+  "game_state_updates": {
+    "history_event": "Versucht, die Schläger in den Mülleimer zu locken, teilweise erfolgreich.",
+    "scene_updates": {
+      "Gassen-Schläger 2": "Verletzt und desorientiert im Mülleimer.",
+      "Neon Alley Ambush": "Die Situation ist angespannt, ein Schläger ist verletzt, aber die Bedrohung besteht weiterhin.",
+      "Qualmender Mülleimer": "Enthält jetzt einen schreienden Schläger."
     },
-    "character": {
-      "add_condition": null,
-      "remove_condition": null,
-      "add_item": {},
-      "remove_item": null
-    }
-  }
+    "world_state_updates": {},
+    "quest_updates": {}
+  },
+  "character_updates": {
+    "add_hits": 1,
+    "heal_hits": 0,
+    "add_trauma": null,
+    "add_condition": null,
+    "remove_condition": null,
+    "spend_stunt_points": 0,
+    "refresh_stunt_points": false,
+    "add_xp": 0,
+    "add_item": null,
+    "remove_item": null,
+    "tick_drive": 0,
+    "cross_out_drive": 0
+  },
+  "scene_completed": false
 }

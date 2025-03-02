@@ -68,7 +68,10 @@
       "Versuche, die Schläger zu überlisten",
       "Die Umgebung zu deinem Vorteil nutzen (Mülleimer, Autodoc, Neonpflaster)"
     ],
-    "completed": false
+    "completed": false,
+    "Gassen-Schläger 2": "Verletzt und desorientiert im Mülleimer.",
+    "Neon Alley Ambush": "Die Situation ist angespannt, ein Schläger ist verletzt, aber die Bedrohung besteht weiterhin.",
+    "Qualmender Mülleimer": "Enthält jetzt einen schreienden Schläger."
   },
   "quest_data": {
     "name": "Forgotten Echoes",
@@ -147,5 +150,7 @@
     "completed": false
   },
   "world_state": {},
-  "history": []
+  "history": [
+    "Versucht, die Schläger in den Mülleimer zu locken, teilweise erfolgreich."
+  ]
 }

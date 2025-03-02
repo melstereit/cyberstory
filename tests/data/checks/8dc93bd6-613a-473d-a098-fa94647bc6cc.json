@@ -1,0 +1,45 @@
+{
+  "id": "8dc93bd6-613a-473d-a098-fa94647bc6cc",
+  "timestamp": 1740939521.3411925,
+  "character_id": "16325b79-a826-4877-9480-e87c8d6a3432",
+  "context": {
+    "action": "Versuche, die Schläger in der Neon Alley abzulenken und zu überlisten, um eine Flucht zu ermöglichen.",
+    "relevant_trademark": "Arcology Brat",
+    "relevant_edges": [
+      "Athletic",
+      "Hacking"
+    ],
+    "gear_tags": [
+      "Concealed",
+      "Quick",
+      "Fast",
+      "Quick draw"
+    ],
+    "advantageous_tags": [
+      "Rutschig",
+      "Ablenkend"
+    ],
+    "disadvantageous_tags": [
+      "Überzahl"
+    ],
+    "opposition_scale": 0
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 4,
+    "action_dice": [
+      1,
+      1,
+      4
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      1,
+      1,
+      4
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}
