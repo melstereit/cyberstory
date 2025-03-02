@@ -1,0 +1,138 @@
+{
+  "id": "69c03abe-ba1c-40ea-ac05-9894d6905e0b",
+  "active_character_id": "92b1e87f-ee38-4668-91f4-0cdab834fd15",
+  "current_scene": {
+    "name": "Neon Alley Ambush",
+    "description": "Du findest dich in einer dunklen Gasse wieder, die nur spärlich von flackernden Neonreklamen beleuchtet wird. Der Regen tropft von den rostigen Metallplatten über dir und vermischt sich mit dem Öl und dem Dreck auf dem Boden. Der Gestank von verbranntem Synthetik und billigem Ramen hängt in der Luft. Du hast gerade den 'Jade Dragon' verlassen, eine heruntergekommene Nudelbar, in der du ein paar vage Informationen über Osiris bekommen hast. Plötzlich hörst du hinter dir das Klicken von Sicherheitsstiefeln auf dem nassen Pflasterstein. Zwei Gestalten versperren dir den Weg.",
+    "characters": [
+      {
+        "name": "Razer",
+        "description": "Ein bulliger Typ mit einer Cyberarm, die mit Klingen bestückt ist. Er trägt eine abgenutzte Lederjacke und hat einen aggressiven Gesichtsausdruck.",
+        "faction": "Osiris' Handlanger"
+      },
+      {
+        "name": "Glitch",
+        "description": "Ein schmächtiger Hacker mit leuchtenden Cyberaugen und einem Dataport an seinem Schläfen. Er scheint nervös und hält eine Pistole zitternd in der Hand.",
+        "faction": "Osiris' Handlanger"
+      }
+    ],
+    "objects": [
+      {
+        "name": "Müllcontainer",
+        "description": "Ein großer, rostiger Müllcontainer, überquellend mit Müll.",
+        "tags": [
+          "Deckung",
+          "Versteck"
+        ]
+      },
+      {
+        "name": "Neonreklame",
+        "description": "Eine flackernde Neonreklame, die für 'Cyber Sushi' wirbt.",
+        "tags": [
+          "Ablenkung",
+          "Gefahr"
+        ]
+      }
+    ],
+    "threats": [
+      {
+        "name": "Razer's Klingenarm",
+        "description": "Razer's Cyberarm ist mit scharfen Klingen bestückt, die er mit tödlicher Präzision einsetzen kann.",
+        "hits": 2,
+        "tags": [
+          "Nahkampf",
+          "Cyberware"
+        ]
+      },
+      {
+        "name": "Glitch's Pistole",
+        "description": "Glitch's Pistole ist alt und verrostet, aber immer noch tödlich.",
+        "hits": 1,
+        "tags": [
+          "Schusswaffe",
+          "Unsicher"
+        ]
+      }
+    ],
+    "objectives": [
+      "Überlebe den Hinterhalt.",
+      "Finde heraus, wer die Angreifer geschickt hat."
+    ],
+    "suggested_actions": [
+      "Nutze deine Codeslinger-Fähigkeiten, um Glitch's Pistole zu deaktivieren.",
+      "Nutze deine Cyber Eyes, um die Schwachstellen von Razer's Cyberarm zu erkennen.",
+      "Fliehe aus der Gasse."
+    ],
+    "completed": false
+  },
+  "quest_data": [
+    {
+      "name": "Echoes of Osiris",
+      "description": "Ein Informant hat Exodus kontaktiert und behauptet, Informationen über den Verbleib von gestohlenen Daten von Osiris zu haben. Der Informant, bekannt als 'Whisper', ist jedoch paranoid und verlangt ein Treffen an einem sicheren Ort. Whisper fürchtet, dass Osiris' Leute ihm auf den Fersen sind.",
+      "client": {
+        "name": "Whisper",
+        "description": "Ein ehemaliger Datenbroker, der jetzt im Untergrund lebt und Informationen verkauft, um zu überleben. Misstrauisch und ängstlich.",
+        "faction": "Neutral"
+      },
+      "objectives": [
+        {
+          "description": "Triff Whisper an einem sicheren Ort, ohne von Osiris' Leuten entdeckt zu werden.",
+          "completed": false
+        },
+        {
+          "description": "Extrahiere die Informationen über die gestohlenen Daten von Osiris von Whisper.",
+          "completed": false
+        },
+        {
+          "description": "Entscheide, was mit Whisper passiert (schütze ihn oder lasse ihn zurück).",
+          "completed": false
+        }
+      ],
+      "rewards": {
+        "credits": 1200,
+        "items": [
+          {
+            "name": "Verschlüsselte Datenshards",
+            "tags": [
+              "Daten",
+              "Verschlüsselt",
+              "Osiris"
+            ],
+            "is_special": true
+          }
+        ],
+        "xp": 4,
+        "faction_standing": {}
+      },
+      "locations": [
+        {
+          "name": "Verlassenes U-Bahn-System",
+          "description": "Ein Netzwerk verlassener U-Bahn-Tunnel, die von Squattern und Kriminellen bewohnt werden. Dunkel, feucht und gefährlich.",
+          "visited": false
+        },
+        {
+          "name": "Rattennest Bar",
+          "description": "Eine schmutzige Bar im Untergrund, bekannt für ihre zwielichtigen Kunden und illegalen Aktivitäten.",
+          "visited": false
+        }
+      ],
+      "npcs": [
+        {
+          "name": "Whisper",
+          "description": "Ein nervöser Informant, der ständig auf der Hut ist.",
+          "faction": "Neutral",
+          "attitude": "Misstrauisch"
+        },
+        {
+          "name": "Jäger von Osiris",
+          "description": "Skrupellose Söldner, die im Auftrag von Osiris arbeiten.",
+          "faction": "Osiris",
+          "attitude": "Feindselig"
+        }
+      ],
+      "completed": false
+    }
+  ],
+  "world_state": {},
+  "history": []
+}

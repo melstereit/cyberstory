@@ -1,0 +1,85 @@
+{
+  "id": "92348954-6845-4670-9afb-0f9eefeff1ab",
+  "name": "eXodus",
+  "faction": 1,
+  "trademarks": {
+    "Infiltrator": {
+      "name": "Infiltrator",
+      "triggers": [
+        "Stealthy",
+        "Silent takedown",
+        "Quick"
+      ],
+      "description": ""
+    },
+    "Gutter Scum": {
+      "name": "Gutter Scum",
+      "triggers": [
+        "I know these streets",
+        "Pick pockets",
+        "Switchblade"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Awareness",
+      "trademark": "Infiltrator",
+      "description": ""
+    },
+    {
+      "name": "Sneak",
+      "trademark": "Gutter Scum",
+      "description": ""
+    }
+  ],
+  "flaws": [
+    {
+      "name": "Family ties",
+      "description": "You have family obligations that often get in the way."
+    },
+    {
+      "name": "Wanted",
+      "description": "Someone is looking for you, and not in a good way."
+    }
+  ],
+  "drive": {
+    "description": "Prove I didn't kill \"Bam Bam\" Crow",
+    "track": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [
+    {
+      "name": "Light Pistol",
+      "tags": [
+        "Concealed",
+        "Quick draw"
+      ],
+      "description": "",
+      "is_special": true
+    }
+  ],
+  "xp": 1,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [
+    null
+  ],
+  "conditions": []
+}

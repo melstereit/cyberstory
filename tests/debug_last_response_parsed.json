@@ -1,33 +1,68 @@
-{
-  "requires_check": false,
-  "check_context": {
-    "action": "Assess the situation using Cyber Eyes",
-    "relevant_trademark": null,
-    "relevant_edges": [],
-    "gear_tags": [
-      "Thermal imaging",
-      "Camera",
-      "HUD"
-    ],
-    "advantageous_tags": [],
-    "disadvantageous_tags": [
-      "Distracting"
-    ],
-    "opposition_scale": 0
-  },
-  "response": "Your Cyber Eyes activate, enhancing your perception. Thermal imaging highlights the heat signatures of Rico and Shiv, revealing their positions even through the dim light. The camera function zooms in, providing a closer look at Rico's neural interface jack and Shiv's metallic knuckles. The HUD overlays tactical information: Rico's bio-signs are stable, suggesting he's calm and collected, while Shiv's are elevated, indicating agitation. You notice Rico is tapping away on a wrist-mounted device. The flickering neon sign above is causing some visual distortion, but your systems compensate.",
-  "state_update": {
-    "game_state": {
-      "history_event": "eXodus used Cyber Eyes to scan the alley.",
-      "scene_updates": {},
-      "world_state_updates": {},
-      "quest_updates": {}
+[
+  {
+    "name": "Echoes of Osiris",
+    "description": "Ein Informant hat Exodus kontaktiert und behauptet, Informationen über den Verbleib von gestohlenen Daten von Osiris zu haben. Der Informant, bekannt als 'Whisper', ist jedoch paranoid und verlangt ein Treffen an einem sicheren Ort. Whisper fürchtet, dass Osiris' Leute ihm auf den Fersen sind.",
+    "client": {
+      "name": "Whisper",
+      "description": "Ein ehemaliger Datenbroker, der jetzt im Untergrund lebt und Informationen verkauft, um zu überleben. Misstrauisch und ängstlich.",
+      "faction": "Neutral"
     },
-    "character": {
-      "add_condition": null,
-      "remove_condition": null,
-      "add_item": {},
-      "remove_item": null
-    }
+    "objectives": [
+      {
+        "description": "Triff Whisper an einem sicheren Ort, ohne von Osiris' Leuten entdeckt zu werden.",
+        "completed": false
+      },
+      {
+        "description": "Extrahiere die Informationen über die gestohlenen Daten von Osiris von Whisper.",
+        "completed": false
+      },
+      {
+        "description": "Entscheide, was mit Whisper passiert (schütze ihn oder lasse ihn zurück).",
+        "completed": false
+      }
+    ],
+    "rewards": {
+      "credits": 1200,
+      "items": [
+        {
+          "name": "Verschlüsselte Datenshards",
+          "tags": [
+            "Daten",
+            "Verschlüsselt",
+            "Osiris"
+          ],
+          "is_special": true
+        }
+      ],
+      "xp": 4,
+      "faction_standing": {}
+    },
+    "locations": [
+      {
+        "name": "Verlassenes U-Bahn-System",
+        "description": "Ein Netzwerk verlassener U-Bahn-Tunnel, die von Squattern und Kriminellen bewohnt werden. Dunkel, feucht und gefährlich.",
+        "visited": false
+      },
+      {
+        "name": "Rattennest Bar",
+        "description": "Eine schmutzige Bar im Untergrund, bekannt für ihre zwielichtigen Kunden und illegalen Aktivitäten.",
+        "visited": false
+      }
+    ],
+    "npcs": [
+      {
+        "name": "Whisper",
+        "description": "Ein nervöser Informant, der ständig auf der Hut ist.",
+        "faction": "Neutral",
+        "attitude": "Misstrauisch"
+      },
+      {
+        "name": "Jäger von Osiris",
+        "description": "Skrupellose Söldner, die im Auftrag von Osiris arbeiten.",
+        "faction": "Osiris",
+        "attitude": "Feindselig"
+      }
+    ],
+    "completed": false
   }
-}
+]

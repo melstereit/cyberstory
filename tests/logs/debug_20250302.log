@@ -1,0 +1,210 @@
+[2025-03-02 21:06:02] Starting game loop
+
+[2025-03-02 21:06:06] Initialized last_event as None
+
+[2025-03-02 21:06:06] Current scene
+  name: Neon Alley Rumble
+  has_last_event: False
+
+[2025-03-02 21:06:06] Displayed scene elements
+
+[2025-03-02 21:06:06] Displayed character summary
+
+[2025-03-02 21:06:13] Player action
+  action: observe
+
+[2025-03-02 21:06:13] Processing player action
+  action: observe
+
+[2025-03-02 21:06:16] Action result received
+  requires_check: False
+
+[2025-03-02 21:06:16] Direct response handled
+  response: You continue to observe Fingers and Ripper. Finger
+
+[2025-03-02 21:06:16] State update found in action result
+
+[2025-03-02 21:06:16] Reloaded character data after state update
+
+[2025-03-02 21:06:16] Set last_event from direct response
+  event_start: You continue to observe Fingers and Ripper. Finger
+
+[2025-03-02 21:06:16] Added response to history and saved game state
+
+[2025-03-02 21:06:58] Player pressed Enter to continue
+
+[2025-03-02 21:06:58] Checking if scene is completed
+  completed: False
+
+[2025-03-02 21:06:58] Current scene
+  name: Neon Alley Rumble
+  has_last_event: True
+
+[2025-03-02 21:06:58] Displaying last event
+  event_start: You continue to observe Fingers and Ripper. Finger
+
+[2025-03-02 21:06:58] Reset last_event to None after display
+
+[2025-03-02 21:06:58] Displayed scene elements
+
+[2025-03-02 21:06:58] Displayed character summary
+
+[2025-03-02 21:09:12] Player action
+  action: Attempt to eavesdrop on the conversation.
+
+[2025-03-02 21:09:12] Processing player action
+  action: Attempt to eavesdrop on the conversation.
+
+[2025-03-02 21:09:15] Action result received
+  requires_check: True
+
+[2025-03-02 21:09:15] Check required
+  action: Eavesdropping on Ripper Rostoff and Fingers Malone to gather information about their plans and connection to Bam Bam Crow's death.
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Awareness', 'Sneak']
+  gear_tags: []
+  advantageous_tags: ['Concealing']
+  disadvantageous_tags: ['Distracting']
+  opposition_scale: 2
+
+[2025-03-02 21:09:15] Check performed
+  success_level: partial
+
+[2025-03-02 21:09:15] Generating consequences
+
+[2025-03-02 21:09:20] Consequences received
+  description: You manage to get a little closer, staying out of 
+
+[2025-03-02 21:09:20] Updating game state and character
+
+[2025-03-02 21:14:51] Starting game loop
+
+[2025-03-02 21:14:52] Initialized last_event as None
+
+[2025-03-02 21:14:52] Current scene
+  name: Neon Alley Rumble
+  has_last_event: False
+
+[2025-03-02 21:14:52] Displayed scene elements
+
+[2025-03-02 21:14:52] Displayed character summary
+
+[2025-03-02 21:15:00] Player action
+  action: 2
+
+[2025-03-02 21:15:00] Processing player action
+  action: 2
+
+[2025-03-02 21:15:03] Action result received
+  requires_check: True
+
+[2025-03-02 21:15:03] Check required
+  action: Attempt to eavesdrop on the conversation between Ripper Rostoff and Fingers Malone.
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Awareness']
+  gear_tags: []
+  advantageous_tags: ['Concealing']
+  disadvantageous_tags: ['Distracting']
+  opposition_scale: 1
+
+[2025-03-02 21:15:03] Check performed
+  success_level: success
+
+[2025-03-02 21:15:03] Generating consequences
+
+[2025-03-02 21:15:09] Consequences received
+  description: You focus all your senses, trying to decipher the 
+
+[2025-03-02 21:15:09] Updating game state and character
+
+[2025-03-02 21:15:09] Updating character
+  char_id: 92348954-6845-4670-9afb-0f9eefeff1ab
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-03-02 21:15:09] Adding 0 hits
+
+[2025-03-02 21:15:09] Healing 0 hits
+
+[2025-03-02 21:15:09] Spending 0 stunt points
+
+[2025-03-02 21:15:09] Adding 0 XP
+
+[2025-03-02 21:15:09] Ticking drive box: 0
+
+[2025-03-02 21:15:09] Crossing out drive box: 0
+
+[2025-03-02 21:15:09] Saving updated character to database
+
+[2025-03-02 21:15:09] Reloading character data
+
+[2025-03-02 21:15:09] Set last_event from consequences
+  event_start: You focus all your senses, trying to decipher the 
+
+[2025-03-02 21:15:09] Reloaded character data
+
+[2025-03-02 21:15:53] Player pressed Enter to continue
+
+[2025-03-02 21:15:53] Checking if scene is completed
+  completed: False
+
+[2025-03-02 21:15:53] Current scene
+  name: Neon Alley Rumble
+  has_last_event: True
+
+[2025-03-02 21:15:53] Displaying last event
+  event_start: You focus all your senses, trying to decipher the 
+
+[2025-03-02 21:15:53] Reset last_event to None after display
+
+[2025-03-02 21:15:53] Displayed scene elements
+
+[2025-03-02 21:15:53] Displayed character summary
+
+[2025-03-02 21:17:26] Player action
+  action: 2
+
+[2025-03-02 21:17:26] Processing player action
+  action: 2
+
+[2025-03-02 21:17:30] Action result received
+  requires_check: False
+
+[2025-03-02 21:17:30] Direct response handled
+  response: You carefully move towards the dumpster, keeping t
+
+[2025-03-02 21:17:30] State update found in action result
+
+[2025-03-02 21:17:30] Reloaded character data after state update
+
+[2025-03-02 21:17:30] Set last_event from direct response
+  event_start: You carefully move towards the dumpster, keeping t
+
+[2025-03-02 21:17:30] Added response to history and saved game state
+
+[2025-03-02 21:18:11] Player pressed Enter to continue
+
+[2025-03-02 21:18:11] Checking if scene is completed
+  completed: False
+
+[2025-03-02 21:18:11] Current scene
+  name: Neon Alley Rumble
+  has_last_event: True
+
+[2025-03-02 21:18:11] Displaying last event
+  event_start: You carefully move towards the dumpster, keeping t
+
+[2025-03-02 21:18:11] Reset last_event to None after display
+
+[2025-03-02 21:18:11] Displayed scene elements
+
+[2025-03-02 21:18:11] Displayed character summary
+
+[2025-03-02 21:24:54] Starting game loop
+
+[2025-03-02 21:24:55] No current scene, generating a new one
+
+[2025-03-02 21:25:02] New scene generated and saved
+  scene_name: Neon Alley Ambush
+
+[2025-03-02 21:25:02] No current quest, generating a new one
+

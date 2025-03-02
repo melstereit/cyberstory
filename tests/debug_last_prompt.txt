@@ -2,45 +2,60 @@
 Du bist der Spielleiter eines textbasierten Cyberpunk-RPGs.
 
 ## Input
-- Charakterdaten: {"id": "bf6f9ae8-a897-4566-acaf-5ae3d727c53b", "name": "eXodus", "faction": 1, "trademarks": {"Codeslinger": {"name": "Codeslinger", "triggers": ["Hacking", "Cyber combat", "Security systems"], "description": ""}, "Cyber Arms": {"name": "Cyber Arms", "triggers": ["Hit hard", "Armored", "Blades"], "description": ""}}, "edges": [{"name": "Hacking", "trademark": "Codeslinger", "description": ""}, {"name": "Block a blow", "trademark": "Cyber Arms", "description": ""}], "flaws": [{"name": "Family ties", "description": "You have family obligations that often get in the way."}, {"name": "Code of honor", "description": "You follow strict personal rules that can be limiting."}], "drive": {"description": "Find my missing birth records", "track": [false, false, false, false, false, false, false, false, false, false]}, "stunt_points": 3, "max_stunt_points": 3, "inventory": [{"name": "Cyber Eyes", "tags": ["Thermal imaging", "Camera", "HUD"], "description": "", "is_special": true}, {"name": "Switchblade", "tags": ["Concealed", "Quick"], "description": "", "is_special": true}], "xp": 0, "hit_track": [false, false, false], "traumas": [], "conditions": []}
-- Aktueller Spielzustand: {"id": "5772970f-ab7d-4ecf-96b4-d8bd73d5c8de", "active_character_id": "bf6f9ae8-a897-4566-acaf-5ae3d727c53b", "current_scene": {"name": "Neon Alley Ambush", "description": "You find yourself standing in a narrow alley, slick with rain and illuminated by flickering neon signs advertising braindances and noodle bars. The air smells of synth-ramen and desperation. The alley walls are covered in layers of graffiti and decaying posters. A rusted fire escape zigzags up the side of a towering building, promising a precarious escape route. A nearby dumpster overflows with discarded tech and biological waste. The rhythmic pulse of the city's underbelly vibrates through the grimy pavement.", "characters": [{"name": "\"Razor\" Rico", "description": "A gaunt figure leaning against a wall, his face obscured by a deep hood. Cybernetic enhancements glint under the neon, including a visible neural interface jack on his temple and enhanced eyes. He exudes an aura of predatory calm.", "faction": "Scavengers"}, {"name": "\"Spike\" Shiv", "description": "Razor Rico's backup. Shiv is a hulking figure with visible cybernetic implants, including metallic knuckles and armored shins. Constantly cracking his knuckles and twitching.", "faction": "Scavengers"}], "objects": [{"name": "Overturned Trash Can", "description": "An overflowing metal trash can, knocked on its side, spilling its contents of refuse across the alley.", "tags": ["Cover", "Obstacle"]}, {"name": "Flickering Neon Sign", "description": "A sign for 'Kabuki Noodles' above. Its light casts intermittent strobe-like flickers across the scene.", "tags": ["Distracting", "Environmental Hazard"]}], "threats": [{"name": "Razor Rico's Ambush", "description": "Rico and Shiv are lying in wait, looking to relieve eXodus of their valuables. Rico prefers to hack systems and fight smart, where Shiv likes to rush in and hit hard.", "hits": 2, "tags": ["Surprise", "Melee", "Hacking"]}], "objectives": ["Survive the ambush", "Find out who sent the ambushers (Optional)"], "suggested_actions": ["Assess the situation using Cyber Eyes", "Attempt to hack Rico's cybernetics", "Engage in close combat using Cyber Arms"], "completed": false}, "quest_data": {"name": "Echoes of the Past", "description": "A contact surfaces claiming to have information regarding eXodus's missing birth records. They demand a favor in return: retrieve a stolen data chip containing sensitive information from a heavily guarded corporate archive.", "client": {"name": "Whisper", "description": "A shadowy informant known for dealing in secrets and classified data. Their motives are always shrouded in mystery.", "faction": "Netrunners"}, "objectives": [{"description": "Meet Whisper at the designated rendezvous point in the Glitch District.", "completed": false}, {"description": "Infiltrate the Arasaka Datacenter.", "completed": false}, {"description": "Retrieve the stolen data chip (Project Nightingale).", "completed": false}, {"description": "Deliver the chip to Whisper.", "completed": false}], "rewards": {"credits": 1500, "items": [{"name": "Encrypted Datapad", "tags": ["Encrypted", "Secure", "Data Storage"], "is_special": false}], "xp": 5, "faction_standing": {"Netrunners": 1}}, "locations": [{"name": "Glitch District Rendezvous", "description": "A dilapidated, overcrowded sector known for its black market tech and illegal braindance dens. Finding a secure meeting place here will be difficult.", "visited": false}, {"name": "Arasaka Datacenter", "description": "A heavily fortified data storage facility protected by layers of security systems, cybernetic guards, and automated defenses.", "visited": false}], "npcs": [{"name": "Whisper", "description": "A mysterious netrunner with a penchant for secrets and deception. It's hard to tell what they're really after.", "faction": "Netrunners", "attitude": "Neutral"}, {"name": "Sergeant Kaito", "description": "Head of security at the Arasaka Datacenter. A no-nonsense cyborg with enhanced reflexes and lethal combat skills.", "faction": "Arasaka Security", "attitude": "Hostile"}], "completed": false}, "world_state": {}, "history": []}
-- Aktuelle Szene: {"name": "Neon Alley Ambush", "description": "You find yourself standing in a narrow alley, slick with rain and illuminated by flickering neon signs advertising braindances and noodle bars. The air smells of synth-ramen and desperation. The alley walls are covered in layers of graffiti and decaying posters. A rusted fire escape zigzags up the side of a towering building, promising a precarious escape route. A nearby dumpster overflows with discarded tech and biological waste. The rhythmic pulse of the city's underbelly vibrates through the grimy pavement.", "characters": [{"name": "\"Razor\" Rico", "description": "A gaunt figure leaning against a wall, his face obscured by a deep hood. Cybernetic enhancements glint under the neon, including a visible neural interface jack on his temple and enhanced eyes. He exudes an aura of predatory calm.", "faction": "Scavengers"}, {"name": "\"Spike\" Shiv", "description": "Razor Rico's backup. Shiv is a hulking figure with visible cybernetic implants, including metallic knuckles and armored shins. Constantly cracking his knuckles and twitching.", "faction": "Scavengers"}], "objects": [{"name": "Overturned Trash Can", "description": "An overflowing metal trash can, knocked on its side, spilling its contents of refuse across the alley.", "tags": ["Cover", "Obstacle"]}, {"name": "Flickering Neon Sign", "description": "A sign for 'Kabuki Noodles' above. Its light casts intermittent strobe-like flickers across the scene.", "tags": ["Distracting", "Environmental Hazard"]}], "threats": [{"name": "Razor Rico's Ambush", "description": "Rico and Shiv are lying in wait, looking to relieve eXodus of their valuables. Rico prefers to hack systems and fight smart, where Shiv likes to rush in and hit hard.", "hits": 2, "tags": ["Surprise", "Melee", "Hacking"]}], "objectives": ["Survive the ambush", "Find out who sent the ambushers (Optional)"], "suggested_actions": ["Assess the situation using Cyber Eyes", "Attempt to hack Rico's cybernetics", "Engage in close combat using Cyber Arms"], "completed": false}
-- Spieleraktion: "i use cyber eyes"
+- Charakterdaten: {"id": "92b1e87f-ee38-4668-91f4-0cdab834fd15", "name": "exodus", "faction": 1, "trademarks": {"Codeslinger": {"name": "Codeslinger", "triggers": ["Hacking", "Cyber combat", "Security systems"], "description": ""}, "Cyber Eyes": {"name": "Cyber Eyes", "triggers": ["Target assist", "Camera", "Thermal imaging"], "description": ""}}, "edges": [{"name": "Defence programs", "trademark": "Codeslinger", "description": ""}, {"name": "Target assist", "trademark": "Cyber Eyes", "description": ""}], "flaws": [{"name": "Code of honor", "description": "You follow strict personal rules that can be limiting."}, {"name": "Addiction", "description": "You are addicted to a substance or behavior."}], "drive": {"description": "Recover what I stole from Osiris", "track": [false, false, false, false, false, false, false, false, false, false]}, "stunt_points": 3, "max_stunt_points": 3, "inventory": [], "xp": 0, "hit_track": [false, false, false], "traumas": [], "conditions": []}
+- Aktueller Spielzustand: {"id": "69c03abe-ba1c-40ea-ac05-9894d6905e0b", "active_character_id": "92b1e87f-ee38-4668-91f4-0cdab834fd15", "current_scene": {"name": "Neon Alley Ambush", "description": "Du findest dich in einer dunklen Gasse wieder, die nur spärlich von flackernden Neonreklamen beleuchtet wird. Der Regen tropft von den rostigen Metallplatten über dir und vermischt sich mit dem Öl und dem Dreck auf dem Boden. Der Gestank von verbranntem Synthetik und billigem Ramen hängt in der Luft. Du hast gerade den 'Jade Dragon' verlassen, eine heruntergekommene Nudelbar, in der du ein paar vage Informationen über Osiris bekommen hast. Plötzlich hörst du hinter dir das Klicken von Sicherheitsstiefeln auf dem nassen Pflasterstein. Zwei Gestalten versperren dir den Weg.", "characters": [{"name": "Razer", "description": "Ein bulliger Typ mit einer Cyberarm, die mit Klingen bestückt ist. Er trägt eine abgenutzte Lederjacke und hat einen aggressiven Gesichtsausdruck.", "faction": "Osiris' Handlanger"}, {"name": "Glitch", "description": "Ein schmächtiger Hacker mit leuchtenden Cyberaugen und einem Dataport an seinem Schläfen. Er scheint nervös und hält eine Pistole zitternd in der Hand.", "faction": "Osiris' Handlanger"}], "objects": [{"name": "Müllcontainer", "description": "Ein großer, rostiger Müllcontainer, überquellend mit Müll.", "tags": ["Deckung", "Versteck"]}, {"name": "Neonreklame", "description": "Eine flackernde Neonreklame, die für 'Cyber Sushi' wirbt.", "tags": ["Ablenkung", "Gefahr"]}], "threats": [{"name": "Razer's Klingenarm", "description": "Razer's Cyberarm ist mit scharfen Klingen bestückt, die er mit tödlicher Präzision einsetzen kann.", "hits": 2, "tags": ["Nahkampf", "Cyberware"]}, {"name": "Glitch's Pistole", "description": "Glitch's Pistole ist alt und verrostet, aber immer noch tödlich.", "hits": 1, "tags": ["Schusswaffe", "Unsicher"]}], "objectives": ["Überlebe den Hinterhalt.", "Finde heraus, wer die Angreifer geschickt hat."], "suggested_actions": ["Nutze deine Codeslinger-Fähigkeiten, um Glitch's Pistole zu deaktivieren.", "Nutze deine Cyber Eyes, um die Schwachstellen von Razer's Cyberarm zu erkennen.", "Fliehe aus der Gasse."], "completed": false}, "quest_data": {}, "world_state": {}, "history": []}
 
 ## Aufgabe
-Analysiere die Spieleraktion und bestimme, was passieren sollte. Entscheide, ob ein Würfelwurf erforderlich ist oder ob die Aktion automatisch gelingt/misslingt.
+Generiere eine neue Quest für den Charakter, passend zu seinen Trademarks, Flaws und Drive. Die Quest sollte einen klaren Auftrag, Hindernisse und potenzielle Belohnungen haben.
 
 ## Output-Format
 Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
 ```json
 {
-  "requires_check": true/false,
-  "check_context": {
-    "action": "Beschreibung der Aktion",
-    "relevant_trademark": "Name des relevanten Trademarks oder null",
-    "relevant_edges": ["Edge1", "Edge2"],
-    "gear_tags": ["Tag1", "Tag2"],
-    "advantageous_tags": ["Tag1", "Tag2"],
-    "disadvantageous_tags": ["Tag1", "Tag2"],
-    "opposition_scale": 0
+  "name": "Name der Quest",
+  "description": "Ausführliche Beschreibung der Quest",
+  "client": {
+    "name": "Name des Auftraggebers",
+    "description": "Beschreibung des Auftraggebers",
+    "faction": "Fraktion des Auftraggebers"
   },
-  "response": "Antwort für den Spieler, wenn kein Würfelwurf erforderlich ist",
-  "state_update": {
-    "game_state": {
-      "history_event": "Ereignis für die Historie",
-      "scene_updates": {},
-      "world_state_updates": {},
-      "quest_updates": {}
-    },
-    "character": {
-      "add_condition": "Bedingung hinzufügen",
-      "remove_condition": "Bedingung entfernen",
-      "add_item": {},
-      "remove_item": "Item-Name"
+  "objectives": [
+    {
+      "description": "Beschreibung des Ziels",
+      "completed": false
     }
-  }
+  ],
+  "rewards": {
+    "credits": 1000,
+    "items": [
+      {
+        "name": "Item-Name",
+        "tags": ["Tag1", "Tag2"],
+        "is_special": true
+      }
+    ],
+    "xp": 3,
+    "faction_standing": {
+      "faction_name": 1
+    }
+  },
+  "locations": [
+    {
+      "name": "Name des Orts",
+      "description": "Beschreibung des Orts",
+      "visited": false
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Name des NPC",
+      "description": "Beschreibung des NPC",
+      "faction": "Fraktion des NPC",
+      "attitude": "Einstellung zum Spieler"
+    }
+  ],
+  "completed": false
 }
 ```
 
-Wenn `requires_check` true ist, wird ein Würfelwurf durchgeführt, und das Feld `check_context` wird verwendet, um den Würfelpool zu berechnen.
-Wenn `requires_check` false ist, wird die `response` direkt angezeigt, und `state_update` wird verwendet, um den Spielzustand zu aktualisieren.
+Sei kreativ, generiere eine interessante Quest mit mehreren möglichen Lösungswegen und Hindernissen, die zu den Fähigkeiten des Charakters passen.
