@@ -9,6 +9,8 @@ from cyberstory.ai.prompt_templates import (
     CONSEQUENCES_PROMPT,
     QUEST_GENERATION_PROMPT
 )
+from cyberstory.ai.schemas import Scene  # oder welches Modell auch immer benötigt wird
+from cyberstory.mechanics.dice_result import DiceResult  # Import DiceResult
 
 
 class LLMGameplayIntegration:
@@ -147,7 +149,7 @@ class LLMGameplayIntegration:
     def generate_consequences(self, 
                              game_state: Dict[str, Any], 
                              character_data: Dict[str, Any], 
-                             check_result: Dict[str, Any], 
+                             check_result: Any,  # Allow both dict and DiceResult
                              action_text: str) -> Dict[str, Any]:
         """
         Generiert Konsequenzen basierend auf einem Würfelergebnis.
@@ -155,7 +157,7 @@ class LLMGameplayIntegration:
         Args:
             game_state: Aktueller Spielzustand
             character_data: Aktuelle Charakterdaten
-            check_result: Ergebnis der Würfelprobe
+            check_result: Ergebnis der Würfelprobe (kann dict oder DiceResult sein)
             action_text: Text der Spieleraktion
             
         Returns:
@@ -163,7 +165,6 @@ class LLMGameplayIntegration:
         """
         # Extrahiere relevante Daten für den Prompt
         current_scene = game_state.get("current_scene", {})
-        result = check_result.get("result", {})
         
         # Erstelle den Prompt
         prompt = CONSEQUENCES_PROMPT.format(
@@ -171,10 +172,10 @@ class LLMGameplayIntegration:
             game_state=json.dumps(game_state, ensure_ascii=False),
             current_scene=json.dumps(current_scene, ensure_ascii=False),
             action_text=action_text,
-            check_result=json.dumps(check_result, ensure_ascii=False),
-            success_level=result.success_level if hasattr(result, 'success_level') else "failure",
-            value=result.value if hasattr(result, 'value') else 0,
-            boons=result.boons if hasattr(result, 'boons') else 0
+            check_result=json.dumps(check_result.to_dict() if isinstance(check_result, DiceResult) else check_result, ensure_ascii=False),  # Use to_dict() here
+            success_level=check_result.success_level if isinstance(check_result, DiceResult) else "failure",
+            value=check_result.value if isinstance(check_result, DiceResult) else 0,
+            boons=check_result.boons if isinstance(check_result, DiceResult) else 0
         )
         
         # Sende den Prompt an das LLM
@@ -182,7 +183,7 @@ class LLMGameplayIntegration:
         
         # Fallback-Konsequenzen, falls etwas schiefgeht
         if not response:
-            return self._create_fallback_consequences(result)
+            return self._create_fallback_consequences(check_result.value if isinstance(check_result, DiceResult) else None)
         
         return response
     
@@ -212,7 +213,7 @@ class LLMGameplayIntegration:
         
         return response
     
-    def _send_to_llm(self, prompt: str) -> Optional[Dict[str, Any]]:
+    def _send_to_llm(self, prompt: str, schema_model=None) -> Optional[Dict[str, Any]]:
         try:
             print("\n=== LLM-ANFRAGE BEGINNT ===")
             print(f"Sende Anfrage an Modell: {self.llm.model}")
@@ -223,11 +224,16 @@ class LLMGameplayIntegration:
                 f.write(prompt)
                 print("Vollständiger Prompt in 'debug_last_prompt.txt' gespeichert.")
             
-            # API-Anfrage senden
+            # Konfiguration vorbereiten
+            config = {'response_mime_type': 'application/json'}
+            if schema_model:
+                config['response_schema'] = schema_model
+            
+            # API-Anfrage senden mit JSON-Konfiguration
             response = self.llm.client.models.generate_content(
                 model=self.llm.model,
                 contents=prompt,
-                config={"response_mime_type": "application/json"}
+                config=config
             )
             
             # Debug: Rohantwort speichern
@@ -237,25 +243,33 @@ class LLMGameplayIntegration:
             
             print(f"LLM-Antwort erhalten, Rohtext: {response.text[:300]}...")
             
-            # Manuelles JSON-Parsing implementieren
-            import json
-            try:
-                # Manuelles JSON-Parsing der Textantwort
-                result = json.loads(response.text)
-                print(f"Manuelles JSON-Parsing erfolgreich: {str(result)[:300]}...")
+            # Verwenden von response.parsed statt manuelles Parsing
+            if hasattr(response, 'parsed') and response.parsed is not None:
+                result = response.parsed
+                print(f"Automatisches JSON-Parsing erfolgreich")
                 
-                # Debug: Geparste Antwort speichern
-                with open("debug_last_response_parsed.json", "w", encoding="utf-8") as f:
-                    json.dump(result, f, ensure_ascii=False, indent=2)
-                    print("Geparste Antwort in 'debug_last_response_parsed.json' gespeichert.")
+                # Wenn das Ergebnis ein Pydantic-Modell ist, zu Dict konvertieren
+                if hasattr(result, 'dict'):
+                    result = result.dict()
                 
-                print("=== LLM-ANFRAGE ENDE ===\n")
-                return result
-                
-            except json.JSONDecodeError as je:
-                print(f"JSON-Parsing-Fehler: {je}")
-                print(f"Vollständige Antwort: {response.text}")
-                return None
+            else:
+                # Fallback auf manuelles JSON-Parsing wenn nötig
+                import json
+                try:
+                    result = json.loads(response.text)
+                    print(f"Manuelles JSON-Parsing erfolgreich")
+                except json.JSONDecodeError as je:
+                    print(f"JSON-Parsing-Fehler: {je}")
+                    print(f"Vollständige Antwort: {response.text}")
+                    return None
+            
+            # Debug: Geparste Antwort speichern
+            with open("debug_last_response_parsed.json", "w", encoding="utf-8") as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+                print("Geparste Antwort in 'debug_last_response_parsed.json' gespeichert.")
+            
+            print("=== LLM-ANFRAGE ENDE ===\n")
+            return result
             
         except Exception as e:
             print(f"\n!!! FEHLER BEI DER LLM-ANFRAGE: {e} !!!")
@@ -268,7 +282,7 @@ class LLMGameplayIntegration:
         """Erstellt eine Fallback-Szene für den Fall eines Fehlers."""
         return {
             "name": "Neon-beleuchtete Gasse",
-            "description": "Du stehst in einer engen Gasse, gesäumt von flackernden Neonlichtern, die die Pfützen auf dem regennassen Asphalt bunt färben. Die Luft ist erfüllt vom Geruch nach gebratenem Essen, Abgasen und dem metallischen Duft der Stadt. Menschen drängen sich vorbei, jeder in seine eigene Geschichte vertieft.",
+            "description": "Du stehst in einer engen Gasse, gesäumt von flackernden Neonlichtern, die die Pfützen auf dem regennassen Asphalt bunt färben. Die Luft ist erfüllt vom Geruch nach gebratenem Essen, Abgasen und dem metallischen Duft der Stadt. Menschen drängen sich vorbei, jeder in seine eigene Geschichte vertieft. ",
             "characters": [
                 {"name": "Straßenverkäufer", "description": "Ein älterer Mann mit Cyber-Auge, der Syn-Ramen an einem kleinen Stand verkauft.", "faction": "Freelancer"}
             ],

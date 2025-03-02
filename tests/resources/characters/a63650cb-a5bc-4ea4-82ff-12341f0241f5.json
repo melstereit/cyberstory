@@ -1,0 +1,92 @@
+{
+  "id": "a63650cb-a5bc-4ea4-82ff-12341f0241f5",
+  "name": "eXodus",
+  "faction": 1,
+  "trademarks": {
+    "Infiltrator": {
+      "name": "Infiltrator",
+      "triggers": [
+        "Stealthy",
+        "Silent takedown",
+        "Quick"
+      ],
+      "description": ""
+    },
+    "Cyber Eyes": {
+      "name": "Cyber Eyes",
+      "triggers": [
+        "Notice",
+        "Thermal imaging",
+        "Target assist"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Concealed weapon",
+      "trademark": "Infiltrator",
+      "description": ""
+    },
+    {
+      "name": "Notice",
+      "trademark": "Cyber Eyes",
+      "description": ""
+    }
+  ],
+  "flaws": [
+    {
+      "name": "Family ties",
+      "description": "You have family obligations that often get in the way."
+    },
+    {
+      "name": "Wanted",
+      "description": "Someone is looking for you, and not in a good way."
+    }
+  ],
+  "drive": {
+    "description": "Repay Pollux for saving my life",
+    "track": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [
+    {
+      "name": "Switchblade",
+      "tags": [
+        "Concealed",
+        "Quick"
+      ],
+      "description": "",
+      "is_special": true
+    },
+    {
+      "name": "Motorcycle",
+      "tags": [
+        "Fast",
+        "Agile"
+      ],
+      "description": "",
+      "is_special": true
+    }
+  ],
+  "xp": 0,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [],
+  "conditions": []
+}

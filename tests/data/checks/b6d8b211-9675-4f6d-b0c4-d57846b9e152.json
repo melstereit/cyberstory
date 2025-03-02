@@ -1,0 +1,41 @@
+{
+  "id": "b6d8b211-9675-4f6d-b0c4-d57846b9e152",
+  "timestamp": 1740935771.1781032,
+  "character_id": "16325b79-a826-4877-9480-e87c8d6a3432",
+  "context": {
+    "action": "Versucht die Gassen-Schläger zu überlisten.",
+    "relevant_trademark": "Arcology Brat",
+    "relevant_edges": [
+      "Athletic"
+    ],
+    "gear_tags": [
+      "Concealed",
+      "Fast",
+      "Quick"
+    ],
+    "advantageous_tags": [
+      "Rutschig",
+      "Ablenkend"
+    ],
+    "disadvantageous_tags": [],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "success",
+    "value": 6,
+    "action_dice": [
+      1,
+      6,
+      5
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      1,
+      6,
+      5
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

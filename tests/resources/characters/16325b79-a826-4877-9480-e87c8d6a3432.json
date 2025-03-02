@@ -1,0 +1,92 @@
+{
+  "id": "16325b79-a826-4877-9480-e87c8d6a3432",
+  "name": "Testing name",
+  "faction": 0,
+  "trademarks": {
+    "Arcology Brat": {
+      "name": "Arcology Brat",
+      "triggers": [
+        "Educated",
+        "Sneak",
+        "Lie"
+      ],
+      "description": ""
+    },
+    "Codeslinger": {
+      "name": "Codeslinger",
+      "triggers": [
+        "Hacking",
+        "Cyber combat",
+        "Security systems"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Athletic",
+      "trademark": "Arcology Brat",
+      "description": ""
+    },
+    {
+      "name": "Hacking",
+      "trademark": "Codeslinger",
+      "description": ""
+    }
+  ],
+  "flaws": [
+    {
+      "name": "Addiction",
+      "description": "You are addicted to a substance or behavior."
+    },
+    {
+      "name": "Code of honor",
+      "description": "You follow strict personal rules that can be limiting."
+    }
+  ],
+  "drive": {
+    "description": "Find my missing birth records",
+    "track": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [
+    {
+      "name": "Switchblade",
+      "tags": [
+        "Concealed",
+        "Quick"
+      ],
+      "description": "",
+      "is_special": true
+    },
+    {
+      "name": "Wired Reflexes",
+      "tags": [
+        "Fast",
+        "Quick draw"
+      ],
+      "description": "",
+      "is_special": true
+    }
+  ],
+  "xp": 0,
+  "hit_track": [
+    false,
+    false,
+    false
+  ],
+  "traumas": [],
+  "conditions": []
+}
