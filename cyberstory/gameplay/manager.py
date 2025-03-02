@@ -147,6 +147,10 @@ class GameplayManager:
                 action_text
             )
             
+            # Dieser Flag wird gesetzt, wenn wir die Szene aktualisieren, um anzuzeigen, 
+            # dass wir beim nächsten Schleifendurchlauf nicht neu anzeigen müssen
+            scene_updated = False
+            
             # Führe einen Würfelwurf durch, falls erforderlich
             if action_result.get("requires_check", False):
                 check_context = action_result.get("check_context", {})
@@ -172,24 +176,53 @@ class GameplayManager:
                 )
                 
                 # Zeige die Konsequenzen an
-                self._display_consequences(consequences)
+                self.ui.display_subtitle("Konsequenzen")
+                self.ui.display_text(consequences.get("description", ""))
                 
                 # Aktualisiere den Spielzustand und Charakter
                 self._update_game_state(consequences)
                 self._update_character(consequences)
+                
+                # Speichern nach der Aktualisierung
+                self.game_state_manager.save_game()
+                
+                # Aktualisiere die Daten
+                self.current_character_data = self.character_manager.get_character(self.current_character_data["id"])
+                
+                # Markiere die Szene als aktualisiert
+                scene_updated = True
+                
             else:
                 # Direkte Antwort ohne Würfelwurf
-                self.ui.display_text("\n" + action_result.get("response", ""))
+                response = action_result.get("response", "")
+                self.ui.display_text("\n" + response)
                 
                 # Aktualisiere den Spielzustand, falls notwendig
                 if "state_update" in action_result:
                     self._update_direct(action_result["state_update"])
+                    
+                    # Speichern nach der Aktualisierung
+                    self.game_state_manager.save_game()
+                    
+                    # Aktualisiere die Daten
+                    self.current_character_data = self.character_manager.get_character(self.current_character_data["id"])
+                    
+                    # Markiere die Szene als aktualisiert
+                    scene_updated = True
+                
+                # Wenn es keine state_update gibt, füge die Antwort als letztes Ereignis hinzu
+                else:
+                    self.current_game_state.current_scene["letztes_ereignis"] = response
+                    self.current_game_state.add_to_history(response[:100] + "..." if len(response) > 100 else response)
+                    self.game_state_manager.save_game()
+                    scene_updated = True
+            
+            # Warte auf Benutzereingabe, bevor fortfahren
+            self.ui.display_text("\nDrücke Enter, um fortzufahren...")
+            input()
             
             # Prüfe, ob die Szene abgeschlossen ist
-            scene_completed = (
-                self.current_game_state.current_scene.get("completed", False) or
-                (consequences.get("scene_completed", False) if 'consequences' in locals() else False)
-            )
+            scene_completed = self.current_game_state.current_scene.get("completed", False)
             
             if scene_completed:
                 self.ui.display_text("\nDie Szene ist abgeschlossen.")
@@ -208,9 +241,13 @@ class GameplayManager:
                     )
                     self.current_game_state.current_scene = scene
                     self.game_state_manager.save_game()
+                    scene_updated = False  # Neue Szene muss angezeigt werden
             
-            # Speichere den Spielzustand
-            self.game_state_manager.save_game()
+            # Optional: Wenn die Szene aktualisiert wurde, zeige sie sofort an,
+            # anstatt auf den nächsten Schleifendurchlauf zu warten
+            if scene_updated:
+                self._display_current_scene()
+                self.character_display.display_character_summary(self.current_character_data)
     
     def _display_current_scene(self) -> None:
         """Zeigt die aktuelle Szene an."""
@@ -218,33 +255,68 @@ class GameplayManager:
         
         scene = self.current_game_state.current_scene
         
+        # Sicherstellen, dass die Szene existiert
+        if not scene:
+            self.ui.display_title("KEINE SZENE VERFÜGBAR")
+            self.ui.display_text("Es ist keine aktive Szene vorhanden.")
+            return
+        
         self.ui.display_title(scene.get("name", "Aktuelle Szene"))
         self.ui.display_text(scene.get("description", ""))
         
         # Zeige zusätzliche Informationen an
-        if "characters" in scene and scene["characters"]:
+        # Prüfen, ob der Wert ein Wörterbuch oder eine Liste ist
+        characters = scene.get("characters", [])
+        if isinstance(characters, list) and characters:
             self.ui.display_subtitle("Personen")
-            for char in scene["characters"]:
-                self.ui.display_text(f"- {char['name']}: {char['description']}")
+            for char in characters:
+                if isinstance(char, dict):
+                    self.ui.display_text(f"- {char.get('name', '')}: {char.get('description', '')}")
+                else:
+                    self.ui.display_text(f"- {char}")
         
-        if "objects" in scene and scene["objects"]:
+        objects = scene.get("objects", [])
+        if isinstance(objects, list) and objects:
             self.ui.display_subtitle("Objekte")
-            for obj in scene["objects"]:
-                self.ui.display_text(f"- {obj['name']}: {obj['description']}")
+            for obj in objects:
+                if isinstance(obj, dict):
+                    self.ui.display_text(f"- {obj.get('name', '')}: {obj.get('description', '')}")
+                else:
+                    self.ui.display_text(f"- {obj}")
         
-        if "threats" in scene and scene["threats"]:
+        threats = scene.get("threats", [])
+        if isinstance(threats, list) and threats:
             self.ui.display_subtitle("Bedrohungen")
-            for threat in scene["threats"]:
-                self.ui.display_text(f"- {threat['name']}: {threat['description']}")
+            for threat in threats:
+                if isinstance(threat, dict):
+                    self.ui.display_text(f"- {threat.get('name', '')}: {threat.get('description', '')}")
+                else:
+                    self.ui.display_text(f"- {threat}")
         
-        if "objectives" in scene and scene["objectives"]:
+        # Zusätzliche dynamische Elemente der Szene anzeigen
+        for key, value in scene.items():
+            # Ignoriere bereits verarbeitete Standard-Schlüssel
+            if key in ["name", "description", "characters", "objects", "threats", "objectives", "suggested_actions", "completed"]:
+                continue
+            
+            # Wenn es ein String ist, könnte es ein dynamisches Element wie eine Notiz oder ein Zustand sein
+            if isinstance(value, str):
+                self.ui.display_text(f"{key}: {value}")
+        
+        objectives = scene.get("objectives", [])
+        if isinstance(objectives, list) and objectives:
             self.ui.display_subtitle("Ziele")
-            for objective in scene["objectives"]:
-                self.ui.display_text(f"- {objective}")
+            for objective in objectives:
+                if isinstance(objective, dict):
+                    status = "[X]" if objective.get("completed", False) else "[ ]"
+                    self.ui.display_text(f"{status} {objective.get('description', '')}")
+                else:
+                    self.ui.display_text(f"- {objective}")
         
-        if "suggested_actions" in scene and scene["suggested_actions"]:
+        suggested_actions = scene.get("suggested_actions", [])
+        if isinstance(suggested_actions, list) and suggested_actions:
             self.ui.display_subtitle("Mögliche Aktionen")
-            for action in scene["suggested_actions"]:
+            for action in suggested_actions:
                 self.ui.display_text(f"- {action}")
     
     def _display_current_quest(self) -> None:
@@ -386,17 +458,40 @@ class GameplayManager:
         # Aktualisiere die aktuelle Szene
         if "scene_updates" in updates:
             for key, value in updates["scene_updates"].items():
-                self.current_game_state.current_scene[key] = value
+                # Wenn der Schlüssel bereits ein Dictionary in der Szene ist, aktualisiere es
+                if key in self.current_game_state.current_scene and isinstance(self.current_game_state.current_scene[key], dict):
+                    self.current_game_state.current_scene[key].update(value if isinstance(value, dict) else {"status": value})
+                else:
+                    # Sonst füge den Wert direkt hinzu
+                    self.current_game_state.current_scene[key] = value
         
         # Aktualisiere den Spielweltzustand
         if "world_state_updates" in updates:
             for key, value in updates["world_state_updates"].items():
-                self.current_game_state.world_state[key] = value
+                if key in self.current_game_state.world_state and isinstance(self.current_game_state.world_state[key], dict):
+                    self.current_game_state.world_state[key].update(value if isinstance(value, dict) else {"status": value})
+                else:
+                    self.current_game_state.world_state[key] = value
         
         # Aktualisiere die Questdaten
         if "quest_updates" in updates:
             for key, value in updates["quest_updates"].items():
-                self.current_game_state.quest_data[key] = value
+                if key in self.current_game_state.quest_data and isinstance(self.current_game_state.quest_data[key], dict):
+                    self.current_game_state.quest_data[key].update(value if isinstance(value, dict) else {"status": value})
+                else:
+                    self.current_game_state.quest_data[key] = value
+        
+        # Aktualisiere die Beschreibung der Szene mit den Konsequenzen, wenn vorhanden
+        if "description" in consequences:
+            # Füge die neue Beschreibung als neue Information hinzu
+            # und behalte die ursprüngliche Beschreibung
+            original_description = self.current_game_state.current_scene.get("description", "")
+            new_description = consequences["description"]
+            
+            # Wenn die Beschreibung unterschiedlich ist, aktualisiere sie
+            if original_description != new_description and new_description.strip():
+                # Füge die neue Beschreibung zur Szene als letztes_ereignis oder ähnlich hinzu
+                self.current_game_state.current_scene["letztes_ereignis"] = new_description
         
         # Markiere die Szene als abgeschlossen, wenn angegeben
         if consequences.get("scene_completed", False):
@@ -419,11 +514,11 @@ class GameplayManager:
             return
         
         # Hits hinzufügen/entfernen
-        if "add_hits" in updates:
+        if "add_hits" in updates and updates["add_hits"] is not None:
             for _ in range(updates["add_hits"]):
                 character.take_hit()
         
-        if "heal_hits" in updates:
+        if "heal_hits" in updates and updates["heal_hits"] is not None:
             for _ in range(updates["heal_hits"]):
                 character.heal_hit()
         

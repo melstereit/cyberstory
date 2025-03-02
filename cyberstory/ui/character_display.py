@@ -48,16 +48,22 @@ class CharacterDisplay:
         # Traumas
         traumas = character_data.get("traumas", [])
         if traumas:
-            self.ui.display_text("Traumas:")
-            for trauma in traumas:
-                self.ui.display_text(f"  - {trauma}")
+            # Filtern Sie None-Werte heraus
+            valid_traumas = [trauma for trauma in traumas if trauma is not None]
+            if valid_traumas:
+                self.ui.display_text("Traumas:")
+                for trauma in valid_traumas:
+                    self.ui.display_text(f"  - {trauma}")
         
         # Conditions
         conditions = character_data.get("conditions", [])
         if conditions:
-            self.ui.display_text("Conditions:")
-            for condition in conditions:
-                self.ui.display_text(f"  - {condition}")
+            # Filtern Sie None-Werte heraus
+            valid_conditions = [cond for cond in conditions if cond is not None]
+            if valid_conditions:
+                self.ui.display_text("Conditions:")
+                for condition in valid_conditions:
+                    self.ui.display_text(f"  - {condition}")
         
         # Trademarks und Edges
         self.ui.display_subtitle("TRADEMARKS & EDGES")
@@ -148,12 +154,18 @@ class CharacterDisplay:
         # Aktuelle Conditions
         conditions = character_data.get("conditions", [])
         if conditions:
-            self.ui.display_text(f"Conditions: {', '.join(conditions)}")
+            # Filtern Sie None-Werte heraus
+            valid_conditions = [cond for cond in conditions if cond is not None]
+            if valid_conditions:
+                self.ui.display_text(f"Conditions: {', '.join(valid_conditions)}")
         
         # Traumas
         traumas = character_data.get("traumas", [])
         if traumas:
-            self.ui.display_text(f"Traumas: {', '.join(traumas)}")
+            # Filtern Sie None-Werte heraus
+            valid_traumas = [trauma for trauma in traumas if trauma is not None]
+            if valid_traumas:
+                self.ui.display_text(f"Traumas: {', '.join(valid_traumas)}")
     
     def display_character_list(self, characters: List[Dict[str, Any]]) -> Optional[str]:
         """

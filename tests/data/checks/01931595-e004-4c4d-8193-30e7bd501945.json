@@ -1,0 +1,42 @@
+{
+  "id": "01931595-e004-4c4d-8193-30e7bd501945",
+  "timestamp": 1740941163.8590376,
+  "character_id": "a63650cb-a5bc-4ea4-82ff-12341f0241f5",
+  "context": {
+    "action": "Versucht, die Schläger auszumanövrieren und einen Vorteil zu gewinnen.",
+    "relevant_trademark": "Infiltrator",
+    "relevant_edges": [
+      "Concealed weapon"
+    ],
+    "gear_tags": [],
+    "advantageous_tags": [
+      "Rutschig",
+      "Ablenkend"
+    ],
+    "disadvantageous_tags": [
+      "Nahkampf",
+      "Überzahl"
+    ],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "success",
+    "value": 6,
+    "action_dice": [
+      6,
+      1,
+      2
+    ],
+    "danger_dice": [
+      5
+    ],
+    "remaining_dice": [
+      6,
+      1,
+      2
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

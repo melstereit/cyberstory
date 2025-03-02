@@ -1,0 +1,136 @@
+{
+  "id": "5772970f-ab7d-4ecf-96b4-d8bd73d5c8de",
+  "active_character_id": "bf6f9ae8-a897-4566-acaf-5ae3d727c53b",
+  "current_scene": {
+    "name": "Neon Alley Ambush",
+    "description": "You find yourself standing in a narrow alley, slick with rain and illuminated by flickering neon signs advertising braindances and noodle bars. The air smells of synth-ramen and desperation. The alley walls are covered in layers of graffiti and decaying posters. A rusted fire escape zigzags up the side of a towering building, promising a precarious escape route. A nearby dumpster overflows with discarded tech and biological waste. The rhythmic pulse of the city's underbelly vibrates through the grimy pavement.",
+    "characters": [
+      {
+        "name": "\"Razor\" Rico",
+        "description": "A gaunt figure leaning against a wall, his face obscured by a deep hood. Cybernetic enhancements glint under the neon, including a visible neural interface jack on his temple and enhanced eyes. He exudes an aura of predatory calm.",
+        "faction": "Scavengers"
+      },
+      {
+        "name": "\"Spike\" Shiv",
+        "description": "Razor Rico's backup. Shiv is a hulking figure with visible cybernetic implants, including metallic knuckles and armored shins. Constantly cracking his knuckles and twitching.",
+        "faction": "Scavengers"
+      }
+    ],
+    "objects": [
+      {
+        "name": "Overturned Trash Can",
+        "description": "An overflowing metal trash can, knocked on its side, spilling its contents of refuse across the alley.",
+        "tags": [
+          "Cover",
+          "Obstacle"
+        ]
+      },
+      {
+        "name": "Flickering Neon Sign",
+        "description": "A sign for 'Kabuki Noodles' above. Its light casts intermittent strobe-like flickers across the scene.",
+        "tags": [
+          "Distracting",
+          "Environmental Hazard"
+        ]
+      }
+    ],
+    "threats": [
+      {
+        "name": "Razor Rico's Ambush",
+        "description": "Rico and Shiv are lying in wait, looking to relieve eXodus of their valuables. Rico prefers to hack systems and fight smart, where Shiv likes to rush in and hit hard.",
+        "hits": 2,
+        "tags": [
+          "Surprise",
+          "Melee",
+          "Hacking"
+        ]
+      }
+    ],
+    "objectives": [
+      "Survive the ambush",
+      "Find out who sent the ambushers (Optional)"
+    ],
+    "suggested_actions": [
+      "Assess the situation using Cyber Eyes",
+      "Attempt to hack Rico's cybernetics",
+      "Engage in close combat using Cyber Arms"
+    ],
+    "completed": false
+  },
+  "quest_data": {
+    "name": "Echoes of the Past",
+    "description": "A contact surfaces claiming to have information regarding eXodus's missing birth records. They demand a favor in return: retrieve a stolen data chip containing sensitive information from a heavily guarded corporate archive.",
+    "client": {
+      "name": "Whisper",
+      "description": "A shadowy informant known for dealing in secrets and classified data. Their motives are always shrouded in mystery.",
+      "faction": "Netrunners"
+    },
+    "objectives": [
+      {
+        "description": "Meet Whisper at the designated rendezvous point in the Glitch District.",
+        "completed": false
+      },
+      {
+        "description": "Infiltrate the Arasaka Datacenter.",
+        "completed": false
+      },
+      {
+        "description": "Retrieve the stolen data chip (Project Nightingale).",
+        "completed": false
+      },
+      {
+        "description": "Deliver the chip to Whisper.",
+        "completed": false
+      }
+    ],
+    "rewards": {
+      "credits": 1500,
+      "items": [
+        {
+          "name": "Encrypted Datapad",
+          "tags": [
+            "Encrypted",
+            "Secure",
+            "Data Storage"
+          ],
+          "is_special": false
+        }
+      ],
+      "xp": 5,
+      "faction_standing": {
+        "Netrunners": 1
+      }
+    },
+    "locations": [
+      {
+        "name": "Glitch District Rendezvous",
+        "description": "A dilapidated, overcrowded sector known for its black market tech and illegal braindance dens. Finding a secure meeting place here will be difficult.",
+        "visited": false
+      },
+      {
+        "name": "Arasaka Datacenter",
+        "description": "A heavily fortified data storage facility protected by layers of security systems, cybernetic guards, and automated defenses.",
+        "visited": false
+      }
+    ],
+    "npcs": [
+      {
+        "name": "Whisper",
+        "description": "A mysterious netrunner with a penchant for secrets and deception. It's hard to tell what they're really after.",
+        "faction": "Netrunners",
+        "attitude": "Neutral"
+      },
+      {
+        "name": "Sergeant Kaito",
+        "description": "Head of security at the Arasaka Datacenter. A no-nonsense cyborg with enhanced reflexes and lethal combat skills.",
+        "faction": "Arasaka Security",
+        "attitude": "Hostile"
+      }
+    ],
+    "completed": false
+  },
+  "world_state": {},
+  "history": [
+    "eXodus used Cyber Eyes to scan the alley."
+  ]
+}

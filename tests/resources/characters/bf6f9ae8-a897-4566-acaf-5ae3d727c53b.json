@@ -1,36 +1,36 @@
 {
-  "id": "a63650cb-a5bc-4ea4-82ff-12341f0241f5",
+  "id": "bf6f9ae8-a897-4566-acaf-5ae3d727c53b",
   "name": "eXodus",
   "faction": 1,
   "trademarks": {
-    "Infiltrator": {
-      "name": "Infiltrator",
+    "Codeslinger": {
+      "name": "Codeslinger",
       "triggers": [
-        "Stealthy",
-        "Silent takedown",
-        "Quick"
+        "Hacking",
+        "Cyber combat",
+        "Security systems"
       ],
       "description": ""
     },
-    "Cyber Eyes": {
-      "name": "Cyber Eyes",
+    "Cyber Arms": {
+      "name": "Cyber Arms",
       "triggers": [
-        "Notice",
-        "Thermal imaging",
-        "Target assist"
+        "Hit hard",
+        "Armored",
+        "Blades"
       ],
       "description": ""
     }
   },
   "edges": [
     {
-      "name": "Concealed weapon",
-      "trademark": "Infiltrator",
+      "name": "Hacking",
+      "trademark": "Codeslinger",
       "description": ""
     },
     {
-      "name": "Notice",
-      "trademark": "Cyber Eyes",
+      "name": "Block a blow",
+      "trademark": "Cyber Arms",
       "description": ""
     }
   ],
@@ -40,12 +40,12 @@
       "description": "You have family obligations that often get in the way."
     },
     {
-      "name": "Wanted",
-      "description": "Someone is looking for you, and not in a good way."
+      "name": "Code of honor",
+      "description": "You follow strict personal rules that can be limiting."
     }
   ],
   "drive": {
-    "description": "Repay Pollux for saving my life",
+    "description": "Find my missing birth records",
     "track": [
       false,
       false,
@@ -63,19 +63,20 @@
   "max_stunt_points": 3,
   "inventory": [
     {
-      "name": "Switchblade",
+      "name": "Cyber Eyes",
       "tags": [
-        "Concealed",
-        "Quick"
+        "Thermal imaging",
+        "Camera",
+        "HUD"
       ],
       "description": "",
       "is_special": true
     },
     {
-      "name": "Motorcycle",
+      "name": "Switchblade",
       "tags": [
-        "Fast",
-        "Agile"
+        "Concealed",
+        "Quick"
       ],
       "description": "",
       "is_special": true
