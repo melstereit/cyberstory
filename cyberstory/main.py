@@ -14,6 +14,8 @@ from cyberstory.mechanics.check_manager import CheckManager
 from cyberstory.data.game_state import GameStateManager
 from cyberstory.ui.character_creation_ui import CharacterCreationUI
 from cyberstory.ui.character_display import CharacterDisplay
+from cyberstory.ai.gameplay_integration import LLMGameplayIntegration
+from cyberstory.gameplay.manager import GameplayManager
 from dotenv import load_dotenv
 
 
@@ -33,7 +35,6 @@ def main():
     
     # LLM-Interface initialisieren
     api_key = os.getenv("GOOGLE_API_KEY")
-    # api_key = config.get("api_key") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         ui.display_text("Kein API-Schlüssel gefunden. Bitte setze die Umgebungsvariable GOOGLE_API_KEY.")
         return
@@ -41,6 +42,7 @@ def main():
     model = config.get("model", "gemini-2.0-flash")
     llm = LLMInterface(api_key=api_key)
     
+
     # Datenverzeichnisse aus der Konfiguration
     char_dir = config.get("data_dirs.characters", "data/characters")
     template_dir = config.get("data_dirs.templates", "data/templates")
@@ -66,6 +68,18 @@ def main():
     # UIs erstellen
     character_creation_ui = CharacterCreationUI(ui, character_creation)
     character_display = CharacterDisplay(ui)
+
+    # Neue LLM-Gameplay-Integration erstellen
+    llm_gameplay = LLMGameplayIntegration(llm)
+
+    # GameplayManager erstellen
+    gameplay_manager = GameplayManager(
+        character_manager, 
+        game_state_manager, 
+        check_manager, 
+        llm_gameplay,
+        ui
+    )
     
     # Lade aktiven Spielzustand, falls vorhanden
     active_game_id = session.get_session_value("active_game_state_id")
@@ -141,6 +155,15 @@ def main():
                 game_state = game_state_manager.new_game(char_id)
                 session.set_session_value("active_game_state_id", game_state.id)
             
+             # Spiel starten
+            gameplay_manager.start_game(game_id, char_id)
+            
+            # Speichere den aktiven Spielzustand
+            if gameplay_manager.current_game_state:
+                session.set_session_value(
+                    "active_game_state_id", 
+                    gameplay_manager.current_game_state.id
+                )
             # Hier würde die Spielimplementierung beginnen
             # Dies ist für die nächste Phase vorgesehen
             ui.clear_screen()

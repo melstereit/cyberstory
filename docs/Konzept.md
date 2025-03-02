@@ -214,31 +214,31 @@ cyberpunk_rpg/
 4. [x] Charakterstatusanzeige
 
 ### Phase 3: Spielmechanik
-1. Check-System implementieren
-2. Kampfsystem
-3. Stunt Points und Konsequenzen
-4. Heilung und Traumas
+1. [] Check-System implementieren
+2. [] Kampfsystem
+3. [] Stunt Points und Konsequenzen
+4. [] Heilung und Traumas
 
 ### Phase 4: LLM-Integration
-1. Promptvorlagen erstellen
-2. Szenengenerierer
-3. NPC-Interaktionen
-4. Questgenerator
+1. [] Promptvorlagen erstellen
+2. [] Szenengenerierer
+3. [] NPC-Interaktionen
+4. [] Questgenerator
 
 ### Phase 5: Hauptspielschleife
-1. Szenenübergänge
-2. Quest-Tracking
-3. Downtime-Aktivitäten
-4. XP und Charakterfortschritt
+1. [] Szenenübergänge
+2. [] Quest-Tracking
+3. [] Downtime-Aktivitäten
+4. [] XP und Charakterfortschritt
 
 ### Phase 6: Testing und Verfeinerung
-1. Spielbalance
-2. Prompt-Optimierung
-3. Fehlerbehebung
-4. Dokumentation
+1. [] Spielbalance
+2. [] Prompt-Optimierung
+3. [] Fehlerbehebung
+4. [] Dokumentation
 
 ## 7. LLM-Prompting-Strategie
-
+[] 
 Für effektive LLM-Nutzung werden wir drei Haupttypen von Prompts verwenden:
 
 1. **Systemprompt**: Definiert die Rolle des LLM als Spielleiter und enthält die Spielregeln.

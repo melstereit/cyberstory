@@ -1,3 +1,4 @@
+# muss noch in main integriert werden. Skript wird aktuell noch nicht verwendet.
 from typing import Dict, List, Any
 
 from cyberstory.ai.llm_interface import LLMInterface
