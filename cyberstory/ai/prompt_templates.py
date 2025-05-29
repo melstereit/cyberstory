@@ -113,6 +113,18 @@ Das Ergebnis ist:
 - Wert: {value}
 - Boons: {boons}
 
+## Wichtige Anweisungen für scene_updates:
+
+**IMMER prüfen und aktualisieren wenn nötig:**
+1. **objectives**: Überdenke alle Ziele basierend auf der neuen Situation
+2. **suggested_actions**: Generiere komplett neue, situationsgerechte Aktionen  
+3. **objects**: Aktualisiere Objekte die durch die Aktion verändert wurden
+   - Wurde etwas aufgebrochen, geöffnet, beschädigt?
+   - Hat sich der Zustand von Gegenständen geändert?
+   - Sind neue Objekte entstanden oder verschwunden?
+
+**Beispiel**: Wenn eine Tür aufgebrochen wurde, ändere "verschlossen" zu "aufgebrochen" oder "teilweise geöffnet".
+
 ## Output-Format
 Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
 ```json
@@ -122,18 +134,18 @@ Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
     "history_event": "Ereignis für die Historie",
       "scene_updates": {{
   "objectives": [
-    "Neues/aktualisiertes Ziel basierend auf den Konsequenzen",
-    "Weiteres Ziel falls relevant"
+    "Komplett überarbeitete Ziele basierend auf neuer Situation"
   ],
   "suggested_actions": [
-    "Neue mögliche Aktion basierend auf der Situation", 
-    "Weitere relevante Aktion",
-    "Situationsspezifische Aktion"
+    "Völlig neue Aktionen die zur aktuellen Lage passen"
   ],
-  "new_elements": {{
-    "key": "value für andere Szenen-Updates"
-  }}
-}},
+  "objects": [
+    {{
+      "name": "Objektname",
+      "description": "AKTUALISIERTE Beschreibung mit neuem Zustand"
+    }}
+  ]
+}}
     "world_state_updates": {{
       "key": "value"
     }},

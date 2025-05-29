@@ -1450,3 +1450,41 @@
 
 [2025-05-29 16:57:52] Displayed character summary
 
+[2025-05-29 17:10:31] Player action
+  action: beenden
+
+[2025-05-29 17:10:33] Game ended by player
+
+[2025-05-29 17:10:47] Starting game loop
+
+[2025-05-29 17:10:50] Initialized last_event as None
+
+[2025-05-29 17:10:50] Current scene
+  name: Rooftop Escape
+  has_last_event: False
+
+[2025-05-29 17:10:50] Displayed scene elements
+
+[2025-05-29 17:10:50] Displayed character summary
+
+[2025-05-29 17:11:37] Player action
+  action: die daten von razor auswerten
+
+[2025-05-29 17:11:37] Processing player action
+  action: die daten von razor auswerten
+
+[2025-05-29 17:11:39] Action result received
+  requires_check: False
+
+[2025-05-29 17:11:39] Direct response handled
+  response: Du hast bereits die fragmentierten Daten analysier
+
+[2025-05-29 17:11:39] State update found in action result
+
+[2025-05-29 17:11:39] Reloaded character data after state update
+
+[2025-05-29 17:11:39] Set last_event from direct response
+  event_start: Du hast bereits die fragmentierten Daten analysier
+
+[2025-05-29 17:11:39] Added response to history and saved game state
+

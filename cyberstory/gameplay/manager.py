@@ -297,10 +297,17 @@ class GameplayManager:
     def _display_scene_elements(self) -> None:
         """Zeigt die wichtigen Elemente der aktuellen Szene an."""
         scene = self.current_game_state.current_scene
-        # Zeige das letzte Ereignis an, falls vorhanden
+        # Zeige nur das NEUESTE letzte Ereignis an
         if "letztes_ereignis" in scene and scene["letztes_ereignis"]:
-            self.ui.display_subtitle("Letztes Ereignis")
-            self.ui.display_text(scene["letztes_ereignis"])
+            # Falls es eine Liste ist, nimm das letzte Element
+            if isinstance(scene["letztes_ereignis"], list):
+                latest_event = scene["letztes_ereignis"][-1]  # Letztes Element
+            else:
+                latest_event = scene["letztes_ereignis"]
+            
+            if latest_event:  # Nur anzeigen wenn nicht leer
+                self.ui.display_subtitle("Letztes Ereignis")
+                self.ui.display_text(latest_event)
         
         # Zeige zusätzliche Informationen an
         # Prüfen, ob der Wert ein Wörterbuch oder eine Liste ist
@@ -536,6 +543,10 @@ class GameplayManager:
                 elif key == "suggested_actions" and isinstance(value, list):
                     # Suggested actions komplett ersetzen mit neuen Vorschlägen
                     self.current_game_state.current_scene["suggested_actions"] = value
+                # In der scene_updates Schleife, fügen Sie hinzu:
+                elif key == "objects" and isinstance(value, list):
+                    # Objects komplett ersetzen mit aktualisierten Beschreibungen
+                    self.current_game_state.current_scene["objects"] = value
                 else:
                     # Bestehende Logik für alle anderen Updates beibehalten
                     if key in self.current_game_state.current_scene and isinstance(self.current_game_state.current_scene[key], dict):

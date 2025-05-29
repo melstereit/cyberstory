@@ -9,16 +9,16 @@
     "disadvantageous_tags": [],
     "opposition_scale": 0
   },
-  "response": "Du konzentrierst dich und rufst die Ergebnisse der Analyse der fragmentierten Daten ab. Die Daten sind kryptisch, aber einige klare Hinweise kristallisieren sich heraus. Die Datenfragmente scheinen auf einen Treffpunkt namens 'The Serpent's Coil' in der Nähe des 'Red Light District' hinzuweisen. Außerdem wird eine Person namens 'Silas' erwähnt, die ein Schlüssel zum Verständnis von Razors Plänen sein könnte. Allerdings ist die Datenanalyse anstrengend, und du spürst eine leichte Erschöpfung.",
+  "response": "Du hast bereits die fragmentierten Daten analysiert und Hinweise auf 'The Serpent's Coil' und eine Person namens 'Silas' gefunden. Du benötigst diese Daten nicht erneut auszuwerten.",
   "state_update": {
     "game_state": {
-      "history_event": "eXo analysiert die fragmentierten Daten und erhält Hinweise auf 'The Serpent's Coil' und eine Person namens 'Silas'.",
+      "history_event": "eXo versucht erneut, die fragmentierten Daten auszuwerten, scheitert aber, da er dies bereits getan hat.",
       "scene_updates": {},
       "world_state_updates": {},
       "quest_updates": {}
     },
     "character": {
-      "add_condition": "Erschöpft",
+      "add_condition": null,
       "remove_condition": null,
       "add_item": {},
       "remove_item": null
