@@ -1,0 +1,32 @@
+{
+  "id": "6031f870-22f5-4435-835b-4dc63b86e04c",
+  "timestamp": 1748529878.444715,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Versuchen, die Zugangstür zum Treppenhaus zu öffnen",
+    "relevant_trademark": null,
+    "relevant_edges": [],
+    "gear_tags": [
+      "Stahl"
+    ],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [
+      "Verschlossen"
+    ],
+    "opposition_scale": 2
+  },
+  "dice_result": {
+    "success_level": "failure",
+    "value": 3,
+    "action_dice": [
+      3
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      3
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

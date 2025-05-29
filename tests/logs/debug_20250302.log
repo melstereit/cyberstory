@@ -208,3 +208,250 @@
 
 [2025-03-02 21:25:02] No current quest, generating a new one
 
+[2025-03-02 21:33:48] Starting game loop
+
+[2025-03-02 21:33:50] Initialized last_event as None
+
+[2025-03-02 21:33:50] Current scene
+  name: Neon Alley Ambush
+  has_last_event: False
+
+[2025-03-02 21:33:50] Displayed scene elements
+
+[2025-03-02 21:33:50] Displayed character summary
+
+[2025-03-02 21:34:29] Player action
+  action: 1
+
+[2025-03-02 21:34:29] Processing player action
+  action: 1
+
+[2025-03-02 21:34:30] Action result received
+  requires_check: True
+
+[2025-03-02 21:34:30] Check required
+  action: Exodus versucht, mit seinen Codeslinger-Fähigkeiten Glitch's Pistole zu deaktivieren.
+  relevant_trademark: Codeslinger
+  relevant_edges: ['Defence programs']
+  gear_tags: []
+  advantageous_tags: ['Cyberware']
+  disadvantageous_tags: ['Unsicher']
+  opposition_scale: 1
+
+[2025-03-02 21:34:30] Check performed
+  success_level: partial
+
+[2025-03-02 21:34:30] Generating consequences
+
+[2025-03-02 21:34:34] Consequences received
+  description: Du versuchst, dich auf Glitchs Pistole zu konzentr
+
+[2025-03-02 21:34:34] Updating game state and character
+
+[2025-03-02 21:34:34] Updating character
+  char_id: 92b1e87f-ee38-4668-91f4-0cdab834fd15
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-03-02 21:34:34] Adding 0 hits
+
+[2025-03-02 21:34:34] Healing 0 hits
+
+[2025-03-02 21:34:34] Spending 0 stunt points
+
+[2025-03-02 21:34:34] Adding 0 XP
+
+[2025-03-02 21:34:34] Ticking drive box: 0
+
+[2025-03-02 21:34:34] Crossing out drive box: 0
+
+[2025-03-02 21:34:34] Saving updated character to database
+
+[2025-03-02 21:34:34] Reloading character data
+
+[2025-03-02 21:34:34] Set last_event from consequences
+  event_start: Du versuchst, dich auf Glitchs Pistole zu konzentr
+
+[2025-03-02 21:34:34] Reloaded character data
+
+[2025-03-02 21:35:17] Player pressed Enter to continue
+
+[2025-03-02 21:35:17] Checking if scene is completed
+  completed: False
+
+[2025-03-02 21:35:17] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-03-02 21:35:17] Displaying last event
+  event_start: Du versuchst, dich auf Glitchs Pistole zu konzentr
+
+[2025-03-02 21:35:17] Reset last_event to None after display
+
+[2025-03-02 21:35:17] Displayed scene elements
+
+[2025-03-02 21:35:17] Displayed character summary
+
+[2025-03-02 21:45:38] Player action
+  action: fliehen
+
+[2025-03-02 21:45:38] Processing player action
+  action: fliehen
+
+[2025-03-02 21:45:40] Action result received
+  requires_check: True
+
+[2025-03-02 21:45:40] Check required
+  action: Flucht aus der Gasse
+  relevant_trademark: None
+  relevant_edges: []
+  gear_tags: []
+  advantageous_tags: []
+  disadvantageous_tags: []
+  opposition_scale: 2
+
+[2025-03-02 21:45:40] Check performed
+  success_level: failure
+
+[2025-03-02 21:45:40] Generating consequences
+
+[2025-03-02 21:45:44] Consequences received
+  description: Du versuchst, an Razer vorbeizukommen, aber er ist
+
+[2025-03-02 21:45:44] Updating game state and character
+
+[2025-03-02 21:45:44] Updating character
+  char_id: 92b1e87f-ee38-4668-91f4-0cdab834fd15
+  updates: {'add_hits': 1, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-03-02 21:45:44] Adding 1 hits
+
+[2025-03-02 21:45:44] Healing 0 hits
+
+[2025-03-02 21:45:44] Spending 0 stunt points
+
+[2025-03-02 21:45:44] Adding 0 XP
+
+[2025-03-02 21:45:44] Ticking drive box: 0
+
+[2025-03-02 21:45:44] Crossing out drive box: 0
+
+[2025-03-02 21:45:44] Saving updated character to database
+
+[2025-03-02 21:45:44] Reloading character data
+
+[2025-03-02 21:45:44] Set last_event from consequences
+  event_start: Du versuchst, an Razer vorbeizukommen, aber er ist
+
+[2025-03-02 21:45:44] Reloaded character data
+
+[2025-03-02 21:46:09] Player pressed Enter to continue
+
+[2025-03-02 21:46:09] Checking if scene is completed
+  completed: False
+
+[2025-03-02 21:46:09] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-03-02 21:46:09] Displaying last event
+  event_start: Du versuchst, an Razer vorbeizukommen, aber er ist
+
+[2025-03-02 21:46:09] Reset last_event to None after display
+
+[2025-03-02 21:46:09] Displayed scene elements
+
+[2025-03-02 21:46:09] Displayed character summary
+
+[2025-03-02 22:00:55] Starting game loop
+
+[2025-03-02 22:00:58] No current scene, generating a new one
+
+[2025-03-02 22:01:03] New scene generated and saved
+  scene_name: Neon Alley Ambush
+
+[2025-03-02 22:01:03] No current quest, generating a new one
+
+[2025-03-02 22:01:09] New quest generated and saved
+  quest_name: Ghost in the Machine
+
+[2025-03-02 22:01:09] Initialized last_event as None
+
+[2025-03-02 22:01:09] Current scene
+  name: Neon Alley Ambush
+  has_last_event: False
+
+[2025-03-02 22:01:09] Displayed scene elements
+
+[2025-03-02 22:01:09] Displayed character summary
+
+[2025-03-02 22:01:58] Player action
+  action: scan
+
+[2025-03-02 22:01:58] Processing player action
+  action: scan
+
+[2025-03-02 22:02:00] Action result received
+  requires_check: True
+
+[2025-03-02 22:02:00] Check required
+  action: Scan the environment for escape routes and threats
+  relevant_trademark: Gutter Scum
+  relevant_edges: ['Notice', 'Spot danger']
+  gear_tags: []
+  advantageous_tags: ['Slippery']
+  disadvantageous_tags: []
+  opposition_scale: 0
+
+[2025-03-02 22:02:00] Check performed
+  success_level: partial
+
+[2025-03-02 22:02:00] Generating consequences
+
+[2025-03-02 22:02:02] Consequences received
+  description: You quickly scan the alley, your eyes darting betw
+
+[2025-03-02 22:02:02] Updating game state and character
+
+[2025-03-02 22:02:02] Updating character
+  char_id: 640dd232-32fb-4444-8500-6cef576a12a5
+  updates: {'add_hits': 1, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-03-02 22:02:02] Adding 1 hits
+
+[2025-03-02 22:02:02] Healing 0 hits
+
+[2025-03-02 22:02:02] Spending 0 stunt points
+
+[2025-03-02 22:02:02] Adding 0 XP
+
+[2025-03-02 22:02:02] Ticking drive box: 0
+
+[2025-03-02 22:02:02] Crossing out drive box: 0
+
+[2025-03-02 22:02:02] Saving updated character to database
+
+[2025-03-02 22:02:02] Reloading character data
+
+[2025-03-02 22:02:02] Set last_event from consequences
+  event_start: You quickly scan the alley, your eyes darting betw
+
+[2025-03-02 22:02:02] Reloaded character data
+
+[2025-03-02 22:02:45] Player pressed Enter to continue
+
+[2025-03-02 22:02:45] Checking if scene is completed
+  completed: False
+
+[2025-03-02 22:02:45] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-03-02 22:02:45] Displaying last event
+  event_start: You quickly scan the alley, your eyes darting betw
+
+[2025-03-02 22:02:45] Reset last_event to None after display
+
+[2025-03-02 22:02:45] Displayed scene elements
+
+[2025-03-02 22:02:45] Displayed character summary
+

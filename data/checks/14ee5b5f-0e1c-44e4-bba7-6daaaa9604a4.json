@@ -1,0 +1,40 @@
+{
+  "id": "14ee5b5f-0e1c-44e4-bba7-6daaaa9604a4",
+  "timestamp": 1748529508.4953191,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Die Zugangstür zum Treppenhaus mit Cyberaugen hacken.",
+    "relevant_trademark": "Cyber Eyes",
+    "relevant_edges": [
+      "Thermal imaging"
+    ],
+    "gear_tags": [
+      "Thermal imaging",
+      "Camera",
+      "HUD"
+    ],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [
+      "Verschlossen"
+    ],
+    "opposition_scale": 2
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 4,
+    "action_dice": [
+      4,
+      2,
+      4
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      4,
+      2,
+      4
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

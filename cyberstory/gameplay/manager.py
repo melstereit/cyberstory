@@ -297,6 +297,10 @@ class GameplayManager:
     def _display_scene_elements(self) -> None:
         """Zeigt die wichtigen Elemente der aktuellen Szene an."""
         scene = self.current_game_state.current_scene
+        # Zeige das letzte Ereignis an, falls vorhanden
+        if "letztes_ereignis" in scene and scene["letztes_ereignis"]:
+            self.ui.display_subtitle("Letztes Ereignis")
+            self.ui.display_text(scene["letztes_ereignis"])
         
         # Zeige zusätzliche Informationen an
         # Prüfen, ob der Wert ein Wörterbuch oder eine Liste ist
@@ -522,19 +526,22 @@ class GameplayManager:
         """
         updates = consequences.get("game_state_updates", {})
         
-        # Füge Ereignis zur Historie hinzu
-        if "history_event" in updates:
-            self.current_game_state.add_to_history(updates["history_event"])
-        
         # Aktualisiere die aktuelle Szene
         if "scene_updates" in updates:
             for key, value in updates["scene_updates"].items():
-                # Wenn der Schlüssel bereits ein Dictionary in der Szene ist, aktualisiere es
-                if key in self.current_game_state.current_scene and isinstance(self.current_game_state.current_scene[key], dict):
-                    self.current_game_state.current_scene[key].update(value if isinstance(value, dict) else {"status": value})
+                # Spezielle Behandlung für Listen
+                if key == "objectives" and isinstance(value, list):
+                    # Objectives komplett ersetzen mit neuen/aktualisierten Zielen
+                    self.current_game_state.current_scene["objectives"] = value
+                elif key == "suggested_actions" and isinstance(value, list):
+                    # Suggested actions komplett ersetzen mit neuen Vorschlägen
+                    self.current_game_state.current_scene["suggested_actions"] = value
                 else:
-                    # Sonst füge den Wert direkt hinzu
-                    self.current_game_state.current_scene[key] = value
+                    # Bestehende Logik für alle anderen Updates beibehalten
+                    if key in self.current_game_state.current_scene and isinstance(self.current_game_state.current_scene[key], dict):
+                        self.current_game_state.current_scene[key].update(value if isinstance(value, dict) else {"status": value})
+                    else:
+                        self.current_game_state.current_scene[key] = value
         
         # Aktualisiere den Spielweltzustand
         if "world_state_updates" in updates:

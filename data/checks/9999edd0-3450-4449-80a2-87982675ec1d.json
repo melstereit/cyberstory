@@ -1,0 +1,37 @@
+{
+  "id": "9999edd0-3450-4449-80a2-87982675ec1d",
+  "timestamp": 1748530360.2265248,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Die Stahltür im Treppenhaus aufbrechen",
+    "relevant_trademark": "Infiltrator",
+    "relevant_edges": [
+      "Quick"
+    ],
+    "gear_tags": [
+      "Quick",
+      "Concealed"
+    ],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [],
+    "opposition_scale": 2
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 5,
+    "action_dice": [
+      1,
+      5,
+      5
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      1,
+      5,
+      5
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

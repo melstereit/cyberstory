@@ -1,0 +1,39 @@
+{
+  "id": "2e236c15-238e-43d6-a853-3651746353e5",
+  "timestamp": 1748526010.2307596,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Hacking der Neonreklame, um eine Ablenkung zu erzeugen und anschließender Nahkampfangriff auf Roxy mit dem Switchblade.",
+    "relevant_trademark": "Cyber Eyes",
+    "relevant_edges": [
+      "Quick"
+    ],
+    "gear_tags": [
+      "Concealed",
+      "Quick"
+    ],
+    "advantageous_tags": [
+      "Flackernd"
+    ],
+    "disadvantageous_tags": [],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 5,
+    "action_dice": [
+      4,
+      4,
+      5
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      4,
+      4,
+      5
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

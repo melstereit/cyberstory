@@ -1,0 +1,28 @@
+{
+  "id": "901b010a-7dc3-4e22-93ee-25ca7a877a11",
+  "timestamp": 1740948340.4173145,
+  "character_id": "92b1e87f-ee38-4668-91f4-0cdab834fd15",
+  "context": {
+    "action": "Flucht aus der Gasse",
+    "relevant_trademark": null,
+    "relevant_edges": [],
+    "gear_tags": [],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [],
+    "opposition_scale": 2
+  },
+  "dice_result": {
+    "success_level": "failure",
+    "value": 2,
+    "action_dice": [
+      2
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      2
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

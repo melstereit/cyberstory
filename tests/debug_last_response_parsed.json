@@ -1,68 +1,24 @@
-[
-  {
-    "name": "Echoes of Osiris",
-    "description": "Ein Informant hat Exodus kontaktiert und behauptet, Informationen über den Verbleib von gestohlenen Daten von Osiris zu haben. Der Informant, bekannt als 'Whisper', ist jedoch paranoid und verlangt ein Treffen an einem sicheren Ort. Whisper fürchtet, dass Osiris' Leute ihm auf den Fersen sind.",
-    "client": {
-      "name": "Whisper",
-      "description": "Ein ehemaliger Datenbroker, der jetzt im Untergrund lebt und Informationen verkauft, um zu überleben. Misstrauisch und ängstlich.",
-      "faction": "Neutral"
-    },
-    "objectives": [
-      {
-        "description": "Triff Whisper an einem sicheren Ort, ohne von Osiris' Leuten entdeckt zu werden.",
-        "completed": false
-      },
-      {
-        "description": "Extrahiere die Informationen über die gestohlenen Daten von Osiris von Whisper.",
-        "completed": false
-      },
-      {
-        "description": "Entscheide, was mit Whisper passiert (schütze ihn oder lasse ihn zurück).",
-        "completed": false
-      }
-    ],
-    "rewards": {
-      "credits": 1200,
-      "items": [
-        {
-          "name": "Verschlüsselte Datenshards",
-          "tags": [
-            "Daten",
-            "Verschlüsselt",
-            "Osiris"
-          ],
-          "is_special": true
-        }
-      ],
-      "xp": 4,
-      "faction_standing": {}
-    },
-    "locations": [
-      {
-        "name": "Verlassenes U-Bahn-System",
-        "description": "Ein Netzwerk verlassener U-Bahn-Tunnel, die von Squattern und Kriminellen bewohnt werden. Dunkel, feucht und gefährlich.",
-        "visited": false
-      },
-      {
-        "name": "Rattennest Bar",
-        "description": "Eine schmutzige Bar im Untergrund, bekannt für ihre zwielichtigen Kunden und illegalen Aktivitäten.",
-        "visited": false
-      }
-    ],
-    "npcs": [
-      {
-        "name": "Whisper",
-        "description": "Ein nervöser Informant, der ständig auf der Hut ist.",
-        "faction": "Neutral",
-        "attitude": "Misstrauisch"
-      },
-      {
-        "name": "Jäger von Osiris",
-        "description": "Skrupellose Söldner, die im Auftrag von Osiris arbeiten.",
-        "faction": "Osiris",
-        "attitude": "Feindselig"
-      }
-    ],
-    "completed": false
-  }
-]
+{
+  "description": "You quickly scan the alley, your eyes darting between the flickering neon signs and the shadowy figures blocking your path. The scan reveals that all three attackers have basic cybernetic enhancements, likely for combat. You notice that 'Whisper' is equipped with a low-grade cloaking device, explaining her unnervingly fast movements. However, the sudden burst of data overload causes a painful spike in your head. You gain a bit of knowledge, but at a cost.",
+  "game_state_updates": {
+    "history_event": "Character scanned the attackers, identified cybernetic enhancements and Whisper's cloaking device, but suffered a data overload.",
+    "scene_updates": {},
+    "world_state_updates": {},
+    "quest_updates": {}
+  },
+  "character_updates": {
+    "add_hits": 1,
+    "heal_hits": 0,
+    "add_trauma": null,
+    "add_condition": null,
+    "remove_condition": null,
+    "spend_stunt_points": 0,
+    "refresh_stunt_points": false,
+    "add_xp": 0,
+    "add_item": null,
+    "remove_item": null,
+    "tick_drive": 0,
+    "cross_out_drive": 0
+  },
+  "scene_completed": false
+}

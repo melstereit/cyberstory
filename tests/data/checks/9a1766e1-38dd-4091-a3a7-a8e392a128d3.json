@@ -1,0 +1,37 @@
+{
+  "id": "9a1766e1-38dd-4091-a3a7-a8e392a128d3",
+  "timestamp": 1740949320.0347743,
+  "character_id": "640dd232-32fb-4444-8500-6cef576a12a5",
+  "context": {
+    "action": "Scan the environment for escape routes and threats",
+    "relevant_trademark": "Gutter Scum",
+    "relevant_edges": [
+      "Notice",
+      "Spot danger"
+    ],
+    "gear_tags": [],
+    "advantageous_tags": [
+      "Slippery"
+    ],
+    "disadvantageous_tags": [],
+    "opposition_scale": 0
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 4,
+    "action_dice": [
+      2,
+      1,
+      4
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      2,
+      1,
+      4
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

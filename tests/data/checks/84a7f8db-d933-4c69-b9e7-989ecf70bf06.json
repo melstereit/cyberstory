@@ -1,0 +1,38 @@
+{
+  "id": "84a7f8db-d933-4c69-b9e7-989ecf70bf06",
+  "timestamp": 1740947670.1713312,
+  "character_id": "92b1e87f-ee38-4668-91f4-0cdab834fd15",
+  "context": {
+    "action": "Exodus versucht, mit seinen Codeslinger-Fähigkeiten Glitch's Pistole zu deaktivieren.",
+    "relevant_trademark": "Codeslinger",
+    "relevant_edges": [
+      "Defence programs"
+    ],
+    "gear_tags": [],
+    "advantageous_tags": [
+      "Cyberware"
+    ],
+    "disadvantageous_tags": [
+      "Unsicher"
+    ],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 5,
+    "action_dice": [
+      4,
+      5,
+      4
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      4,
+      5,
+      4
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

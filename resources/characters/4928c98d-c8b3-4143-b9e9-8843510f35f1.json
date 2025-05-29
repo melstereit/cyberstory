@@ -1,0 +1,103 @@
+{
+  "id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "name": "eXo",
+  "faction": 1,
+  "trademarks": {
+    "Infiltrator": {
+      "name": "Infiltrator",
+      "triggers": [
+        "Silent takedown",
+        "Hide",
+        "Climb"
+      ],
+      "description": ""
+    },
+    "Cyber Eyes": {
+      "name": "Cyber Eyes",
+      "triggers": [
+        "Thermal imaging",
+        "Target assist",
+        "Notice"
+      ],
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "name": "Quick",
+      "trademark": "Infiltrator",
+      "description": ""
+    },
+    {
+      "name": "Thermal imaging",
+      "trademark": "Cyber Eyes",
+      "description": ""
+    }
+  ],
+  "flaws": [
+    {
+      "name": "Code of honor",
+      "description": "You follow strict personal rules that can be limiting."
+    },
+    {
+      "name": "Flashbacks",
+      "description": "Traumatic memories haunt you and can be triggered unexpectedly."
+    }
+  ],
+  "drive": {
+    "description": "Bring down Kitsune Media Corp",
+    "track": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "stunt_points": 3,
+  "max_stunt_points": 3,
+  "inventory": [
+    {
+      "name": "Switchblade",
+      "tags": [
+        "Concealed",
+        "Quick"
+      ],
+      "description": "",
+      "is_special": true
+    },
+    {
+      "name": "Cyber Eyes",
+      "tags": [
+        "Thermal imaging",
+        "Camera",
+        "HUD"
+      ],
+      "description": "",
+      "is_special": true
+    },
+    {
+      "name": "Fragmentierte Daten",
+      "tags": [
+        "Kryptisch",
+        "Kitsune",
+        "Hinweis"
+      ],
+      "description": "",
+      "is_special": false
+    }
+  ],
+  "xp": 3,
+  "hit_track": [
+    true,
+    true,
+    true
+  ],
+  "traumas": [],
+  "conditions": []
+}

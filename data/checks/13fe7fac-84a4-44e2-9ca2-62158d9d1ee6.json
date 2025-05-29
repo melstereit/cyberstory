@@ -1,0 +1,28 @@
+{
+  "id": "13fe7fac-84a4-44e2-9ca2-62158d9d1ee6",
+  "timestamp": 1748526532.400494,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Versuch, Roxy und Knuckles zu überzeugen, Informationen preiszugeben, im Austausch für ihr Leben.",
+    "relevant_trademark": null,
+    "relevant_edges": [],
+    "gear_tags": [],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [],
+    "opposition_scale": 2
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 4,
+    "action_dice": [
+      4
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      4
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

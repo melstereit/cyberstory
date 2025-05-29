@@ -1,0 +1,40 @@
+{
+  "id": "afe6bb6a-fc4c-4ff5-8fba-fef2036d5f60",
+  "timestamp": 1748530116.4627354,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Die beschädigte Drohne erneut angreifen.",
+    "relevant_trademark": "Cyber Eyes",
+    "relevant_edges": [
+      "Target assist"
+    ],
+    "gear_tags": [
+      "Thermal imaging",
+      "Camera",
+      "HUD"
+    ],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [
+      "Beschädigt"
+    ],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "success",
+    "value": 6,
+    "action_dice": [
+      6,
+      1,
+      1
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      6,
+      1,
+      1
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

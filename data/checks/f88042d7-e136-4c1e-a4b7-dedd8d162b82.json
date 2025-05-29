@@ -1,0 +1,42 @@
+{
+  "id": "f88042d7-e136-4c1e-a4b7-dedd8d162b82",
+  "timestamp": 1748526871.0389538,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Versuch, in die Chrome Cathedral zu hacken, um Informationen über Razor zu finden.",
+    "relevant_trademark": "Cyber Eyes",
+    "relevant_edges": [
+      "Thermal imaging"
+    ],
+    "gear_tags": [
+      "Thermal imaging",
+      "Camera",
+      "HUD"
+    ],
+    "advantageous_tags": [
+      "Fern",
+      "Glitzernd",
+      "Einschüchternd"
+    ],
+    "disadvantageous_tags": [],
+    "opposition_scale": 2
+  },
+  "dice_result": {
+    "success_level": "success",
+    "value": 6,
+    "action_dice": [
+      1,
+      6,
+      2
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      1,
+      6,
+      2
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

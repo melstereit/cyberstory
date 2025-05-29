@@ -1,0 +1,140 @@
+{
+  "id": "9435ac53-821d-46d4-8652-bbd48620ec43",
+  "active_character_id": "640dd232-32fb-4444-8500-6cef576a12a5",
+  "current_scene": {
+    "name": "Neon Alley Ambush",
+    "description": "Rain slicks the grimy alleyway, reflecting the flickering neon signs overhead in distorted rainbows. The air hangs thick with the smell of synthetic ramen and ozone. A datachip vendor's stall, shuttered tight, leans against one wall. Three figures emerge from the shadows, their faces obscured by glowing cybernetic implants and cheap, black market respirators. They move with a practiced menace, their hands hovering near the concealed weapons beneath their tattered coats. One of them spits a glob of something foul onto the wet pavement. They don't look friendly.",
+    "characters": [
+      {
+        "name": "Spike",
+        "description": "A wiry figure with a shaved head and glowing red cybernetic eyes. A crude metal respirator covers the lower half of his face.",
+        "faction": "Unknown"
+      },
+      {
+        "name": "Knuckles",
+        "description": "A hulking brute with augmented knuckles that gleam under the neon lights. He cracks them menacingly.",
+        "faction": "Unknown"
+      },
+      {
+        "name": "Whisper",
+        "description": "Slender and agile, Whisper wears a black bodysuit and a mirrored visor that reflects the surrounding neon. She moves silently and unnervingly fast.",
+        "faction": "Unknown"
+      }
+    ],
+    "objects": [
+      {
+        "name": "Datachip Vendor Stall",
+        "description": "A ramshackle stall, covered in graffiti and bolted shut. Its displays are cracked and faded, promising wares long since outdated.",
+        "tags": [
+          "Locked",
+          "Abandoned"
+        ]
+      },
+      {
+        "name": "Puddle",
+        "description": "A shimmering pool of rainwater mixed with engine grease. The neon reflections create an illusion of depth and color.",
+        "tags": [
+          "Slippery",
+          "Contaminated"
+        ]
+      }
+    ],
+    "threats": [
+      {
+        "name": "Street Gang Ambush",
+        "description": "Three members of a local gang, looking to shake down anyone who wanders into their territory. They're armed and dangerous, but disorganized.",
+        "hits": 6,
+        "tags": [
+          "Melee",
+          "Ranged",
+          "Ambush"
+        ]
+      }
+    ],
+    "objectives": [
+      "Survive the Ambush",
+      "Identify the Attackers",
+      "Escape the Alley"
+    ],
+    "suggested_actions": [
+      "Initiate combat",
+      "Attempt to talk them down",
+      "Use stealth to evade them",
+      "Scan the environment for escape routes"
+    ],
+    "completed": false,
+    "letztes_ereignis": "You quickly scan the alley, your eyes darting between the flickering neon signs and the shadowy figures blocking your path. The scan reveals that all three attackers have basic cybernetic enhancements, likely for combat. You notice that 'Whisper' is equipped with a low-grade cloaking device, explaining her unnervingly fast movements. However, the sudden burst of data overload causes a painful spike in your head. You gain a bit of knowledge, but at a cost."
+  },
+  "quest_data": {
+    "name": "Ghost in the Machine",
+    "description": "Pollux, the enigmatic fixer who saved your life, needs a favor. A valuable piece of experimental datashard has gone missing from their secure network. They suspect a highly skilled netrunner, one capable of bypassing even Pollux's defenses. Your mission is to track down the thief, recover the datashard, and return it to Pollux. The datashard contains sensitive information that could destabilize the city's delicate balance of power if it falls into the wrong hands. Pollux emphasizes discretion and minimal collateral damage, hinting that the thief may be more than just a simple data pirate.",
+    "client": {
+      "name": "Pollux",
+      "description": "A shadowy information broker with a network spanning the city's underbelly. Resourceful, well-connected, and deeply indebted to by many, Pollux is known for their intricate plans and unwavering loyalty to those who earn their respect.",
+      "faction": "Independent"
+    },
+    "objectives": [
+      {
+        "description": "Locate the missing datashard.",
+        "completed": false
+      },
+      {
+        "description": "Identify the netrunner responsible for the theft.",
+        "completed": false
+      },
+      {
+        "description": "Recover the datashard and return it to Pollux.",
+        "completed": false
+      }
+    ],
+    "rewards": {
+      "credits": 2500,
+      "items": [
+        {
+          "name": "Customized Cyberdeck Interface",
+          "tags": [
+            "Cyberware",
+            "Hacking",
+            "Rare"
+          ],
+          "is_special": true
+        }
+      ],
+      "xp": 5,
+      "faction_standing": {
+        "faction_name": 1
+      }
+    },
+    "locations": [
+      {
+        "name": "The Glitch Market",
+        "description": "A sprawling black market known for its illicit cyberware, stolen data, and cut-rate tech. A hive of activity, crawling with fixers, hackers, and shady dealers.",
+        "visited": false
+      },
+      {
+        "name": "Abandoned Data Storage Facility",
+        "description": "A derelict building once used for massive data storage. Now filled with squatters, gang members, and forgotten technology. Rumors abound of hidden access points to the city's mainframe.",
+        "visited": false
+      }
+    ],
+    "npcs": [
+      {
+        "name": "Cipher",
+        "description": "A reclusive netrunner known for their cryptic messages and ghost-like presence in the digital world. Cipher is rumored to have a deep understanding of security systems and a knack for disappearing without a trace.",
+        "faction": "Independent",
+        "attitude": "Neutral"
+      },
+      {
+        "name": "Razor",
+        "description": "A brutal street enforcer who is employed by various gangs. Known for their ruthlessness and fondness for using brute force to get what they want. They may have information about Cipher's whereabouts.",
+        "faction": "Street Gang",
+        "attitude": "Hostile"
+      }
+    ],
+    "completed": false
+  },
+  "world_state": {},
+  "history": [
+    "Character scanned the attackers, identified cybernetic enhancements and Whisper's cloaking device, but suffered a data overload."
+  ]
+}

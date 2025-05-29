@@ -1,0 +1,41 @@
+{
+  "id": "858d284d-6559-4ed6-9490-bf17bfbf05b2",
+  "timestamp": 1748530195.7587028,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Die Stahltür zum Treppenhaus aufbrechen",
+    "relevant_trademark": "Infiltrator",
+    "relevant_edges": [
+      "Quick"
+    ],
+    "gear_tags": [
+      "Stahl",
+      "Verschlossen",
+      "Zugang"
+    ],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [
+      "Stahl",
+      "Verschlossen"
+    ],
+    "opposition_scale": 2
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 5,
+    "action_dice": [
+      1,
+      5,
+      2
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      1,
+      5,
+      2
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

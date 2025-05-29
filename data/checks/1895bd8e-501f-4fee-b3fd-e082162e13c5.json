@@ -1,0 +1,39 @@
+{
+  "id": "1895bd8e-501f-4fee-b3fd-e082162e13c5",
+  "timestamp": 1748526257.825944,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "eXo versucht, Spike in eine Falle zu locken und ihn dann im Nahkampf anzugreifen.",
+    "relevant_trademark": "Infiltrator",
+    "relevant_edges": [
+      "Quick"
+    ],
+    "gear_tags": [
+      "Concealed",
+      "Quick"
+    ],
+    "advantageous_tags": [
+      "Ablenkung"
+    ],
+    "disadvantageous_tags": [],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 4,
+    "action_dice": [
+      4,
+      3,
+      4
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      4,
+      3,
+      4
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

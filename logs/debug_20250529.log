@@ -1,0 +1,1452 @@
+[2025-05-29 15:33:41] Starting game loop
+
+[2025-05-29 15:33:46] No current scene, generating a new one
+
+[2025-05-29 15:33:52] New scene generated and saved
+  scene_name: Neon Alley Ambush
+
+[2025-05-29 15:33:52] No current quest, generating a new one
+
+[2025-05-29 15:33:57] New quest generated and saved
+  quest_name: Kitsune's Secrets
+
+[2025-05-29 15:33:57] Initialized last_event as None
+
+[2025-05-29 15:33:57] Current scene
+  name: Neon Alley Ambush
+  has_last_event: False
+
+[2025-05-29 15:33:57] Displayed scene elements
+
+[2025-05-29 15:33:57] Displayed character summary
+
+[2025-05-29 15:35:41] Player action
+  action: verstecken und analysisieren
+
+[2025-05-29 15:35:41] Processing player action
+  action: verstecken und analysisieren
+
+[2025-05-29 15:35:44] Action result received
+  requires_check: True
+
+[2025-05-29 15:35:44] Check required
+  action: eXo versucht, sich im Dampf des defekten Lüftungsschachts und zwischen den Müllcontainern zu verstecken, um die Situation zu analysieren.
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Quick']
+  gear_tags: ['Concealed', 'Quick']
+  advantageous_tags: ['Dampf', 'Versteckmöglichkeit', 'Ratten']
+  disadvantageous_tags: ['Schmutzig', 'Neon', 'Flackernd']
+  opposition_scale: 1
+
+[2025-05-29 15:35:44] Check performed
+  success_level: partial
+
+[2025-05-29 15:35:44] Generating consequences
+
+[2025-05-29 15:35:47] Consequences received
+  description: Du versuchst, dich hinter einem der überquellenden
+
+[2025-05-29 15:35:47] Updating game state and character
+
+[2025-05-29 15:35:47] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 15:35:47] Adding 0 hits
+
+[2025-05-29 15:35:47] Healing 0 hits
+
+[2025-05-29 15:35:47] Spending 0 stunt points
+
+[2025-05-29 15:35:47] Adding 0 XP
+
+[2025-05-29 15:35:47] Ticking drive box: 0
+
+[2025-05-29 15:35:47] Crossing out drive box: 0
+
+[2025-05-29 15:35:47] Saving updated character to database
+
+[2025-05-29 15:35:47] Reloading character data
+
+[2025-05-29 15:35:47] Set last_event from consequences
+  event_start: Du versuchst, dich hinter einem der überquellenden
+
+[2025-05-29 15:35:47] Reloaded character data
+
+[2025-05-29 15:37:03] Player pressed Enter to continue
+
+[2025-05-29 15:37:03] Checking if scene is completed
+  completed: False
+
+[2025-05-29 15:37:03] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-05-29 15:37:03] Displaying last event
+  event_start: Du versuchst, dich hinter einem der überquellenden
+
+[2025-05-29 15:37:03] Reset last_event to None after display
+
+[2025-05-29 15:37:03] Displayed scene elements
+
+[2025-05-29 15:37:03] Displayed character summary
+
+[2025-05-29 15:40:07] Player action
+  action: ich starte ein ablenkungsmanöver, indem ich die neonreklame hacke. anschließend greife ich roxy im nahkampf mit meinem steahlth blade an
+
+[2025-05-29 15:40:07] Processing player action
+  action: ich starte ein ablenkungsmanöver, indem ich die neonreklame hacke. anschließend greife ich roxy im nahkampf mit meinem steahlth blade an
+
+[2025-05-29 15:40:10] Action result received
+  requires_check: True
+
+[2025-05-29 15:40:10] Check required
+  action: Hacking der Neonreklame, um eine Ablenkung zu erzeugen und anschließender Nahkampfangriff auf Roxy mit dem Switchblade.
+  relevant_trademark: Cyber Eyes
+  relevant_edges: ['Quick']
+  gear_tags: ['Concealed', 'Quick']
+  advantageous_tags: ['Flackernd']
+  disadvantageous_tags: []
+  opposition_scale: 1
+
+[2025-05-29 15:40:10] Check performed
+  success_level: partial
+
+[2025-05-29 15:40:10] Generating consequences
+
+[2025-05-29 15:40:13] Consequences received
+  description: Du hackst die Neonreklame mit einem kurzen Impuls 
+
+[2025-05-29 15:40:13] Updating game state and character
+
+[2025-05-29 15:40:13] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 15:40:13] Adding 0 hits
+
+[2025-05-29 15:40:13] Healing 0 hits
+
+[2025-05-29 15:40:13] Spending 0 stunt points
+
+[2025-05-29 15:40:13] Adding 0 XP
+
+[2025-05-29 15:40:13] Ticking drive box: 0
+
+[2025-05-29 15:40:13] Crossing out drive box: 0
+
+[2025-05-29 15:40:13] Saving updated character to database
+
+[2025-05-29 15:40:13] Reloading character data
+
+[2025-05-29 15:40:13] Set last_event from consequences
+  event_start: Du hackst die Neonreklame mit einem kurzen Impuls 
+
+[2025-05-29 15:40:13] Reloaded character data
+
+[2025-05-29 15:41:00] Player pressed Enter to continue
+
+[2025-05-29 15:41:00] Checking if scene is completed
+  completed: False
+
+[2025-05-29 15:41:00] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-05-29 15:41:00] Displaying last event
+  event_start: Du hackst die Neonreklame mit einem kurzen Impuls 
+
+[2025-05-29 15:41:00] Reset last_event to None after display
+
+[2025-05-29 15:41:00] Displayed scene elements
+
+[2025-05-29 15:41:00] Displayed character summary
+
+[2025-05-29 15:42:59] Player action
+  action: ich attackiere roxy erneut
+
+[2025-05-29 15:42:59] Processing player action
+  action: ich attackiere roxy erneut
+
+[2025-05-29 15:43:01] Action result received
+  requires_check: True
+
+[2025-05-29 15:43:01] Check required
+  action: Erneuter Angriff auf Roxy mit der Switchblade
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Quick']
+  gear_tags: ['Concealed', 'Quick']
+  advantageous_tags: []
+  disadvantageous_tags: []
+  opposition_scale: 0
+
+[2025-05-29 15:43:01] Check performed
+  success_level: partial
+
+[2025-05-29 15:43:01] Generating consequences
+
+[2025-05-29 15:43:05] Consequences received
+  description: Du versuchst erneut, Roxy mit deiner Switchblade a
+
+[2025-05-29 15:43:05] Updating game state and character
+
+[2025-05-29 15:43:05] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 15:43:05] Adding 0 hits
+
+[2025-05-29 15:43:05] Healing 0 hits
+
+[2025-05-29 15:43:05] Spending 0 stunt points
+
+[2025-05-29 15:43:05] Adding 0 XP
+
+[2025-05-29 15:43:05] Ticking drive box: 0
+
+[2025-05-29 15:43:05] Crossing out drive box: 0
+
+[2025-05-29 15:43:05] Saving updated character to database
+
+[2025-05-29 15:43:05] Reloading character data
+
+[2025-05-29 15:43:05] Set last_event from consequences
+  event_start: Du versuchst erneut, Roxy mit deiner Switchblade a
+
+[2025-05-29 15:43:05] Reloaded character data
+
+[2025-05-29 15:43:29] Player pressed Enter to continue
+
+[2025-05-29 15:43:29] Checking if scene is completed
+  completed: False
+
+[2025-05-29 15:43:29] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-05-29 15:43:29] Displaying last event
+  event_start: Du versuchst erneut, Roxy mit deiner Switchblade a
+
+[2025-05-29 15:43:29] Reset last_event to None after display
+
+[2025-05-29 15:43:29] Displayed scene elements
+
+[2025-05-29 15:43:29] Displayed character summary
+
+[2025-05-29 15:44:15] Player action
+  action: ich locke spike in eine falle und greife ihn im nahkampf an
+
+[2025-05-29 15:44:15] Processing player action
+  action: ich locke spike in eine falle und greife ihn im nahkampf an
+
+[2025-05-29 15:44:17] Action result received
+  requires_check: True
+
+[2025-05-29 15:44:17] Check required
+  action: eXo versucht, Spike in eine Falle zu locken und ihn dann im Nahkampf anzugreifen.
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Quick']
+  gear_tags: ['Concealed', 'Quick']
+  advantageous_tags: ['Ablenkung']
+  disadvantageous_tags: []
+  opposition_scale: 1
+
+[2025-05-29 15:44:17] Check performed
+  success_level: partial
+
+[2025-05-29 15:44:17] Generating consequences
+
+[2025-05-29 15:44:20] Consequences received
+  description: Du versuchst, Spike in eine Falle zu locken und ih
+
+[2025-05-29 15:44:20] Updating game state and character
+
+[2025-05-29 15:44:20] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 1}
+
+[2025-05-29 15:44:20] Adding 1 hits
+
+[2025-05-29 15:44:20] Saving updated character to database
+
+[2025-05-29 15:44:20] Reloading character data
+
+[2025-05-29 15:44:20] Set last_event from consequences
+  event_start: Du versuchst, Spike in eine Falle zu locken und ih
+
+[2025-05-29 15:44:20] Reloaded character data
+
+[2025-05-29 15:44:44] Player pressed Enter to continue
+
+[2025-05-29 15:44:44] Checking if scene is completed
+  completed: False
+
+[2025-05-29 15:44:44] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-05-29 15:44:44] Displaying last event
+  event_start: Du versuchst, Spike in eine Falle zu locken und ih
+
+[2025-05-29 15:44:44] Reset last_event to None after display
+
+[2025-05-29 15:44:44] Displayed scene elements
+
+[2025-05-29 15:44:44] Displayed character summary
+
+[2025-05-29 15:47:16] Player action
+  action: ich manipuliere den lüftungsschaft, um spike abzulenken und starte einen takedown
+
+[2025-05-29 15:47:16] Processing player action
+  action: ich manipuliere den lüftungsschaft, um spike abzulenken und starte einen takedown
+
+[2025-05-29 15:47:19] Action result received
+  requires_check: True
+
+[2025-05-29 15:47:19] Check required
+  action: eXo versuche, den Lüftungsschacht zu manipulieren, um Spike abzulenken und einen "Silent Takedown" zu starten.
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Quick']
+  gear_tags: []
+  advantageous_tags: ['Dampf', 'Versteckmöglichkeit']
+  disadvantageous_tags: []
+  opposition_scale: 1
+
+[2025-05-29 15:47:19] Check performed
+  success_level: success
+
+[2025-05-29 15:47:19] Generating consequences
+
+[2025-05-29 15:47:23] Consequences received
+  description: Mit einem Ruck reißt du an dem rostigen Lüftungssc
+
+[2025-05-29 15:47:23] Updating game state and character
+
+[2025-05-29 15:47:23] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 1, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 15:47:23] Adding 0 hits
+
+[2025-05-29 15:47:23] Healing 0 hits
+
+[2025-05-29 15:47:23] Spending 0 stunt points
+
+[2025-05-29 15:47:23] Adding 1 XP
+
+[2025-05-29 15:47:23] Ticking drive box: 0
+
+[2025-05-29 15:47:23] Crossing out drive box: 0
+
+[2025-05-29 15:47:23] Saving updated character to database
+
+[2025-05-29 15:47:23] Reloading character data
+
+[2025-05-29 15:47:23] Set last_event from consequences
+  event_start: Mit einem Ruck reißt du an dem rostigen Lüftungssc
+
+[2025-05-29 15:47:23] Reloaded character data
+
+[2025-05-29 15:48:03] Player pressed Enter to continue
+
+[2025-05-29 15:48:03] Checking if scene is completed
+  completed: False
+
+[2025-05-29 15:48:03] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-05-29 15:48:03] Displaying last event
+  event_start: Mit einem Ruck reißt du an dem rostigen Lüftungssc
+
+[2025-05-29 15:48:03] Reset last_event to None after display
+
+[2025-05-29 15:48:03] Displayed scene elements
+
+[2025-05-29 15:48:03] Displayed character summary
+
+[2025-05-29 15:48:50] Player action
+  action: ich rufe zu roxy und knuckles, dass ich sie am leben lasse, wenn sie mir sagen, wer sie geschickt hat.
+
+[2025-05-29 15:48:50] Processing player action
+  action: ich rufe zu roxy und knuckles, dass ich sie am leben lasse, wenn sie mir sagen, wer sie geschickt hat.
+
+[2025-05-29 15:48:52] Action result received
+  requires_check: True
+
+[2025-05-29 15:48:52] Check required
+  action: Versuch, Roxy und Knuckles zu überzeugen, Informationen preiszugeben, im Austausch für ihr Leben.
+  relevant_trademark: None
+  relevant_edges: []
+  gear_tags: []
+  advantageous_tags: []
+  disadvantageous_tags: []
+  opposition_scale: 2
+
+[2025-05-29 15:48:52] Check performed
+  success_level: partial
+
+[2025-05-29 15:48:52] Generating consequences
+
+[2025-05-29 15:48:55] Consequences received
+  description: Roxy, zögerlich und noch immer blutend, blickt dic
+
+[2025-05-29 15:48:55] Updating game state and character
+
+[2025-05-29 15:48:55] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 15:48:55] Adding 0 hits
+
+[2025-05-29 15:48:55] Healing 0 hits
+
+[2025-05-29 15:48:55] Spending 0 stunt points
+
+[2025-05-29 15:48:55] Adding 0 XP
+
+[2025-05-29 15:48:55] Ticking drive box: 0
+
+[2025-05-29 15:48:55] Crossing out drive box: 0
+
+[2025-05-29 15:48:55] Saving updated character to database
+
+[2025-05-29 15:48:55] Reloading character data
+
+[2025-05-29 15:48:55] Set last_event from consequences
+  event_start: Roxy, zögerlich und noch immer blutend, blickt dic
+
+[2025-05-29 15:48:55] Reloaded character data
+
+[2025-05-29 15:49:16] Player pressed Enter to continue
+
+[2025-05-29 15:49:16] Checking if scene is completed
+  completed: False
+
+[2025-05-29 15:49:16] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-05-29 15:49:16] Displaying last event
+  event_start: Roxy, zögerlich und noch immer blutend, blickt dic
+
+[2025-05-29 15:49:16] Reset last_event to None after display
+
+[2025-05-29 15:49:16] Displayed scene elements
+
+[2025-05-29 15:49:16] Displayed character summary
+
+[2025-05-29 15:50:43] Player action
+  action: sie fragen, wo ich razor finden kann
+
+[2025-05-29 15:50:43] Processing player action
+  action: sie fragen, wo ich razor finden kann
+
+[2025-05-29 15:50:45] Action result received
+  requires_check: False
+
+[2025-05-29 15:50:45] Direct response handled
+  response: "Razor? Wieso sollten wir dir das erzählen? Wir si
+
+[2025-05-29 15:50:45] State update found in action result
+
+[2025-05-29 15:50:45] Reloaded character data after state update
+
+[2025-05-29 15:50:45] Set last_event from direct response
+  event_start: "Razor? Wieso sollten wir dir das erzählen? Wir si
+
+[2025-05-29 15:50:45] Added response to history and saved game state
+
+[2025-05-29 15:50:56] Player pressed Enter to continue
+
+[2025-05-29 15:50:56] Checking if scene is completed
+  completed: False
+
+[2025-05-29 15:50:56] Current scene
+  name: Neon Alley Ambush
+  has_last_event: True
+
+[2025-05-29 15:50:56] Displaying last event
+  event_start: "Razor? Wieso sollten wir dir das erzählen? Wir si
+
+[2025-05-29 15:50:56] Reset last_event to None after display
+
+[2025-05-29 15:50:56] Displayed scene elements
+
+[2025-05-29 15:50:56] Displayed character summary
+
+[2025-05-29 15:51:33] Player action
+  action: ich klettere auf das nächst gelegene dach, um zu entkommen.
+
+[2025-05-29 15:51:33] Processing player action
+  action: ich klettere auf das nächst gelegene dach, um zu entkommen.
+
+[2025-05-29 15:51:34] Action result received
+  requires_check: True
+
+[2025-05-29 15:51:34] Check required
+  action: Klettern auf das nächstgelegene Dach, um zu entkommen.
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Quick']
+  gear_tags: []
+  advantageous_tags: []
+  disadvantageous_tags: []
+  opposition_scale: 1
+
+[2025-05-29 15:51:34] Check performed
+  success_level: success
+
+[2025-05-29 15:51:34] Generating consequences
+
+[2025-05-29 15:51:38] Consequences received
+  description: Mit einem kraftvollen Sprung packst du die Kante d
+
+[2025-05-29 15:51:38] Updating game state and character
+
+[2025-05-29 15:51:38] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 1, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 15:51:38] Adding 0 hits
+
+[2025-05-29 15:51:38] Healing 0 hits
+
+[2025-05-29 15:51:38] Spending 0 stunt points
+
+[2025-05-29 15:51:38] Adding 1 XP
+
+[2025-05-29 15:51:38] Ticking drive box: 0
+
+[2025-05-29 15:51:38] Crossing out drive box: 0
+
+[2025-05-29 15:51:38] Saving updated character to database
+
+[2025-05-29 15:51:38] Reloading character data
+
+[2025-05-29 15:51:38] Set last_event from consequences
+  event_start: Mit einem kraftvollen Sprung packst du die Kante d
+
+[2025-05-29 15:51:38] Reloaded character data
+
+[2025-05-29 15:52:07] Player pressed Enter to continue
+
+[2025-05-29 15:52:07] Checking if scene is completed
+  completed: True
+
+[2025-05-29 15:52:09] Scene completed, player pressed Enter
+
+[2025-05-29 15:52:09] Generating next scene
+
+[2025-05-29 15:52:15] New scene generated and saved
+  scene_name: Rooftop Escape
+
+[2025-05-29 15:52:15] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 15:52:15] Displaying last event
+  event_start: Mit einem kraftvollen Sprung packst du die Kante d
+
+[2025-05-29 15:52:15] Reset last_event to None after display
+
+[2025-05-29 15:52:15] Displayed scene elements
+
+[2025-05-29 15:52:15] Displayed character summary
+
+[2025-05-29 15:54:29] Player action
+  action: in chrome cathedral hacken
+
+[2025-05-29 15:54:29] Processing player action
+  action: in chrome cathedral hacken
+
+[2025-05-29 15:54:31] Action result received
+  requires_check: True
+
+[2025-05-29 15:54:31] Check required
+  action: Versuch, in die Chrome Cathedral zu hacken, um Informationen über Razor zu finden.
+  relevant_trademark: Cyber Eyes
+  relevant_edges: ['Thermal imaging']
+  gear_tags: ['Thermal imaging', 'Camera', 'HUD']
+  advantageous_tags: ['Fern', 'Glitzernd', 'Einschüchternd']
+  disadvantageous_tags: []
+  opposition_scale: 2
+
+[2025-05-29 15:54:31] Check performed
+  success_level: success
+
+[2025-05-29 15:54:31] Generating consequences
+
+[2025-05-29 15:54:34] Consequences received
+  description: Deine Cyberaugen fokussieren sich, während du dich
+
+[2025-05-29 15:54:34] Updating game state and character
+
+[2025-05-29 15:54:34] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 1, 'add_item': {'name': 'Fragmentierte Daten', 'tags': ['Kryptisch', 'Kitsune', 'Hinweis'], 'is_special': False}, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 15:54:34] Adding 0 hits
+
+[2025-05-29 15:54:34] Healing 0 hits
+
+[2025-05-29 15:54:34] Spending 0 stunt points
+
+[2025-05-29 15:54:34] Adding 1 XP
+
+[2025-05-29 15:54:34] Adding item: {'name': 'Fragmentierte Daten', 'tags': ['Kryptisch', 'Kitsune', 'Hinweis'], 'is_special': False}
+
+[2025-05-29 15:54:34] Ticking drive box: 0
+
+[2025-05-29 15:54:34] Crossing out drive box: 0
+
+[2025-05-29 15:54:34] Saving updated character to database
+
+[2025-05-29 15:54:34] Reloading character data
+
+[2025-05-29 15:54:34] Set last_event from consequences
+  event_start: Deine Cyberaugen fokussieren sich, während du dich
+
+[2025-05-29 15:54:34] Reloaded character data
+
+[2025-05-29 16:01:32] Player pressed Enter to continue
+
+[2025-05-29 16:01:32] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:01:32] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:01:32] Displaying last event
+  event_start: Deine Cyberaugen fokussieren sich, während du dich
+
+[2025-05-29 16:01:32] Reset last_event to None after display
+
+[2025-05-29 16:01:32] Displayed scene elements
+
+[2025-05-29 16:01:32] Displayed character summary
+
+[2025-05-29 16:25:51] Player action
+  action: beenden
+
+[2025-05-29 16:25:54] Game ended by player
+
+[2025-05-29 16:27:04] Starting game loop
+
+[2025-05-29 16:27:07] Initialized last_event as None
+
+[2025-05-29 16:27:07] Current scene
+  name: Rooftop Escape
+  has_last_event: False
+
+[2025-05-29 16:27:07] Displayed scene elements
+
+[2025-05-29 16:27:07] Displayed character summary
+
+[2025-05-29 16:28:19] Player action
+  action: hacken
+
+[2025-05-29 16:28:19] Processing player action
+  action: hacken
+
+[2025-05-29 16:28:21] Action result received
+  requires_check: False
+
+[2025-05-29 16:28:21] Direct response handled
+  response: Du hast bereits versucht, dich in die Chrome Cathe
+
+[2025-05-29 16:28:21] State update found in action result
+
+[2025-05-29 16:28:21] Reloaded character data after state update
+
+[2025-05-29 16:28:21] Set last_event from direct response
+  event_start: Du hast bereits versucht, dich in die Chrome Cathe
+
+[2025-05-29 16:28:21] Added response to history and saved game state
+
+[2025-05-29 16:33:02] Player pressed Enter to continue
+
+[2025-05-29 16:33:02] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:33:02] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:33:02] Displaying last event
+  event_start: Du hast bereits versucht, dich in die Chrome Cathe
+
+[2025-05-29 16:33:02] Reset last_event to None after display
+
+[2025-05-29 16:33:02] Displayed scene elements
+
+[2025-05-29 16:33:02] Displayed character summary
+
+[2025-05-29 16:33:09] Player action
+  action: beenden
+
+[2025-05-29 16:33:12] Game ended by player
+
+[2025-05-29 16:37:19] Starting game loop
+
+[2025-05-29 16:37:20] Initialized last_event as None
+
+[2025-05-29 16:37:20] Current scene
+  name: Rooftop Escape
+  has_last_event: False
+
+[2025-05-29 16:37:20] Displayed scene elements
+
+[2025-05-29 16:37:20] Displayed character summary
+
+[2025-05-29 16:38:26] Player action
+  action: tür zum treppenhaus hacken
+
+[2025-05-29 16:38:26] Processing player action
+  action: tür zum treppenhaus hacken
+
+[2025-05-29 16:38:28] Action result received
+  requires_check: True
+
+[2025-05-29 16:38:28] Check required
+  action: Die Zugangstür zum Treppenhaus mit Cyberaugen hacken.
+  relevant_trademark: Cyber Eyes
+  relevant_edges: ['Thermal imaging']
+  gear_tags: ['Thermal imaging', 'Camera', 'HUD']
+  advantageous_tags: []
+  disadvantageous_tags: ['Verschlossen']
+  opposition_scale: 2
+
+[2025-05-29 16:38:28] Check performed
+  success_level: partial
+
+[2025-05-29 16:38:28] Generating consequences
+
+[2025-05-29 16:41:17] Starting game loop
+
+[2025-05-29 16:41:19] Initialized last_event as None
+
+[2025-05-29 16:41:19] Current scene
+  name: Rooftop Escape
+  has_last_event: False
+
+[2025-05-29 16:41:19] Displayed scene elements
+
+[2025-05-29 16:41:19] Displayed character summary
+
+[2025-05-29 16:41:48] Player action
+  action: tür zum treppenhaus hacken
+
+[2025-05-29 16:41:48] Processing player action
+  action: tür zum treppenhaus hacken
+
+[2025-05-29 16:41:50] Action result received
+  requires_check: True
+
+[2025-05-29 16:41:50] Check required
+  action: Versuche, die Zugangstür zum Treppenhaus mit Cyberaugen zu hacken.
+  relevant_trademark: Cyber Eyes
+  relevant_edges: ['Thermal imaging']
+  gear_tags: ['Thermal imaging', 'Camera', 'HUD']
+  advantageous_tags: ['Zugang']
+  disadvantageous_tags: []
+  opposition_scale: 2
+
+[2025-05-29 16:41:50] Check performed
+  success_level: success
+
+[2025-05-29 16:41:50] Generating consequences
+
+[2025-05-29 16:41:52] Consequences received
+  description: Du hast Erfolg! Die Aktion gelingt wie gewünscht.
+
+[2025-05-29 16:41:52] Updating game state and character
+
+[2025-05-29 16:41:52] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {}
+
+[2025-05-29 16:41:52] Saving updated character to database
+
+[2025-05-29 16:41:52] Reloading character data
+
+[2025-05-29 16:41:52] Set last_event from consequences
+  event_start: Du hast Erfolg! Die Aktion gelingt wie gewünscht.
+
+[2025-05-29 16:41:52] Reloaded character data
+
+[2025-05-29 16:43:59] Player pressed Enter to continue
+
+[2025-05-29 16:43:59] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:43:59] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:43:59] Displaying last event
+  event_start: Du hast Erfolg! Die Aktion gelingt wie gewünscht.
+
+[2025-05-29 16:43:59] Reset last_event to None after display
+
+[2025-05-29 16:43:59] Displayed scene elements
+
+[2025-05-29 16:43:59] Displayed character summary
+
+[2025-05-29 16:44:02] Player action
+  action: beenden
+
+[2025-05-29 16:44:04] Game ended by player
+
+[2025-05-29 16:44:19] Starting game loop
+
+[2025-05-29 16:44:20] Initialized last_event as None
+
+[2025-05-29 16:44:20] Current scene
+  name: Rooftop Escape
+  has_last_event: False
+
+[2025-05-29 16:44:20] Displayed scene elements
+
+[2025-05-29 16:44:20] Displayed character summary
+
+[2025-05-29 16:44:36] Player action
+  action: ich öffne die tür
+
+[2025-05-29 16:44:36] Processing player action
+  action: ich öffne die tür
+
+[2025-05-29 16:44:38] Action result received
+  requires_check: True
+
+[2025-05-29 16:44:38] Check required
+  action: Versuchen, die Zugangstür zum Treppenhaus zu öffnen
+  relevant_trademark: None
+  relevant_edges: []
+  gear_tags: ['Stahl']
+  advantageous_tags: []
+  disadvantageous_tags: ['Verschlossen']
+  opposition_scale: 2
+
+[2025-05-29 16:44:38] Check performed
+  success_level: failure
+
+[2025-05-29 16:44:38] Generating consequences
+
+[2025-05-29 16:44:42] Consequences received
+  description: Du fummelst an den Schlössern der Stahltür herum, 
+
+[2025-05-29 16:44:42] Updating game state and character
+
+[2025-05-29 16:44:42] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 16:44:42] Adding 0 hits
+
+[2025-05-29 16:44:42] Healing 0 hits
+
+[2025-05-29 16:44:42] Spending 0 stunt points
+
+[2025-05-29 16:44:42] Adding 0 XP
+
+[2025-05-29 16:44:42] Ticking drive box: 0
+
+[2025-05-29 16:44:42] Crossing out drive box: 0
+
+[2025-05-29 16:44:42] Saving updated character to database
+
+[2025-05-29 16:44:42] Reloading character data
+
+[2025-05-29 16:44:42] Set last_event from consequences
+  event_start: Du fummelst an den Schlössern der Stahltür herum, 
+
+[2025-05-29 16:44:42] Reloaded character data
+
+[2025-05-29 16:45:11] Player pressed Enter to continue
+
+[2025-05-29 16:45:11] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:45:11] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:45:11] Displaying last event
+  event_start: Du fummelst an den Schlössern der Stahltür herum, 
+
+[2025-05-29 16:45:11] Reset last_event to None after display
+
+[2025-05-29 16:45:11] Displayed scene elements
+
+[2025-05-29 16:45:11] Displayed character summary
+
+[2025-05-29 16:46:17] Player action
+  action: alarm deaktivieren mit hacking skill
+
+[2025-05-29 16:46:17] Processing player action
+  action: alarm deaktivieren mit hacking skill
+
+[2025-05-29 16:46:19] Action result received
+  requires_check: True
+
+[2025-05-29 16:46:19] Check required
+  action: Versucht, den Alarm mit Hacking-Kenntnissen zu deaktivieren.
+  relevant_trademark: Cyber Eyes
+  relevant_edges: ['Thermal imaging']
+  gear_tags: ['HUD']
+  advantageous_tags: []
+  disadvantageous_tags: []
+  opposition_scale: 3
+
+[2025-05-29 16:46:19] Check performed
+  success_level: partial
+
+[2025-05-29 16:46:19] Generating consequences
+
+[2025-05-29 16:46:21] Consequences received
+  description: Du versuchst, das Sicherheitssystem zu hacken, abe
+
+[2025-05-29 16:46:21] Updating game state and character
+
+[2025-05-29 16:46:21] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 0}
+
+[2025-05-29 16:46:21] Adding 0 hits
+
+[2025-05-29 16:46:21] Saving updated character to database
+
+[2025-05-29 16:46:21] Reloading character data
+
+[2025-05-29 16:46:21] Set last_event from consequences
+  event_start: Du versuchst, das Sicherheitssystem zu hacken, abe
+
+[2025-05-29 16:46:21] Reloaded character data
+
+[2025-05-29 16:46:39] Player pressed Enter to continue
+
+[2025-05-29 16:46:39] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:46:39] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:46:39] Displaying last event
+  event_start: Du versuchst, das Sicherheitssystem zu hacken, abe
+
+[2025-05-29 16:46:39] Reset last_event to None after display
+
+[2025-05-29 16:46:39] Displayed scene elements
+
+[2025-05-29 16:46:39] Displayed character summary
+
+[2025-05-29 16:47:45] Player action
+  action: ich verwende cyber eyes, um die drone anzuvisieren und greife an.
+
+[2025-05-29 16:47:45] Processing player action
+  action: ich verwende cyber eyes, um die drone anzuvisieren und greife an.
+
+[2025-05-29 16:47:48] Action result received
+  requires_check: True
+
+[2025-05-29 16:47:48] Check required
+  action: Angriff auf die Security Drone mit Target Assist durch Cyber Eyes
+  relevant_trademark: Cyber Eyes
+  relevant_edges: ['Target assist']
+  gear_tags: []
+  advantageous_tags: []
+  disadvantageous_tags: []
+  opposition_scale: 2
+
+[2025-05-29 16:47:48] Check performed
+  success_level: partial
+
+[2025-05-29 16:47:48] Generating consequences
+
+[2025-05-29 16:47:52] Consequences received
+  description: Du aktivierst deine Cyber Eyes und das Zielsystem 
+
+[2025-05-29 16:47:52] Updating game state and character
+
+[2025-05-29 16:47:52] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 1, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 16:47:52] Adding 1 hits
+
+[2025-05-29 16:47:52] Healing 0 hits
+
+[2025-05-29 16:47:52] Spending 0 stunt points
+
+[2025-05-29 16:47:52] Adding 0 XP
+
+[2025-05-29 16:47:52] Ticking drive box: 0
+
+[2025-05-29 16:47:52] Crossing out drive box: 0
+
+[2025-05-29 16:47:52] Saving updated character to database
+
+[2025-05-29 16:47:52] Reloading character data
+
+[2025-05-29 16:47:52] Set last_event from consequences
+  event_start: Du aktivierst deine Cyber Eyes und das Zielsystem 
+
+[2025-05-29 16:47:52] Reloaded character data
+
+[2025-05-29 16:48:12] Player pressed Enter to continue
+
+[2025-05-29 16:48:12] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:48:12] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:48:12] Displaying last event
+  event_start: Du aktivierst deine Cyber Eyes und das Zielsystem 
+
+[2025-05-29 16:48:12] Reset last_event to None after display
+
+[2025-05-29 16:48:12] Displayed scene elements
+
+[2025-05-29 16:48:12] Displayed character summary
+
+[2025-05-29 16:48:34] Player action
+  action: drohne erneut angreifen
+
+[2025-05-29 16:48:34] Processing player action
+  action: drohne erneut angreifen
+
+[2025-05-29 16:48:36] Action result received
+  requires_check: True
+
+[2025-05-29 16:48:36] Check required
+  action: Die beschädigte Drohne erneut angreifen.
+  relevant_trademark: Cyber Eyes
+  relevant_edges: ['Target assist']
+  gear_tags: ['Thermal imaging', 'Camera', 'HUD']
+  advantageous_tags: []
+  disadvantageous_tags: ['Beschädigt']
+  opposition_scale: 1
+
+[2025-05-29 16:48:36] Check performed
+  success_level: success
+
+[2025-05-29 16:48:36] Generating consequences
+
+[2025-05-29 16:48:40] Consequences received
+  description: Mit einem entschlossenen Angriff bringst du die Dr
+
+[2025-05-29 16:48:40] Updating game state and character
+
+[2025-05-29 16:48:40] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 1, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 16:48:40] Adding 1 hits
+
+[2025-05-29 16:48:40] Healing 0 hits
+
+[2025-05-29 16:48:40] Spending 0 stunt points
+
+[2025-05-29 16:48:40] Adding 0 XP
+
+[2025-05-29 16:48:40] Ticking drive box: 0
+
+[2025-05-29 16:48:40] Crossing out drive box: 0
+
+[2025-05-29 16:48:40] Saving updated character to database
+
+[2025-05-29 16:48:40] Reloading character data
+
+[2025-05-29 16:48:40] Set last_event from consequences
+  event_start: Mit einem entschlossenen Angriff bringst du die Dr
+
+[2025-05-29 16:48:40] Reloaded character data
+
+[2025-05-29 16:49:31] Player pressed Enter to continue
+
+[2025-05-29 16:49:31] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:49:31] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:49:31] Displaying last event
+  event_start: Mit einem entschlossenen Angriff bringst du die Dr
+
+[2025-05-29 16:49:31] Reset last_event to None after display
+
+[2025-05-29 16:49:31] Displayed scene elements
+
+[2025-05-29 16:49:31] Displayed character summary
+
+[2025-05-29 16:49:53] Player action
+  action: ich breche die tür auf
+
+[2025-05-29 16:49:53] Processing player action
+  action: ich breche die tür auf
+
+[2025-05-29 16:49:55] Action result received
+  requires_check: True
+
+[2025-05-29 16:49:55] Check required
+  action: Die Stahltür zum Treppenhaus aufbrechen
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Quick']
+  gear_tags: ['Stahl', 'Verschlossen', 'Zugang']
+  advantageous_tags: []
+  disadvantageous_tags: ['Stahl', 'Verschlossen']
+  opposition_scale: 2
+
+[2025-05-29 16:49:55] Check performed
+  success_level: partial
+
+[2025-05-29 16:49:55] Generating consequences
+
+[2025-05-29 16:49:58] Consequences received
+  description: Du setzt deine ganze Kraft ein, um die Stahltür au
+
+[2025-05-29 16:49:58] Updating game state and character
+
+[2025-05-29 16:49:58] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 1, 'heal_hits': 0, 'add_trauma': None, 'add_condition': None, 'remove_condition': None, 'spend_stunt_points': 0, 'refresh_stunt_points': False, 'add_xp': 0, 'add_item': None, 'remove_item': None, 'tick_drive': 0, 'cross_out_drive': 0}
+
+[2025-05-29 16:49:58] Adding 1 hits
+
+[2025-05-29 16:49:58] Healing 0 hits
+
+[2025-05-29 16:49:58] Spending 0 stunt points
+
+[2025-05-29 16:49:58] Adding 0 XP
+
+[2025-05-29 16:49:58] Ticking drive box: 0
+
+[2025-05-29 16:49:58] Crossing out drive box: 0
+
+[2025-05-29 16:49:58] Saving updated character to database
+
+[2025-05-29 16:49:58] Reloading character data
+
+[2025-05-29 16:49:58] Set last_event from consequences
+  event_start: Du setzt deine ganze Kraft ein, um die Stahltür au
+
+[2025-05-29 16:49:58] Reloaded character data
+
+[2025-05-29 16:50:14] Player pressed Enter to continue
+
+[2025-05-29 16:50:14] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:50:15] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:50:15] Displaying last event
+  event_start: Du setzt deine ganze Kraft ein, um die Stahltür au
+
+[2025-05-29 16:50:15] Reset last_event to None after display
+
+[2025-05-29 16:50:15] Displayed scene elements
+
+[2025-05-29 16:50:15] Displayed character summary
+
+[2025-05-29 16:50:50] Player action
+  action: ich verwende meine thermal cam und untersuche das treppenhaus
+
+[2025-05-29 16:50:50] Processing player action
+  action: ich verwende meine thermal cam und untersuche das treppenhaus
+
+[2025-05-29 16:50:53] Action result received
+  requires_check: False
+
+[2025-05-29 16:50:53] Direct response handled
+  response: Durch die Thermal Cam deiner Cyber Eyes erkennst d
+
+[2025-05-29 16:50:53] State update found in action result
+
+[2025-05-29 16:50:53] Reloaded character data after state update
+
+[2025-05-29 16:50:53] Set last_event from direct response
+  event_start: Durch die Thermal Cam deiner Cyber Eyes erkennst d
+
+[2025-05-29 16:50:53] Added response to history and saved game state
+
+[2025-05-29 16:51:10] Player pressed Enter to continue
+
+[2025-05-29 16:51:10] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:51:10] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:51:10] Displaying last event
+  event_start: Durch die Thermal Cam deiner Cyber Eyes erkennst d
+
+[2025-05-29 16:51:10] Reset last_event to None after display
+
+[2025-05-29 16:51:10] Displayed scene elements
+
+[2025-05-29 16:51:10] Displayed character summary
+
+[2025-05-29 16:51:27] Player action
+  action: durch den spalt schlüpfen
+
+[2025-05-29 16:51:27] Processing player action
+  action: durch den spalt schlüpfen
+
+[2025-05-29 16:51:30] Action result received
+  requires_check: False
+
+[2025-05-29 16:51:30] Direct response handled
+  response: Du zwängst dich durch den schmalen Spalt der Stahl
+
+[2025-05-29 16:51:30] State update found in action result
+
+[2025-05-29 16:51:30] Reloaded character data after state update
+
+[2025-05-29 16:51:30] Set last_event from direct response
+  event_start: Du zwängst dich durch den schmalen Spalt der Stahl
+
+[2025-05-29 16:51:30] Added response to history and saved game state
+
+[2025-05-29 16:51:44] Player pressed Enter to continue
+
+[2025-05-29 16:51:44] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:51:44] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:51:44] Displaying last event
+  event_start: Du zwängst dich durch den schmalen Spalt der Stahl
+
+[2025-05-29 16:51:44] Reset last_event to None after display
+
+[2025-05-29 16:51:44] Displayed scene elements
+
+[2025-05-29 16:51:44] Displayed character summary
+
+[2025-05-29 16:52:04] Player action
+  action: ich gehe vorsichtig die treppe herunter und suche einen ausgang
+
+[2025-05-29 16:52:04] Processing player action
+  action: ich gehe vorsichtig die treppe herunter und suche einen ausgang
+
+[2025-05-29 16:52:07] Action result received
+  requires_check: False
+
+[2025-05-29 16:52:07] Direct response handled
+  response: Du tastest dich vorsichtig die dunkle Treppe hinun
+
+[2025-05-29 16:52:07] State update found in action result
+
+[2025-05-29 16:52:07] Reloaded character data after state update
+
+[2025-05-29 16:52:07] Set last_event from direct response
+  event_start: Du tastest dich vorsichtig die dunkle Treppe hinun
+
+[2025-05-29 16:52:07] Added response to history and saved game state
+
+[2025-05-29 16:52:23] Player pressed Enter to continue
+
+[2025-05-29 16:52:23] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:52:23] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:52:23] Displaying last event
+  event_start: Du tastest dich vorsichtig die dunkle Treppe hinun
+
+[2025-05-29 16:52:23] Reset last_event to None after display
+
+[2025-05-29 16:52:23] Displayed scene elements
+
+[2025-05-29 16:52:23] Displayed character summary
+
+[2025-05-29 16:52:38] Player action
+  action: die tür aufbrechen
+
+[2025-05-29 16:52:38] Processing player action
+  action: die tür aufbrechen
+
+[2025-05-29 16:52:40] Action result received
+  requires_check: True
+
+[2025-05-29 16:52:40] Check required
+  action: Die Stahltür im Treppenhaus aufbrechen
+  relevant_trademark: Infiltrator
+  relevant_edges: ['Quick']
+  gear_tags: ['Quick', 'Concealed']
+  advantageous_tags: []
+  disadvantageous_tags: []
+  opposition_scale: 2
+
+[2025-05-29 16:52:40] Check performed
+  success_level: partial
+
+[2025-05-29 16:52:40] Generating consequences
+
+[2025-05-29 16:52:42] Consequences received
+  description: Mit einem Ruck stemmst du dich gegen die Stahltür.
+
+[2025-05-29 16:52:42] Updating game state and character
+
+[2025-05-29 16:52:42] Updating character
+  char_id: 4928c98d-c8b3-4143-b9e9-8843510f35f1
+  updates: {'add_hits': 1}
+
+[2025-05-29 16:52:42] Adding 1 hits
+
+[2025-05-29 16:52:42] Saving updated character to database
+
+[2025-05-29 16:52:42] Reloading character data
+
+[2025-05-29 16:52:42] Set last_event from consequences
+  event_start: Mit einem Ruck stemmst du dich gegen die Stahltür.
+
+[2025-05-29 16:52:42] Reloaded character data
+
+[2025-05-29 16:52:59] Player pressed Enter to continue
+
+[2025-05-29 16:52:59] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:52:59] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:52:59] Displaying last event
+  event_start: Mit einem Ruck stemmst du dich gegen die Stahltür.
+
+[2025-05-29 16:52:59] Reset last_event to None after display
+
+[2025-05-29 16:52:59] Displayed scene elements
+
+[2025-05-29 16:52:59] Displayed character summary
+
+[2025-05-29 16:53:21] Player action
+  action: ich schlüpfe durch die tür auf die straße
+
+[2025-05-29 16:53:21] Processing player action
+  action: ich schlüpfe durch die tür auf die straße
+
+[2025-05-29 16:53:24] Action result received
+  requires_check: False
+
+[2025-05-29 16:53:24] Direct response handled
+  response: Du quetschst dich durch den Spalt auf die Straße. 
+
+[2025-05-29 16:53:24] State update found in action result
+
+[2025-05-29 16:53:24] Reloaded character data after state update
+
+[2025-05-29 16:53:24] Set last_event from direct response
+  event_start: Du quetschst dich durch den Spalt auf die Straße. 
+
+[2025-05-29 16:53:24] Added response to history and saved game state
+
+[2025-05-29 16:53:35] Player pressed Enter to continue
+
+[2025-05-29 16:53:35] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:53:35] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:53:35] Displaying last event
+  event_start: Du quetschst dich durch den Spalt auf die Straße. 
+
+[2025-05-29 16:53:35] Reset last_event to None after display
+
+[2025-05-29 16:53:35] Displayed scene elements
+
+[2025-05-29 16:53:35] Displayed character summary
+
+[2025-05-29 16:56:00] Player action
+  action: ich suche einen abgeschrimten ort auf der straße, um die abgefangenen daten von razor aus der chrome cathedral zu untersuchen
+
+[2025-05-29 16:56:00] Processing player action
+  action: ich suche einen abgeschrimten ort auf der straße, um die abgefangenen daten von razor aus der chrome cathedral zu untersuchen
+
+[2025-05-29 16:56:04] Action result received
+  requires_check: False
+
+[2025-05-29 16:56:04] Direct response handled
+  response: Du suchst nach einem abgeschirmten Ort und findest
+
+[2025-05-29 16:56:04] State update found in action result
+
+[2025-05-29 16:56:04] Reloaded character data after state update
+
+[2025-05-29 16:56:04] Set last_event from direct response
+  event_start: Du suchst nach einem abgeschirmten Ort und findest
+
+[2025-05-29 16:56:04] Added response to history and saved game state
+
+[2025-05-29 16:56:17] Player pressed Enter to continue
+
+[2025-05-29 16:56:17] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:56:17] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:56:17] Displaying last event
+  event_start: Du suchst nach einem abgeschirmten Ort und findest
+
+[2025-05-29 16:56:17] Reset last_event to None after display
+
+[2025-05-29 16:56:17] Displayed scene elements
+
+[2025-05-29 16:56:17] Displayed character summary
+
+[2025-05-29 16:57:25] Player action
+  action: ergebniss der anaylse anzeiegn
+
+[2025-05-29 16:57:25] Processing player action
+  action: ergebniss der anaylse anzeiegn
+
+[2025-05-29 16:57:28] Action result received
+  requires_check: False
+
+[2025-05-29 16:57:28] Direct response handled
+  response: Du konzentrierst dich und rufst die Ergebnisse der
+
+[2025-05-29 16:57:28] State update found in action result
+
+[2025-05-29 16:57:28] Reloaded character data after state update
+
+[2025-05-29 16:57:28] Set last_event from direct response
+  event_start: Du konzentrierst dich und rufst die Ergebnisse der
+
+[2025-05-29 16:57:28] Added response to history and saved game state
+
+[2025-05-29 16:57:52] Player pressed Enter to continue
+
+[2025-05-29 16:57:52] Checking if scene is completed
+  completed: False
+
+[2025-05-29 16:57:52] Current scene
+  name: Rooftop Escape
+  has_last_event: True
+
+[2025-05-29 16:57:52] Displaying last event
+  event_start: Du konzentrierst dich und rufst die Ergebnisse der
+
+[2025-05-29 16:57:52] Reset last_event to None after display
+
+[2025-05-29 16:57:52] Displayed scene elements
+
+[2025-05-29 16:57:52] Displayed character summary
+

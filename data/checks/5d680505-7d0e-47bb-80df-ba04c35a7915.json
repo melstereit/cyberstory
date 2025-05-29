@@ -1,0 +1,37 @@
+{
+  "id": "5d680505-7d0e-47bb-80df-ba04c35a7915",
+  "timestamp": 1748526181.7568374,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Erneuter Angriff auf Roxy mit der Switchblade",
+    "relevant_trademark": "Infiltrator",
+    "relevant_edges": [
+      "Quick"
+    ],
+    "gear_tags": [
+      "Concealed",
+      "Quick"
+    ],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [],
+    "opposition_scale": 0
+  },
+  "dice_result": {
+    "success_level": "partial",
+    "value": 5,
+    "action_dice": [
+      4,
+      4,
+      5
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      4,
+      4,
+      5
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}

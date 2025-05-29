@@ -1,0 +1,37 @@
+{
+  "id": "afe2f250-848b-4723-9ea6-48ac795bdab5",
+  "timestamp": 1748526439.6821895,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "eXo versuche, den Lüftungsschacht zu manipulieren, um Spike abzulenken und einen \"Silent Takedown\" zu starten.",
+    "relevant_trademark": "Infiltrator",
+    "relevant_edges": [
+      "Quick"
+    ],
+    "gear_tags": [],
+    "advantageous_tags": [
+      "Dampf",
+      "Versteckmöglichkeit"
+    ],
+    "disadvantageous_tags": [],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "success",
+    "value": 6,
+    "action_dice": [
+      6,
+      4,
+      6
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      6,
+      4,
+      6
+    ],
+    "boons": 1,
+    "is_botch": false
+  },
+  "consequences": []
+}

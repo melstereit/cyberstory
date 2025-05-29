@@ -120,9 +120,20 @@ Deine Antwort sollte ein JSON-Objekt mit folgenden Feldern sein:
   "description": "Ausführliche Beschreibung der Konsequenzen",
   "game_state_updates": {{
     "history_event": "Ereignis für die Historie",
-    "scene_updates": {{
-      "key": "value"
-    }},
+      "scene_updates": {{
+  "objectives": [
+    "Neues/aktualisiertes Ziel basierend auf den Konsequenzen",
+    "Weiteres Ziel falls relevant"
+  ],
+  "suggested_actions": [
+    "Neue mögliche Aktion basierend auf der Situation", 
+    "Weitere relevante Aktion",
+    "Situationsspezifische Aktion"
+  ],
+  "new_elements": {{
+    "key": "value für andere Szenen-Updates"
+  }}
+}},
     "world_state_updates": {{
       "key": "value"
     }},

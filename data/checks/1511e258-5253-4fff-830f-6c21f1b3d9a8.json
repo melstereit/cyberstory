@@ -1,0 +1,34 @@
+{
+  "id": "1511e258-5253-4fff-830f-6c21f1b3d9a8",
+  "timestamp": 1748526694.978486,
+  "character_id": "4928c98d-c8b3-4143-b9e9-8843510f35f1",
+  "context": {
+    "action": "Klettern auf das nächstgelegene Dach, um zu entkommen.",
+    "relevant_trademark": "Infiltrator",
+    "relevant_edges": [
+      "Quick"
+    ],
+    "gear_tags": [],
+    "advantageous_tags": [],
+    "disadvantageous_tags": [],
+    "opposition_scale": 1
+  },
+  "dice_result": {
+    "success_level": "success",
+    "value": 6,
+    "action_dice": [
+      6,
+      5,
+      3
+    ],
+    "danger_dice": [],
+    "remaining_dice": [
+      6,
+      5,
+      3
+    ],
+    "boons": 0,
+    "is_botch": false
+  },
+  "consequences": []
+}
